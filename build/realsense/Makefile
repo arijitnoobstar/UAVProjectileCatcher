@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ball_trajectory
+
+# Build rule for target.
+ball_trajectory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ball_trajectory
+.PHONY : ball_trajectory
+
+# fast build rule for target.
+ball_trajectory/fast:
+	$(MAKE) -f CMakeFiles/ball_trajectory.dir/build.make CMakeFiles/ball_trajectory.dir/build
+.PHONY : ball_trajectory/fast
+
+#=============================================================================
 # Target rules for targets named ball_locator
 
 # Build rule for target.
@@ -1338,6 +1351,33 @@ src/ball_locator.cpp.s:
 	$(MAKE) -f CMakeFiles/ball_locator.dir/build.make CMakeFiles/ball_locator.dir/src/ball_locator.cpp.s
 .PHONY : src/ball_locator.cpp.s
 
+src/ball_trajectory.o: src/ball_trajectory.cpp.o
+
+.PHONY : src/ball_trajectory.o
+
+# target to build an object file
+src/ball_trajectory.cpp.o:
+	$(MAKE) -f CMakeFiles/ball_trajectory.dir/build.make CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o
+.PHONY : src/ball_trajectory.cpp.o
+
+src/ball_trajectory.i: src/ball_trajectory.cpp.i
+
+.PHONY : src/ball_trajectory.i
+
+# target to preprocess a source file
+src/ball_trajectory.cpp.i:
+	$(MAKE) -f CMakeFiles/ball_trajectory.dir/build.make CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.i
+.PHONY : src/ball_trajectory.cpp.i
+
+src/ball_trajectory.s: src/ball_trajectory.cpp.s
+
+.PHONY : src/ball_trajectory.s
+
+# target to generate assembly for a file
+src/ball_trajectory.cpp.s:
+	$(MAKE) -f CMakeFiles/ball_trajectory.dir/build.make CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.s
+.PHONY : src/ball_trajectory.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1349,6 +1389,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... test"
+	@echo "... ball_trajectory"
 	@echo "... ball_locator"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_eus"
@@ -1442,6 +1483,9 @@ help:
 	@echo "... src/ball_locator.o"
 	@echo "... src/ball_locator.i"
 	@echo "... src/ball_locator.s"
+	@echo "... src/ball_trajectory.o"
+	@echo "... src/ball_trajectory.i"
+	@echo "... src/ball_trajectory.s"
 .PHONY : help
 
 

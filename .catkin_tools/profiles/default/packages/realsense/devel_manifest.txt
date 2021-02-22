@@ -1,6 +1,7 @@
 realsense
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/cmake.lock /home/arijitnoobstar/UAVProjectileCatcher/devel/./cmake.lock
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/pkgconfig/realsense.pc /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/realsense.pc
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/realsense/ball_trajectory /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/ball_trajectory
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/realsense/ball_locator /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/ball_locator
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/share/realsense/cmake/realsenseConfig.cmake /home/arijitnoobstar/UAVProjectileCatcher/devel/share/realsense/cmake/realsenseConfig.cmake
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/share/realsense/cmake/realsenseConfig-version.cmake /home/arijitnoobstar/UAVProjectileCatcher/devel/share/realsense/cmake/realsenseConfig-version.cmake
