@@ -1,0 +1,25 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_locator.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_locator.cpp:111:62:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgeometry_msgs::Point_<std::allocator<void> >::Point_(geometry_msgs::Point*)[m[K’
+  geometry_msgs::Point ball_geom_msg (new geometry_msgs::Point[01;31m[K)[m[K;
+                                                              [01;31m[K^[m[K
+In file included from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_locator.cpp:4:0[m[K:
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:31:3:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::Point_<ContainerAllocator>::Point_(const ContainerAllocator&) [with ContainerAllocator = std::allocator<void>]
+   [01;36m[KPoint_[m[K(const ContainerAllocator& _alloc)
+   [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:31:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Point* {aka geometry_msgs::Point_<std::allocator<void> >*}[m[K’ to ‘[01m[Kconst std::allocator<void>&[m[K’
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:26:3:[m[K [01;36m[Knote: [m[Kcandidate: geometry_msgs::Point_<ContainerAllocator>::Point_() [with ContainerAllocator = std::allocator<void>]
+   [01;36m[KPoint_[m[K()
+   [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:26:3:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: constexpr geometry_msgs::Point_<std::allocator<void> >::Point_(const geometry_msgs::Point_<std::allocator<void> >&)
+ struct [01;36m[KPoint_[m[K
+        [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Point* {aka geometry_msgs::Point_<std::allocator<void> >*}[m[K’ to ‘[01m[Kconst geometry_msgs::Point_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:22:8:[m[K [01;36m[Knote: [m[Kcandidate: constexpr geometry_msgs::Point_<std::allocator<void> >::Point_(geometry_msgs::Point_<std::allocator<void> >&&)
+[01m[K/opt/ros/melodic/include/geometry_msgs/Point.h:22:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kgeometry_msgs::Point* {aka geometry_msgs::Point_<std::allocator<void> >*}[m[K’ to ‘[01m[Kgeometry_msgs::Point_<std::allocator<void> >&&[m[K’
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_locator.cpp:112:15:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kgeometry_msgs::Point {aka geometry_msgs::Point_<std::allocator<void> >}[m[K’
+  ball_geom_msg[01;31m[K->[m[Kx = ball_x;
+               [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_locator.dir/all] Error 2
+make: *** [all] Error 2

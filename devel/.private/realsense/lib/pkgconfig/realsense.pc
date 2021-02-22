@@ -5,4 +5,4 @@ Description: Description of realsense
 Version: 0.0.0
 Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/include
 Libs: -L${prefix}/lib -lrealsense
-Requires: roscpp rospy std_msgs
+Requires: roscpp rospy std_msgs geometry_msgs

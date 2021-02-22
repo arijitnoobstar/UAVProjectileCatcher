@@ -8,6 +8,7 @@ project(realsense)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
   pcl_conversions
   pcl_ros
   roscpp
@@ -111,7 +112,7 @@ find_package(Boost REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES realsense
-  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs geometry_msgs
   DEPENDS system_lib 
 )
 

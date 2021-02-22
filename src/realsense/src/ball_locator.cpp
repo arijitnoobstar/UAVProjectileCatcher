@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <pcl_ros/point_cloud.h>
 #include <pcl/point_types.h>
+#include <geometry_msgs/Point.h>
 #include <numeric>
 
 using namespace std;
@@ -16,6 +17,7 @@ void isolate_ball(std::vector<PointData, EigenPointData>&, float&, float&, float
 
 // Global publisher pointers
 ros::Publisher *ball_points_pubPtr;
+ros::Publisher *ball_geom_pubPtr;
 
 //Colour Range CONFIG
 int red_lower = 0;
@@ -104,6 +106,13 @@ void callback(const PointCloud::ConstPtr& msg)
 	ball_points_msg->width = Frame.size();
 	ball_points_msg->points = Frame;
 	ball_points_pubPtr->publish(ball_points_msg);
+
+	// Finally, publish the x,y,z coordinates of the ball centroid
+	geometry_msgs::Point::Ptr ball_geom_msg (new geometry_msgs::Point);
+	ball_geom_msg->x = ball_x;
+	ball_geom_msg->y = ball_y;
+	ball_geom_msg->z = ball_z;
+	ball_geom_pubPtr->publish(ball_geom_msg);
 }
 
 int main(int argc, char** argv)
@@ -113,8 +122,10 @@ int main(int argc, char** argv)
 
 	ros::Subscriber sub = nh.subscribe<PointCloud>("/camera/depth/color/points", 1, callback);
 	ball_points_pubPtr = new ros::Publisher(nh.advertise<PointCloud>("ball_points", 10000));
+	ball_geom_pubPtr = new ros::Publisher(nh.advertise<geometry_msgs::Point>("ball_geom", 10000));
 
 	ros::spin();
 
 	delete ball_points_pubPtr;
+	delete ball_geom_pubPtr;
 }
