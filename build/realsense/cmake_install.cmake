@@ -143,10 +143,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/realsense" TYPE FILE FILES "/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/realsense" TYPE PROGRAM FILES "/home/arijitnoobstar/UAVProjectileCatcher/build/realsense/catkin_generated/installspace/pc2sub.py")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/arijitnoobstar/UAVProjectileCatcher/build/realsense/gtest/cmake_install.cmake")

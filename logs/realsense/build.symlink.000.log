@@ -1,4 +1,7 @@
 Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/realsense.pc
-Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/pcprinter
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/ball_locator
 Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/realsense/cmake/realsenseConfig.cmake
 Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/realsense/cmake/realsenseConfig-version.cmake
+Cleaning: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/realsense/pcprinter, /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/pcprinter)
+Unlinking: /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/pcprinter
+Already unlinked: {}

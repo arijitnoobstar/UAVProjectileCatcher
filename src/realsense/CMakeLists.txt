@@ -141,7 +141,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/realsense_node.cpp)
 
-add_executable(pcprinter src/pcprinter.cpp)
+add_executable(ball_locator src/ball_locator.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,10 +151,10 @@ add_executable(pcprinter src/pcprinter.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
- add_dependencies(pcprinter ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(ball_locator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(pcprinter   ${catkin_LIBRARIES} ${boost_LIBRARIES})
+ target_link_libraries(ball_locator   ${catkin_LIBRARIES} ${boost_LIBRARIES})
 
 #############
 ## Install ##
@@ -166,7 +166,6 @@ add_executable(pcprinter src/pcprinter.cpp)
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
  catkin_install_python(PROGRAMS
-   scripts/pc2sub.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 

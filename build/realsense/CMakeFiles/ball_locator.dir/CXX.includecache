@@ -6,16 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/pcprinter.cpp
+/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_locator.cpp
 ros/ros.h
 -
 pcl_ros/point_cloud.h
 -
 pcl/point_types.h
--
-boost/foreach.hpp
--
-sensor_msgs/PointCloud2.h
 -
 numeric
 -
