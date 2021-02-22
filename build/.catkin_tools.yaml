@@ -1,0 +1,6 @@
+devel_space: /home/arijitnoobstar/UAVProjectileCatcher/devel
+install: false
+install_space: /home/arijitnoobstar/UAVProjectileCatcher/install
+profile: default
+source_space: /home/arijitnoobstar/UAVProjectileCatcher/src
+workspace: /home/arijitnoobstar/UAVProjectileCatcher

@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/pkgconfig/realsense.pc
