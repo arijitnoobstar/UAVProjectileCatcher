@@ -4,18 +4,22 @@
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/PoseArray.h>
 #include <numeric>
+#include <queue>
 
 using namespace std;
 
 // Function Declarations
 void callback(const geometry_msgs::Point::ConstPtr&);
 
-// Global publisher pointers
+// Global publisher pointer
 ros::Publisher *ball_path_pubPtr;
+
+// Create queues for the XYZ and time data
+
 
 void callback(const geometry_msgs::Point::ConstPtr& msg)
 {
-	
+
 }
 
 int main(int argc, char** argv)

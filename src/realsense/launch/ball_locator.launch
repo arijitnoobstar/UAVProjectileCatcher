@@ -1,0 +1,4 @@
+<launch>
+<rosparam command="load" file="$(find realsense)/config/ball_colour.yaml" />
+<node name = "ball_locator_node" pkg="realsense" type="ball_locator" output = "screen" /> 
+</launch>

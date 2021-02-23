@@ -120,6 +120,14 @@ int main(int argc, char** argv)
 	ros::init(argc, argv, "ball_locator_node");
 	ros::NodeHandle nh;
 
+	// extract colour parameters (stored in config/ball_colour.yaml)
+	nh.getParam("red_lower", red_lower);
+	nh.getParam("red_upper", red_upper);
+	nh.getParam("blue_lower", blue_lower);
+	nh.getParam("blue_upper", blue_upper);
+	nh.getParam("green_lower", green_lower);
+	nh.getParam("green_upper", green_upper);
+
 	ros::Subscriber sub = nh.subscribe<PointCloud>("/camera/depth/color/points", 1, callback);
 	ball_points_pubPtr = new ros::Publisher(nh.advertise<PointCloud>("ball_points", 10000));
 	ball_geom_pubPtr = new ros::Publisher(nh.advertise<geometry_msgs::Point>("ball_geom", 10000));
