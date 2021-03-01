@@ -1,0 +1,384 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>[m[K’ and ‘[01m[Kconst char [2][m[K’)
+    [01;31m[Kcout << "miss" < " "[m[K;
+    [01;31m[K~~~~~~~~~~~~~~~^~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:64:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/7/string:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     [01;36m[Koperator[m[K<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::pair<_T1, _T2>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/7/string:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:308:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     [01;36m[Koperator[m[K<(const reverse_iterator<_Iterator>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:308:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/7/string:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:346:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K<(const reverse_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:346:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/7/string:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1145:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     [01;36m[Koperator[m[K<(const move_iterator<_IteratorL>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1145:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/stl_algobase.h:67:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/7/string:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1151:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Iterator> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     [01;36m[Koperator[m[K<(const move_iterator<_Iterator>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_iterator.h:1151:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:6094:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:6094:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:6107:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:6107:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:6119:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     [01;36m[Koperator[m[K<(const _CharT* __lhs,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:6119:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kstd::basic_ostream<char>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/ios_base.h:46:0[m[K,
+                 from [01m[K/usr/include/c++/7/ios:42[m[K,
+                 from [01m[K/usr/include/c++/7/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/7/iostream:39[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/system_error:208:3:[m[K [01;36m[Knote: [m[Kcandidate: bool std::operator<(const std::error_code&, const std::error_code&)
+   [01;36m[Koperator[m[K<(const error_code& __lhs, const error_code& __rhs) noexcept
+   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/system_error:208:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::basic_ostream<char>[m[K’ to ‘[01m[Kconst std::error_code&[m[K’
+[01m[K/usr/include/c++/7/system_error:282:3:[m[K [01;36m[Knote: [m[Kcandidate: bool std::operator<(const std::error_condition&, const std::error_condition&)
+   [01;36m[Koperator[m[K<(const error_condition& __lhs,
+   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/system_error:282:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::basic_ostream<char>[m[K’ to ‘[01m[Kconst std::error_condition&[m[K’
+In file included from [01m[K/usr/include/c++/7/tuple:39:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/locale:43[m[K,
+                 from [01m[K/usr/include/c++/7/iomanip:43[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/array:262:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)
+     [01;36m[Koperator[m[K<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/array:262:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/unique_ptr.h:37:0[m[K,
+                 from [01m[K/usr/include/c++/7/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/7/locale:43[m[K,
+                 from [01m[K/usr/include/c++/7/iomanip:43[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/tuple:1410:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)
+     [01;36m[Koperator[m[K<(const tuple<_TElements...>& __t,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/tuple:1410:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::tuple<_Tps ...>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/locale_conv.h:41:0[m[K,
+                 from [01m[K/usr/include/c++/7/locale:43[m[K,
+                 from [01m[K/usr/include/c++/7/iomanip:43[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:713:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)
+     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:713:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/locale_conv.h:41:0[m[K,
+                 from [01m[K/usr/include/c++/7/locale:43[m[K,
+                 from [01m[K/usr/include/c++/7/iomanip:43[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:724:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)
+     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:724:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/locale_conv.h:41:0[m[K,
+                 from [01m[K/usr/include/c++/7/locale:43[m[K,
+                 from [01m[K/usr/include/c++/7/iomanip:43[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:730:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)
+     [01;36m[Koperator[m[K<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:730:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kconst char [2][m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/vector:64:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/math_fwd.hpp:26[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_vector.h:1618:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     [01;36m[Koperator[m[K<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_vector.h:1618:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/map:60:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/console.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_tree.h:1543:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator<(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     [01;36m[Koperator[m[K<(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_tree.h:1543:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/map:61:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/console.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_map.h:1411:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     [01;36m[Koperator[m[K<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_map.h:1411:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/map:62:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/console.h:42[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_multimap.h:1076:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     [01;36m[Koperator[m[K<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_multimap.h:1076:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/set:61:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_set.h:930:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     [01;36m[Koperator[m[K<(const set<_Key, _Compare, _Alloc>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_set.h:930:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::set<_Key, _Compare, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/set:62:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_multiset.h:913:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     [01;36m[Koperator[m[K<(const multiset<_Key, _Compare, _Alloc>& __x,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_multiset.h:913:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::multiset<_Key, _Compare, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/list:63:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_list.h:1918:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)
+     [01;36m[Koperator[m[K<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_list.h:1918:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/shared_ptr.h:52:0[m[K,
+                 from [01m[K/usr/include/c++/7/memory:81[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1441:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)
+     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a,
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1441:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/shared_ptr.h:52:0[m[K,
+                 from [01m[K/usr/include/c++/7/memory:81[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1452:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)
+     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1452:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/bits/shared_ptr.h:52:0[m[K,
+                 from [01m[K/usr/include/c++/7/memory:81[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1460:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)
+     [01;36m[Koperator[m[K<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr_base.h:1460:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Kconst char [2][m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/memory:81:0[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:398:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Up>&)
+     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:398:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/memory:81:0[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:408:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)
+     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:408:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::basic_ostream<char>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/7/memory:81:0[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:416:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)
+     [01;36m[Koperator[m[K<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:416:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:30:21:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kconst char [2][m[K’
+    cout << "miss" < [01;36m[K" "[m[K;
+                     [01;36m[K^~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:33:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  [01;31m[K}[m[K
+  [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_image_filter.dir/all] Error 2
+make: *** [all] Error 2

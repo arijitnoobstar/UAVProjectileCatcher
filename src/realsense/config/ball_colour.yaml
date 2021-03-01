@@ -1,6 +1,6 @@
-red_lower : 150
-red_upper : 256
-green_lower : 98
-green_upper : 198
-blue_lower : 26
-blue_upper : 132
+red_lower : 70
+red_upper : 255
+green_lower : 70
+green_upper : 150
+blue_lower : 0
+blue_upper : 95

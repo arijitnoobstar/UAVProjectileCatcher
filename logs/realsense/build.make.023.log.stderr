@@ -1,0 +1,37 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_imgs[m[K’ does not name a type
+ void callback(const [01;31m[Ksensor_imgs[m[K::Image::ConstPtr&);
+                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:39:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+ void callback(const sensor_imgs::Image[01;31m[K::[m[KConstPtr&);
+                                       [01;31m[K^~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:39:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kuint_t[m[K’ was not declared in this scope
+  std::vector<[01;31m[Kuint_t[m[K> ImageArr = msg->data;
+              [01;31m[K^~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:14:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/boost/integer.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/function/function_base.hpp:20[m[K,
+                 from [01m[K/usr/include/boost/function/detail/prologue.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/function.hpp:24[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/usr/include/boost/integer_fwd.hpp:104:12:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::uint_t[m[K’
+     struct [01;36m[Kuint_t[m[K;
+            [01;36m[K^~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:20:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  std::vector<uint_t[01;31m[K>[m[K ImageArr = msg->data;
+                    [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:20:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:38:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst _data_type {aka const std::vector<unsigned char, std::allocator<unsigned char> >}[m[K’ to ‘[01m[Kint[m[K’ in initialization
+  std::vector<uint_t> ImageArr = msg->[01;31m[Kdata[m[K;
+                                      [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:24:19:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[KImageArr[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  cout << ImageArr.[01;31m[Ksize[m[K() << endl;
+                   [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_image_filter.dir/all] Error 2
+make: *** [all] Error 2

@@ -54,7 +54,7 @@ void isolate_ball(std::vector<PointData, EigenPointData> &Frame, float& ball_x, 
 	std::vector<PointData, EigenPointData> temp;
 	// Get rid of fringe points
 	for (auto i = Frame.begin(); i != Frame.end(); i++){
-		if (i->x >= mean_x - stdev_x && i->x <= mean_x + stdev_x &&
+		if (true || i->x >= mean_x - stdev_x && i->x <= mean_x + stdev_x &&
 			i->y >= mean_y - stdev_y && i->y <= mean_y + stdev_y)
 			temp.push_back(*i);
 	}
@@ -123,10 +123,10 @@ int main(int argc, char** argv)
 	// extract colour parameters (stored in config/ball_colour.yaml)
 	nh.getParam("red_lower", red_lower);
 	nh.getParam("red_upper", red_upper);
-	nh.getParam("blue_lower", blue_lower);
-	nh.getParam("blue_upper", blue_upper);
 	nh.getParam("green_lower", green_lower);
 	nh.getParam("green_upper", green_upper);
+	nh.getParam("blue_lower", blue_lower);
+	nh.getParam("blue_upper", blue_upper);
 
 	ros::Subscriber sub = nh.subscribe<PointCloud>("/camera/depth/color/points", 1, callback);
 	ball_points_pubPtr = new ros::Publisher(nh.advertise<PointCloud>("ball_points", 10000));

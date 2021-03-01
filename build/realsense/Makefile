@@ -181,6 +181,19 @@ ball_trajectory/fast:
 .PHONY : ball_trajectory/fast
 
 #=============================================================================
+# Target rules for targets named ball_image_filter
+
+# Build rule for target.
+ball_image_filter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ball_image_filter
+.PHONY : ball_image_filter
+
+# fast build rule for target.
+ball_image_filter/fast:
+	$(MAKE) -f CMakeFiles/ball_image_filter.dir/build.make CMakeFiles/ball_image_filter.dir/build
+.PHONY : ball_image_filter/fast
+
+#=============================================================================
 # Target rules for targets named ball_locator
 
 # Build rule for target.
@@ -1324,6 +1337,33 @@ gtest/fast:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+src/ball_image_filter.o: src/ball_image_filter.cpp.o
+
+.PHONY : src/ball_image_filter.o
+
+# target to build an object file
+src/ball_image_filter.cpp.o:
+	$(MAKE) -f CMakeFiles/ball_image_filter.dir/build.make CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.o
+.PHONY : src/ball_image_filter.cpp.o
+
+src/ball_image_filter.i: src/ball_image_filter.cpp.i
+
+.PHONY : src/ball_image_filter.i
+
+# target to preprocess a source file
+src/ball_image_filter.cpp.i:
+	$(MAKE) -f CMakeFiles/ball_image_filter.dir/build.make CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.i
+.PHONY : src/ball_image_filter.cpp.i
+
+src/ball_image_filter.s: src/ball_image_filter.cpp.s
+
+.PHONY : src/ball_image_filter.s
+
+# target to generate assembly for a file
+src/ball_image_filter.cpp.s:
+	$(MAKE) -f CMakeFiles/ball_image_filter.dir/build.make CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.s
+.PHONY : src/ball_image_filter.cpp.s
+
 src/ball_locator.o: src/ball_locator.cpp.o
 
 .PHONY : src/ball_locator.o
@@ -1390,6 +1430,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... test"
 	@echo "... ball_trajectory"
+	@echo "... ball_image_filter"
 	@echo "... ball_locator"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_eus"
@@ -1480,6 +1521,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... src/ball_image_filter.o"
+	@echo "... src/ball_image_filter.i"
+	@echo "... src/ball_image_filter.s"
 	@echo "... src/ball_locator.o"
 	@echo "... src/ball_locator.i"
 	@echo "... src/ball_locator.s"

@@ -1,0 +1,52 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_imgs[m[K’ does not name a type
+ void callback(const [01;31m[Ksensor_imgs[m[K::Image::ConstPtr&);
+                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:39:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+ void callback(const sensor_imgs::Image[01;31m[K::[m[KConstPtr&);
+                                       [01;31m[K^~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:7:39:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:20:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_imgs[m[K’ does not name a type
+ void callback(const [01;31m[Ksensor_imgs[m[K::Image::ConstPtr& msg)
+                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:20:39:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+ void callback(const sensor_imgs::Image[01;31m[K::[m[KConstPtr& msg)
+                                       [01;31m[K^~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:20:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:20:39:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:40:37:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_imgs[m[K’ was not declared in this scope
+  ros::Subscriber sub = nh.subscribe<[01;31m[Ksensor_imgs[m[K::Image>("/camera/color/image_raw", 1, callback);
+                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:40:27:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  ros::Subscriber sub = nh.[01;31m[Ksubscribe<sensor_imgs::Image>[m[K("/camera/color/image_raw", 1, callback);
+                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:40:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kcallback[m[K’ was not declared in this scope
+  ros::Subscriber sub = nh.subscribe<sensor_imgs::Image>("/camera/color/image_raw", 1, [01;31m[Kcallback[m[K);
+                                                                                       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:40:87:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcalloc[m[K’
+  ros::Subscriber sub = nh.subscribe<sensor_imgs::Image>("/camera/color/image_raw", 1, [01;36m[Kcallback[m[K);
+                                                                                       [01;36m[K^~~~~~~~[m[K
+                                                                                       [32m[Kcalloc[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:41:48:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  filtered_image_pubPtr = new ros::Publisher(nh.[01;31m[Kadvertise<sensor_imgs::Image>[m[K("filtered_image", 10000));
+                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:41:101:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<sensor_imgs>(const char [15], int)[m[K’
+  filtered_image_pubPtr = new ros::Publisher(nh.advertise<sensor_imgs::Image>("filtered_image", 10000[01;31m[K)[m[K);
+                                                                                                     [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+             [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+make[2]: *** [CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_image_filter.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

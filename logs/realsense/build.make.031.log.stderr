@@ -1,0 +1,21 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kuint8[m[K’ was not declared in this scope
+  std::vector<[01;31m[Kuint8[m[K> ImageArr = msg->data;
+              [01;31m[K^~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:14:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kuint[m[K’
+  std::vector<[01;36m[Kuint8[m[K> ImageArr = msg->data;
+              [01;36m[K^~~~~[m[K
+              [32m[Kuint[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:19:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  std::vector<uint8[01;31m[K>[m[K ImageArr = msg->data;
+                   [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:19:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:37:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst _data_type {aka const std::vector<unsigned char, std::allocator<unsigned char> >}[m[K’ to ‘[01m[Kint[m[K’ in initialization
+  std::vector<uint8> ImageArr = msg->[01;31m[Kdata[m[K;
+                                     [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:24:23:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+  cout << ImageArr[7688[01;31m[K][m[K << endl;
+                       [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_image_filter.dir/all] Error 2
+make: *** [all] Error 2

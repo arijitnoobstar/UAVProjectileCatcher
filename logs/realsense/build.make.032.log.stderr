@@ -1,0 +1,24 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kuint8[m[K’ was not declared in this scope
+  std::vector<[01;31m[Kuint8[m[K> ImageArr = msg->data;
+              [01;31m[K^~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:14:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kuint[m[K’
+  std::vector<[01;36m[Kuint8[m[K> ImageArr = msg->data;
+              [01;36m[K^~~~~[m[K
+              [32m[Kuint[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:19:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  std::vector<uint8[01;31m[K>[m[K ImageArr = msg->data;
+                   [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:19:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:23:37:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst _data_type {aka const std::vector<unsigned char, std::allocator<unsigned char> >}[m[K’ to ‘[01m[Kint[m[K’ in initialization
+  std::vector<uint8> ImageArr = msg->[01;31m[Kdata[m[K;
+                                     [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:24:25:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kbegin[m[K’ in ‘[01m[KImageArr[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  for (auto i = ImageArr.[01;31m[Kbegin[m[K(); i != ImageArr.end(); ++i){
+                         [01;31m[K^~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_image_filter.cpp:24:48:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kend[m[K’ in ‘[01m[KImageArr[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  for (auto i = ImageArr.begin(); i != ImageArr.[01;31m[Kend[m[K(); ++i){
+                                                [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/ball_image_filter.dir/src/ball_image_filter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_image_filter.dir/all] Error 2
+make: *** [all] Error 2
