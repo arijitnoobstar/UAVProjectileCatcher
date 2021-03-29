@@ -1,0 +1,29 @@
+[35m[1mScanning dependencies of target image_proc_gencfg[0m
+[  6%] [34m[1mGenerating dynamic reconfigure files from cfg/CropDecimate.cfg: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/CropDecimateConfig.h /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/lib/python2.7/dist-packages/image_proc/cfg/CropDecimateConfig.py[0m
+[ 13%] [34m[1mGenerating dynamic reconfigure files from cfg/Resize.cfg: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/ResizeConfig.h /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/lib/python2.7/dist-packages/image_proc/cfg/ResizeConfig.py[0m
+[ 20%] [34m[1mGenerating dynamic reconfigure files from cfg/Debayer.cfg: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/DebayerConfig.h /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/lib/python2.7/dist-packages/image_proc/cfg/DebayerConfig.py[0m
+[ 26%] [34m[1mGenerating dynamic reconfigure files from cfg/Rectify.cfg: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/RectifyConfig.h /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/lib/python2.7/dist-packages/image_proc/cfg/RectifyConfig.py[0m
+Generating reconfiguration files for CropDecimate in image_proc
+Wrote header file in /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/CropDecimateConfig.h
+Generating reconfiguration files for Resize in image_proc
+Wrote header file in /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/ResizeConfig.h
+Generating reconfiguration files for Rectify in image_proc
+Wrote header file in /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/RectifyConfig.h
+Generating reconfiguration files for Debayer in image_proc
+Wrote header file in /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/include/image_proc/DebayerConfig.h
+[ 26%] Built target image_proc_gencfg
+[35m[1mScanning dependencies of target image_proc[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/nodelets/debayer.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/libimage_proc/advertisement_checker.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/nodelets/crop_decimate.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/libimage_proc/processor.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/nodelets/rectify.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/nodelets/resize.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/nodelets/edge_aware.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/image_proc.dir/src/nodelets/crop_non_zero.cpp.o[0m
+[ 86%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/lib/libimage_proc.so[0m
+[ 86%] Built target image_proc
+[35m[1mScanning dependencies of target image_proc_exe[0m
+[ 93%] [32mBuilding CXX object CMakeFiles/image_proc_exe.dir/src/nodes/image_proc.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/image_proc/lib/image_proc/image_proc[0m
+[100%] Built target image_proc_exe

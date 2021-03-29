@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/Loads/browning50.xml</path>
+    <name>browning50</name>
+    <nopreview/>
+
+    <offsets>
+      <x-m>2.249</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.9</z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

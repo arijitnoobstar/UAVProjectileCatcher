@@ -1,0 +1,189 @@
+############################################################################
+# arch/arm/src/max326xx/Make.defs
+#
+#   Copyright (C) 2018 Gregory Nutt. All rights reserved.
+#   Author: Gregory Nutt <gnutt@nuttx.org>
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+# 3. Neither the name NuttX nor the names of its contributors may be
+#    used to endorse or promote products derived from this software
+#    without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+# OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+############################################################################
+
+# Common ARMv7-M Source Files
+
+CMN_ASRCS  = arm_saveusercontext.S arm_fullcontextrestore.S arm_switchcontext.S
+CMN_ASRCS += arm_testset.S arm_fetchadd.S vfork.S
+
+ifeq ($(CONFIG_ARCH_SETJMP_H),y)
+ifeq ($(CONFIG_ARCH_TOOLCHAIN_GNU),y)
+CMN_ASRCS += arm_setjmp.S
+endif
+endif
+
+CMN_CSRCS  = arm_allocateheap.c arm_assert.c arm_blocktask.c arm_copyfullstate.c
+CMN_CSRCS += arm_createstack.c arm_doirq.c arm_exit.c arm_hardfault.c
+CMN_CSRCS += arm_initialize.c arm_initialstate.c arm_interruptcontext.c
+CMN_CSRCS += arm_mdelay.c arm_memfault.c arm_modifyreg8.c arm_modifyreg16.c
+CMN_CSRCS += arm_modifyreg32.c arm_releasepending.c arm_releasestack.c
+CMN_CSRCS += arm_reprioritizertr.c arm_schedulesigaction.c arm_sigdeliver.c
+CMN_CSRCS += arm_stackframe.c arm_svcall.c arm_trigger_irq.c arm_unblocktask.c
+CMN_CSRCS += arm_udelay.c arm_usestack.c arm_vfork.c
+
+ifeq ($(CONFIG_ARMV7M_LAZYFPU),y)
+CMN_ASRCS += arm_lazyexception.S
+else
+CMN_ASRCS += arm_exception.S
+endif
+CMN_CSRCS += arm_vectors.c
+
+ifeq ($(CONFIG_ARCH_RAMVECTORS),y)
+CMN_CSRCS += arm_ramvec_initialize.c arm_ramvec_attach.c
+endif
+
+ifeq ($(CONFIG_BUILD_PROTECTED),y)
+CMN_CSRCS += arm_mpu.c arm_task_start.c arm_pthread_start.c
+CMN_CSRCS += arm_signal_dispatch.c
+CMN_UASRCS += arm_signal_handler.S
+endif
+
+ifeq ($(CONFIG_STACK_COLORATION),y)
+CMN_CSRCS += arm_checkstack.c
+endif
+
+ifeq ($(CONFIG_ARCH_FPU),y)
+CMN_ASRCS += arm_fpu.S
+CMN_CSRCS += arm_copyarmstate.c
+endif
+
+# Common MAX326XX Source Files
+
+CHIP_CSRCS  = max326_start.c max326_irq.c max326_clrpend.c
+
+ifeq ($(CONFIG_MAX326XX_ICC),y)
+CHIP_CSRCS += max326_icc.c
+endif
+
+ifeq ($(CONFIG_RTC_DRIVER),y)
+CHIP_CSRCS += max326_rtc_lowerhalf.c
+endif
+
+# Source Files for the MAX32620 and MAX32630
+
+# Source Files for the MAX32660
+
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_clockconfig.c max32660_lowputc.c max32660_gpio.c
+endif
+
+# Configuration-Dependent Source Files
+
+ifneq ($(CONFIG_SCHED_TICKLESS),y)
+CHIP_CSRCS += max326_timerisr.c
+else
+CHIP_CSRCS += max326_tickless.c
+endif
+
+ifeq ($(CONFIG_BUILD_PROTECTED),y)
+CHIP_CSRCS += max326_userspace.c max326_mpuinit.c
+endif
+
+ifeq ($(CONFIG_MAX326XX_DMA),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_dma.c
+endif
+endif
+
+ifneq ($(CONFIG_ARCH_IDLE_CUSTOM),y)
+CHIP_CSRCS += max326_idle.c
+endif
+
+ifeq ($(CONFIG_MAX326XX_GPIOIRQ),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_gpioirq.c
+endif
+endif
+
+ifeq ($(CONFIG_MAX326XX_RTC),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_rtc.c
+endif
+endif
+
+ifeq ($(CONFIG_MAX32XX_WDT),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_rtc.c
+endif
+ifeq ($(CONFIG_RTC_DRIVER),y)
+CHIP_CSRCS += max326_rtc_lowerhalf.c
+endif
+endif
+
+ifeq ($(CONFIG_MAX326XX_WDOG),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_wdt.c
+endif
+endif
+
+ifeq ($(CONFIG_MAX326XX_RNG),y)
+CHIP_CSRCS += max326_rng.c
+endif
+
+ifeq ($(CONFIG_MAX326XX_HAVE_UART),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_serial.c
+endif
+endif
+
+ifeq ($(CONFIG_MAX326XX_HAVE_I2CM),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+CHIP_CSRCS += max32660_i2cm.c
+endif
+endif
+
+ifeq ($(CONFIG_MAX326XX_HAVE_SPIM),y)
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+ifeq ($(CONFIG_MAX326XX_SPIM0),y)
+CHIP_CSRCS += max32660_spim.c
+endif
+ifeq ($(CONFIG_MAX326XX_SPIM1),y)
+CHIP_CSRCS += max32660_spimssm.c
+endif
+endif
+endif
+
+# Paths to source files
+
+VPATH += chip/common
+
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32620),y)
+VPATH += chip/max32620_30
+else ifeq ($(CONFIG_ARCH_FAMILY_MAX32630),y)
+VPATH += chip/max32620_30
+endif
+ifeq ($(CONFIG_ARCH_FAMILY_MAX32660),y)
+VPATH += chip/max32660
+endif

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <sim>
+
+    <description>TF-G2 Autogyro (YASim)</description>
+    <author>ThunderFly s.r.o.</author>
+    <status>Alpha 0.1</status>
+    <rating>
+      <FDM type="int">2</FDM>
+      <systems type="int">3</systems>
+      <model type="int">2</model>
+      <cockpit type="int">3</cockpit>
+    </rating>
+
+    <flight-model>yasim</flight-model>
+    <aero>TF-G2-yasim</aero>
+
+    <current-view>
+        <view-number type="int">5</view-number>
+    </current-view>
+
+ <chase-distance-m type="double" archive="y">-3.0</chase-distance-m>
+
+
+ <fuel-fraction>0.8</fuel-fraction>
+
+
+ <startup>
+   <splash-texture>Aircraft/TF-G2/splash.png</splash-texture>
+ </startup>
+
+ <sound>
+   <path>Aircraft/TF-G2/Sounds/sound.xml</path>
+ </sound>
+
+ <model>
+   <path>Aircraft/TF-G2/Models/TF-G2.xml</path>
+   <livery>
+     <file type="string">default</file>
+   </livery>
+   <TF-G2>
+     <rotor-step-deg type="float">-1.0</rotor-step-deg>
+   </TF-G2>
+ </model>
+
+ <multiplay>
+   <chat_display>1</chat_display>
+   <generic>
+     <int type="int" n="0">0</int>
+     <int type="int" n="1">0</int>
+     <int type="int" n="2">0</int>
+     <int type="int" n="3">0</int>
+     <int type="int" n="4">0</int>
+     <int type="int" n="5">0</int>
+
+ <float n="0" alias="/position/altitude-agl-ft">0</float>
+
+   </generic>
+ </multiplay>
+
+<flight-recorder>
+ <replay-config type="int">0</replay-config>
+   <config n="0" include="/Aircraft/Generic/flightrecorder/generic-piston-propeller-1.xml">
+   <name type="string">My Aircraft's Flight Recorder</name>
+     <signal>
+         <type>int</type>
+         <property type="string">/rotors/main/rpm</property>
+     </signal>
+
+     <signal>
+       <type>double</type>
+       <property type="string">/rotors/main/tilt/roll-deg</property>
+     </signal>
+
+     <signal>
+       <type>double</type>
+       <property type="string">/rotors/main/tilt/pitch-deg</property>
+     </signal>
+   </config>
+</flight-recorder>
+
+ <help>
+   <key>
+             <name>s</name>
+             <desc>Start Engine</desc>
+         </key>
+   <key>
+             <name>B</name>
+             <desc>Toggle parking brake</desc>
+         </key>
+   <key>
+             <name>r</name>
+             <desc>Apply rotor brake</desc>
+         </key>
+   <key>
+             <name>k</name>
+             <desc>Toggle Look Up</desc>
+         </key>
+   <key>
+             <name>l</name>
+             <desc>Toggle Look Down</desc>
+         </key>
+
+   <title>TF-G2 (Autogyro)</title>
+   <line>   Start And Take Off</line>
+   <line>1:Start engine (S-Key)</line>
+   <line>2:Prerotate rotor to 250 rpm (hold S-Key)</line>
+   <line>3:Release parking-brake ('B'-key)</line>
+   <line>4:Add power to accelerate and pull the stick back 1/3</line>
+   <line>5:Wait to accelerate then add full power</line>
+   <line>6:Wait for the rotor to reach sufficient rpm (~350)</line>
+   <line>7:Use the stick to slowly pull up and fly</line>
+   <line></line>
+   <line>   Landing</line>
+   <line>1:Reduce power to 1/4</line>
+   <line>2:Wait to slow down. Don't force forward pitch.</line>
+   <line>3:When you slow down to 40-50 pitch down and hold ~50kt</line>
+   <line>4:Over the runway round off then reduce power and pitch up a little</line>
+   <line>5:Touch down and wait rotor to slow down somewhat.</line>
+   <line>6:Pull the stick full back to use rotor to slow down.</line>
+   <line></line>
+   <line>   Good to know</line>
+   <line>The rotor accelerates faster the more you pull the stick</line>
+   <line>This aircraft doesn't stall, but the rotor can slow down.</line>
+   <line>The rotor rpm should be kept over 450...</line>
+   <line>Max rotor rpm 600 or 3-G. Max speed 90kts.</line>
+   <line></line>
+   <line>   Warning!</line>
+   <line>Avoid sudden movements. This can cause Pilot Induced Oscillation (PIO).</line>
+ <line>Never force forward pitch. This can cause negative G.</line>
+ <line>Use throttle first, stick later.</line>
+ <line>Avoid flying at zero G! It is dangerous!</line>
+ <line>Negative and zero G can cause a Power Pushover (PPO).</line>
+ </help>
+
+ <hud>
+   <path n="1">Aircraft/TF-G2/Huds/hud.xml</path>
+         <visibility n="1">true</visibility>
+         <enable3d n="1">false</enable3d>
+         <transparent n="1">false</transparent>
+ </hud>
+
+<menubar>
+     <default>
+         <menu n="10">
+             <label>TF-G2 Autogyro</label>
+             <enabled type="bool">true</enabled>
+             <item>
+                 <label>Select Livery</label>
+                 <binding>
+                     <command>nasal</command>
+                     <script>aircraft.livery.dialog.toggle()</script>
+                 </binding>
+             </item>
+
+
+         </menu>
+     </default>
+ </menubar>
+
+ <view n="100">
+    <name>Mast Camera View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y">  1.01  </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -0.2 </z-offset-m> <!--Back-->
+      <default-field-of-view-deg type="double">95</default-field-of-view-deg>
+      <pitch-offset-deg>-25</pitch-offset-deg>
+    </config>
+  </view>
+
+  <view n="0">
+    <name>Pilot View</name>
+    <internal archive="y">true</internal>
+    <config>
+      <x-offset-m archive="y">  0.000 </x-offset-m> <!--right-->
+      <y-offset-m archive="y">  0.4 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -0.253 </z-offset-m> <!--back 0.553-->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg> 76 </default-field-of-view-deg>
+    </config>
+  </view>
+
+ <!--
+
+  <view n="103">
+    <name>Model View</name>
+    <enabled type="bool" userarchive="y">true</enabled>
+    <type>lookat</type>
+    <config>
+      <from-model type="bool">false</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <eye-lat-deg-path>/sim/viewer/eye/latitude-deg</eye-lat-deg-path>
+      <eye-lon-deg-path>/sim/viewer/eye/longitude-deg</eye-lon-deg-path>
+      <eye-alt-ft-path>/sim/viewer/eye/altitude-ft</eye-alt-ft-path>
+      <eye-heading-deg-path>/sim/viewer/eye/heading-deg</eye-heading-deg-path>
+      <eye-pitch-deg-path>/sim/viewer/eye/pitch-deg</eye-pitch-deg-path>
+      <eye-roll-deg-path>/sim/viewer/eye/roll-deg</eye-roll-deg-path>
+      <at-model type="bool">false</at-model>
+      <at-model-idx type="int">0</at-model-idx>
+      <target-lat-deg-path>/sim/viewer/target/latitude-deg</target-lat-deg-path>
+      <target-lon-deg-path>/sim/viewer/target/longitude-deg</target-lon-deg-path>
+      <target-alt-ft-path>/sim/viewer/target/altitude-ft</target-alt-ft-path>
+      <target-heading-deg-path>/sim/viewer/target/heading-deg</target-heading-deg-path>
+      <target-pitch-deg-path>/sim/viewer/target/pitch-deg</target-pitch-deg-path>
+      <target-roll-deg-path>/sim/viewer/target/roll-deg</target-roll-deg-path>
+      <target-x-offset-m type="double">0</target-x-offset-m>
+      <target-y-offset-m type="double">0</target-y-offset-m>
+      <target-z-offset-m type="double">0</target-z-offset-m>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <x-offset-m type="double">0</x-offset-m>
+      <y-offset-m type="double">0</y-offset-m>
+      <z-offset-m type="double">100</z-offset-m>
+      <heading-offset-deg type="double">0</heading-offset-deg>
+      <pitch-offset-deg type="double">0</pitch-offset-deg>
+      <roll-offset-deg type="double">0</roll-offset-deg>
+    </config>
+  </view>
+
+  -->
+
+  <view n="1">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="2">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="3">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="4">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="5">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="6">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <menubar>
+      <default>
+          <menu n="10">
+              <label>TF-G2</label>
+              <enabled type="bool">true</enabled>
+              <item>
+                  <label>Aerotow Settings</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>aerotow_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Winch Settings</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>winch_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Rope Breakage</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>breakage</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Simulation Options</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>options_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Ground services</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>groundservice_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+              <label>Select Livery</label>
+              <binding>
+                  <command>nasal</command>
+                  <script>aircraft.livery.dialog.open()</script>
+              </binding>
+              </item>
+              <item>
+              <label>Select Immatriculation</label>
+              <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>Immatriculation</dialog-name>
+              </binding>
+              </item>
+          </menu>
+      </default>
+  </menubar>
+  <hitches>
+      <!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+      <!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
+              should fix this somehow-->
+      <hook-open type="bool">false</hook-open>
+      <aerotow>
+          <tow>
+              <length type="float">60</length>
+              <elastic-constant type="float">10000</elastic-constant>
+              <weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
+              <dist type="float">1</dist>
+              <connected-to-property-node type="bool"/>
+              <brake-force type="float">100000</brake-force>
+              <connected-to-ai-or-mp-callsign type="string">*</connected-to-ai-or-mp-callsign>
+              <end-force-x type="float">-3.50</end-force-x>
+              <end-force-y type="float">0</end-force-y>
+              <end-force-z type="float">0</end-force-z>
+          </tow>
+          <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+          <open type="bool">true</open>
+          <is-slave type="bool">false</is-slave>
+      </aerotow>
+      <winch>
+          <automatic-release-angle-deg type="float">90.0</automatic-release-angle-deg>
+      </winch>
+  </hitches>
+
+  <rotors>
+    <main>
+      <rpm type="double">400</rpm>
+    </main>
+  </rotors>
+
+  <engines>
+		<engine>
+		  <rpm type="double">900</rpm>
+		</engine>
+  </engines>
+
+	<nasal>
+  	<TF-G2>
+  		<file>Aircraft/TF-G2/Nasal/liveries.nas</file>
+  	</TF-G2>
+
+  	<gyro>
+  		<file>Aircraft/TF-G2/Nasal/gyro.nas</file>
+  	</gyro>
+
+	</nasal>
+
+  </sim>
+
+
+
+  <controls>
+        <breakage>
+            <enabled type="bool">0</enabled><!--Rope Breakage by default disabled-->
+            <altitude-m type="double">50</altitude-m>
+        </breakage>
+        <flight>
+            <rudder2 type="double">0</rudder2>
+        </flight>
+        <gear>
+            <assist-1 type="bool">false</assist-1>
+        </gear>
+        <winch>
+            <place type="bool">false</place>
+        </winch>
+        <aerotow>
+            <find-aircraft type="bool">false</find-aircraft>
+        </aerotow>
+
+        <smoke type="bool">false</smoke>
+
+        <engines>
+          <engine n="0">
+            <magnetos>3</magnetos>
+          </engine>
+        </engines>
+
+        <gear>
+          <brake-parking>1</brake-parking>
+        </gear>
+
+        <lighting>
+          <strobe type="bool">true</strobe>
+          <beacon type="bool">true</beacon>
+          <nav-lights type="bool">true</nav-lights>
+        </lighting>
+
+        <rotor>
+          <reltarget>1</reltarget>
+          <maxreltorque>1</maxreltorque>
+        </rotor>
+
+  </controls>
+
+  <input>
+      <keyboard>
+          <key n="23">
+              <name>Ctrl-w</name>
+              <desc>Place winch in front of aircraft</desc>
+              <binding>
+                  <command>nasal</command>
+                  <script>towing.setWinchPositionAuto()</script>
+              </binding>
+          </key>
+          <key n="87">
+              <name>W</name>
+              <desc>Increase winch speed</desc>
+              <binding>
+                  <command>nasal</command>
+                  <script>
+                      throttle = getprop("/sim/hitches/winch/winch/rel-speed") + 0.05;
+                      if (throttle > 1) throttle = 1;
+                      setprop("/sim/hitches/winch/winch/rel-speed", throttle);
+                      speed = throttle * getprop("/sim/hitches/winch/winch/max-speed-m-s");
+                      force = getprop("/sim/hitches/winch/force");
+                      gui.popupTip(sprintf("Winch throttle %d%%, speed %0.2f m/s, force %0.2f", throttle * 100, speed, force));
+                  </script>
+              </binding>
+          </key>
+          <key n="119">
+              <name>w</name>
+              <desc>Decrease winch speed</desc>
+              <binding>
+                  <command>nasal</command>
+                  <script>
+                      throttle = getprop("/sim/hitches/winch/winch/rel-speed") - 0.05;
+                      if (0 > throttle) throttle = 0;
+                      setprop("/sim/hitches/winch/winch/rel-speed", throttle);
+                      speed = throttle * getprop("/sim/hitches/winch/winch/max-speed-m-s");
+                      force = getprop("/sim/hitches/winch/force");
+                      gui.popupTip(sprintf("Winch throttle %d%%, speed %0.2f m/s, force %0.2f", throttle * 100, speed, force));
+                  </script>
+              </binding>
+          </key>
+          <key n="15">
+              <name>Ctrl-o</name>
+              <desc>Find aircraft for aerotow</desc>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/controls/aerotow/find-aircraft</property>
+                  <value type="bool">true</value>
+              </binding>
+              <mod-up>
+                  <binding>
+                      <command>property-assign</command>
+                      <property>/controls/aerotow/find-aircraft</property>
+                      <value type="bool">false</value>
+                  </binding>
+              </mod-up>
+          </key>
+          <key n="111">
+              <name>o</name>
+              <desc>Open hook</desc>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/sim/hitches/hook-open</property>
+                  <value type="bool">true</value>
+              </binding>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/sim/hitches/aerotow/open</property>
+                  <value type="bool">true</value>
+              </binding>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/sim/hitches/winch/open</property>
+                  <value type="bool">true</value>
+              </binding>
+              <mod-up>
+                  <binding>
+                      <command>property-assign</command>
+                      <property>/sim/hitches/hook-open</property>
+                      <value type="bool">false</value>
+                  </binding>
+              </mod-up>
+
+          </key>
+          <key n="19">
+              <name>Ctrl-s</name>
+              <desc>Start/stop smoke</desc>
+              <binding>
+                  <command>property-toggle</command>
+                  <property>controls/smoke</property>
+              </binding>
+          </key>
+
+          <key n="114">
+          <name>r</name>
+            <desc>Apply rotor brake</desc>
+            <binding>
+              <command>nasal</command>
+              <script>gyro.apply_rotor_brake()</script>
+            </binding>
+            <mod-up>
+            <binding>
+              <command>nasal</command>
+              <script>gyro.release_rotor_brake()</script>
+            </binding>
+            </mod-up>
+          </key>
+
+      </keyboard>
+  </input>
+
+</PropertyList>

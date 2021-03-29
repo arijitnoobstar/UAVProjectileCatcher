@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+	  <model>
+        <name>Compass2</name>
+        <path>Aircraft/TF-G1/Models/Instruments/comp.xml</path>
+        <offsets>
+           <x-m>-0.96</x-m>
+            <y-m>0.00000</y-m>
+            <z-m>0.29</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model> 
+	
+	<model>
+        <name>Airspeed MPH</name>
+        <path>Aircraft/TF-G1/Models/Instruments/asi.xml</path>
+        <offsets>
+            <x-m>-0.955</x-m>
+            <y-m>-0.0374</y-m>
+            <z-m>0.185</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Altimeter</name>
+        <path>Aircraft/TF-G1/Models/Instruments/altimeter.xml</path>
+        <offsets>
+             <x-m>-0.955</x-m>
+            <y-m>0.0374</y-m>
+            <z-m>0.185</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+
+
+    <model>
+        <name>Vertical Speed</name>
+        <path>Aircraft/TF-G1/Models/Instruments/vsi-gauge.xml</path>
+        <offsets>
+            <x-m>-0.955</x-m>
+            <y-m>0.0374</y-m>
+            <z-m>0.11</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>RPM</name>
+        <path>Aircraft/TF-G1/Models/Instruments/rpm-gauge.xml</path>
+        <offsets>
+			<x-m>-0.955</x-m>
+            <y-m>-0.0374</y-m>
+            <z-m>0.11</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+    <model>
+    <name>Fuel</name>
+        <path>Aircraft/TF-G1/Models/Instruments/fuel-g.xml</path>
+        <offsets>
+			<x-m>-0.955</x-m>
+            <y-m>-0.0951</y-m>
+            <z-m>0.15</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+     <model>
+    <name>RPMRotor</name>
+        <path>Aircraft/TF-G1/Models/Instruments/rpmrotor.xml</path>
+        <offsets>
+			<x-m>-0.955</x-m>
+            <y-m>0.0951</y-m>
+            <z-m>0.15</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+    <!-- 3 small -->
+	
+    <model>
+    <name>OilTemp</name>
+        <path>Aircraft/TF-G1/Models/Instruments/temp.xml</path>
+        <offsets>
+			<x-m>-0.955</x-m>
+            <y-m>0.05</y-m>
+            <z-m>0.047</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+	<model>
+    <name>OilTemp</name>
+        <path>Aircraft/TF-G1/Models/Instruments/manifold.xml</path>
+        <offsets>
+			<x-m>-0.955</x-m>
+            <y-m>0.00</y-m>
+            <z-m>0.047</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+	
+	<model>
+    <name>OilPress</name>
+        <path>Aircraft/TF-G1/Models/Instruments/oilpress.xml</path>
+        <offsets>
+			<x-m>-0.955</x-m>
+            <y-m>-0.05</y-m>
+            <z-m>0.047</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+	
+	
+	<model>
+    <name>switchGroup</name>
+        <path>Aircraft/TF-G1/Models/Instruments/switches.xml</path>
+        <offsets>
+			<x-m>-0.9545</x-m>
+            <y-m>0.0</y-m>
+            <z-m>-0.0</z-m>
+               <pitch-deg>0</pitch-deg>
+        </offsets>
+    </model>
+    
+
+<!-- *** LoD *** -->
+  <animation> 
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>100</max-m>
+  </animation>
+  
+</PropertyList>

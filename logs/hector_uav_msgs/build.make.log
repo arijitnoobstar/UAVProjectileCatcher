@@ -1,0 +1,346 @@
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseActionFeedback[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingResult[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseActionFeedback
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_MotorStatus[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingResult
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_MotorStatus
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_YawrateCommand[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_Supply[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_YawrateCommand
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_RawMagnetic[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_Supply
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_ControllerState[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_RawMagnetic
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffActionResult[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_ControllerState
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffGoal[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffActionResult
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffGoal
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_RawImu[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseActionGoal[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_RawImu
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_RC[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseActionGoal
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_RC
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_VelocityXYCommand[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PositionXYCommand[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_VelocityXYCommand
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PositionXYCommand
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseAction[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_HeightCommand[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseAction
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_HeightCommand
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffAction[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_HeadingCommand[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffAction
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_ServoCommand[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_HeadingCommand
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_ServoCommand
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingActionResult[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseGoal[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingActionResult
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_EnableMotors[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseGoal
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingGoal[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_EnableMotors
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingGoal
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseFeedback[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseActionResult[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseFeedback
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_RawRC[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseActionResult
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_Compass[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_RawRC
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingActionGoal[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_Compass
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_PoseResult[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingActionGoal
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffResult[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_PoseResult
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingAction[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffResult
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingActionFeedback[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingAction
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_VelocityZCommand[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingActionFeedback
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_Altimeter[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_VelocityZCommand
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_Altimeter
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_AttitudeCommand[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_LandingFeedback[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_AttitudeCommand
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_LandingFeedback
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffActionFeedback[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_ThrustCommand[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffActionFeedback
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_ThrustCommand
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffActionGoal[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_TakeoffFeedback[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffActionGoal
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_TakeoffFeedback
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_MotorCommand[0m
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_MotorPWM[0m
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_MotorCommand
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_MotorPWM
+[35m[1mScanning dependencies of target _hector_uav_msgs_generate_messages_check_deps_RuddersCommand[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target _hector_uav_msgs_generate_messages_check_deps_RuddersCommand
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  0%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target hector_uav_msgs_generate_messages_py[0m
+[  0%] [34m[1mGenerating Python from MSG hector_uav_msgs/Altimeter[0m
+[35m[1mScanning dependencies of target hector_uav_msgs_generate_messages_lisp[0m
+[  1%] [34m[1mGenerating Lisp code from hector_uav_msgs/Altimeter.msg[0m
+[  1%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffActionGoal.msg[0m
+[  2%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffActionGoal[0m
+[  3%] [34m[1mGenerating Lisp code from hector_uav_msgs/RuddersCommand.msg[0m
+[  3%] [34m[1mGenerating Lisp code from hector_uav_msgs/ThrustCommand.msg[0m
+[  3%] [34m[1mGenerating Lisp code from hector_uav_msgs/ControllerState.msg[0m
+[  3%] [34m[1mGenerating Python from MSG hector_uav_msgs/RuddersCommand[0m
+[  4%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffActionResult.msg[0m
+[35m[1mScanning dependencies of target hector_uav_msgs_generate_messages_cpp[0m
+[  4%] [34m[1mGenerating Lisp code from hector_uav_msgs/RawMagnetic.msg[0m
+[  5%] [34m[1mGenerating C++ code from hector_uav_msgs/Altimeter.msg[0m
+[  6%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingResult.msg[0m
+[  7%] [34m[1mGenerating Python from MSG hector_uav_msgs/ThrustCommand[0m
+[  7%] [34m[1mGenerating Lisp code from hector_uav_msgs/Supply.msg[0m
+[  7%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffActionGoal.msg[0m
+[  8%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseActionFeedback.msg[0m
+[  8%] [34m[1mGenerating Python from MSG hector_uav_msgs/ControllerState[0m
+[  8%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingFeedback.msg[0m
+[  9%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseActionResult.msg[0m
+[ 10%] [34m[1mGenerating C++ code from hector_uav_msgs/RuddersCommand.msg[0m
+[ 10%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffActionResult[0m
+[ 10%] [34m[1mGenerating Lisp code from hector_uav_msgs/RawImu.msg[0m
+[ 11%] [34m[1mGenerating Python from MSG hector_uav_msgs/RawMagnetic[0m
+[ 11%] [34m[1mGenerating Lisp code from hector_uav_msgs/MotorCommand.msg[0m
+[ 11%] [34m[1mGenerating C++ code from hector_uav_msgs/ThrustCommand.msg[0m
+[ 12%] [34m[1mGenerating Lisp code from hector_uav_msgs/HeightCommand.msg[0m
+[ 12%] [34m[1mGenerating C++ code from hector_uav_msgs/ControllerState.msg[0m
+[ 12%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingResult[0m
+[ 12%] [34m[1mGenerating Lisp code from hector_uav_msgs/ServoCommand.msg[0m
+[ 13%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseGoal.msg[0m
+[ 14%] [34m[1mGenerating Python from MSG hector_uav_msgs/Supply[0m
+[ 14%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseActionFeedback[0m
+[ 14%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingActionGoal.msg[0m
+[ 15%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffActionResult.msg[0m
+[ 16%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingGoal.msg[0m
+[ 16%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffAction.msg[0m
+[ 17%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingFeedback[0m
+[ 17%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseActionGoal.msg[0m
+[ 17%] [34m[1mGenerating C++ code from hector_uav_msgs/RawMagnetic.msg[0m
+[35m[1mScanning dependencies of target hector_uav_msgs_generate_messages_eus[0m
+[ 18%] [34m[1mGenerating Lisp code from hector_uav_msgs/MotorStatus.msg[0m
+[ 19%] [34m[1mGenerating EusLisp code from hector_uav_msgs/Altimeter.msg[0m
+[ 19%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseActionResult[0m
+[ 19%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseFeedback.msg[0m
+[ 20%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingResult.msg[0m
+[ 20%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffActionGoal.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from hector_uav_msgs/MotorPWM.msg[0m
+[ 21%] [34m[1mGenerating EusLisp code from hector_uav_msgs/RuddersCommand.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingActionResult.msg[0m
+[ 22%] [34m[1mGenerating Python from MSG hector_uav_msgs/RawImu[0m
+[ 23%] [34m[1mGenerating Lisp code from hector_uav_msgs/RC.msg[0m
+[ 25%] [34m[1mGenerating EusLisp code from hector_uav_msgs/ThrustCommand.msg[0m
+[ 25%] [34m[1mGenerating C++ code from hector_uav_msgs/Supply.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffFeedback.msg[0m
+[ 25%] [34m[1mGenerating Python from MSG hector_uav_msgs/MotorCommand[0m
+[ 25%] [34m[1mGenerating EusLisp code from hector_uav_msgs/ControllerState.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from hector_uav_msgs/HeadingCommand.msg[0m
+[ 26%] [34m[1mGenerating Lisp code from hector_uav_msgs/RawRC.msg[0m
+[ 27%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffActionResult.msg[0m
+[ 27%] [34m[1mGenerating Python from MSG hector_uav_msgs/HeightCommand[0m
+[ 28%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseActionFeedback.msg[0m
+[ 28%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseResult.msg[0m
+[ 29%] [34m[1mGenerating EusLisp code from hector_uav_msgs/RawMagnetic.msg[0m
+[ 29%] [34m[1mGenerating Lisp code from hector_uav_msgs/PoseAction.msg[0m
+[ 30%] [34m[1mGenerating Python from MSG hector_uav_msgs/ServoCommand[0m
+[ 30%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffGoal.msg[0m
+[ 31%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingResult.msg[0m
+[ 31%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingFeedback.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingActionFeedback.msg[0m
+[ 32%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseGoal[0m
+[ 32%] [34m[1mGenerating EusLisp code from hector_uav_msgs/Supply.msg[0m
+[ 32%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffResult.msg[0m
+[ 33%] [34m[1mGenerating Lisp code from hector_uav_msgs/LandingAction.msg[0m
+[ 33%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseActionFeedback.msg[0m
+[ 34%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseActionResult.msg[0m
+[ 35%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingActionGoal[0m
+[ 35%] [34m[1mGenerating Lisp code from hector_uav_msgs/VelocityZCommand.msg[0m
+[ 36%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingFeedback.msg[0m
+[ 36%] [34m[1mGenerating Lisp code from hector_uav_msgs/VelocityXYCommand.msg[0m
+[ 37%] [34m[1mGenerating Lisp code from hector_uav_msgs/PositionXYCommand.msg[0m
+[ 37%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingGoal[0m
+[ 37%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseActionResult.msg[0m
+[ 37%] [34m[1mGenerating C++ code from hector_uav_msgs/RawImu.msg[0m
+[ 37%] [34m[1mGenerating Lisp code from hector_uav_msgs/YawrateCommand.msg[0m
+[ 38%] [34m[1mGenerating EusLisp code from hector_uav_msgs/RawImu.msg[0m
+[ 39%] [34m[1mGenerating Lisp code from hector_uav_msgs/Compass.msg[0m
+[ 40%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffAction[0m
+[ 40%] [34m[1mGenerating Lisp code from hector_uav_msgs/TakeoffActionFeedback.msg[0m
+[ 40%] [34m[1mGenerating EusLisp code from hector_uav_msgs/MotorCommand.msg[0m
+[ 41%] [34m[1mGenerating Lisp code from hector_uav_msgs/AttitudeCommand.msg[0m
+[ 41%] [34m[1mGenerating C++ code from hector_uav_msgs/MotorCommand.msg[0m
+[ 41%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseActionGoal[0m
+[ 42%] [34m[1mGenerating EusLisp code from hector_uav_msgs/HeightCommand.msg[0m
+[ 42%] [34m[1mGenerating Lisp code from hector_uav_msgs/EnableMotors.srv[0m
+[ 42%] [34m[1mGenerating EusLisp code from hector_uav_msgs/ServoCommand.msg[0m
+[ 42%] Built target hector_uav_msgs_generate_messages_lisp
+[ 42%] [34m[1mGenerating Python from MSG hector_uav_msgs/MotorStatus[0m
+[35m[1mScanning dependencies of target hector_uav_msgs_generate_messages_nodejs[0m
+[ 43%] [34m[1mGenerating C++ code from hector_uav_msgs/HeightCommand.msg[0m
+[ 44%] [34m[1mGenerating Javascript code from hector_uav_msgs/Altimeter.msg[0m
+[ 45%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseGoal.msg[0m
+[ 45%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffActionGoal.msg[0m
+[ 46%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseFeedback[0m
+[ 46%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingActionGoal.msg[0m
+[ 46%] [34m[1mGenerating Javascript code from hector_uav_msgs/RuddersCommand.msg[0m
+[ 46%] [34m[1mGenerating C++ code from hector_uav_msgs/ServoCommand.msg[0m
+[ 47%] [34m[1mGenerating Javascript code from hector_uav_msgs/ThrustCommand.msg[0m
+[ 47%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingGoal.msg[0m
+[ 47%] [34m[1mGenerating Python from MSG hector_uav_msgs/MotorPWM[0m
+[ 47%] [34m[1mGenerating Javascript code from hector_uav_msgs/ControllerState.msg[0m
+[ 48%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffActionResult.msg[0m
+[ 50%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffAction.msg[0m
+[ 51%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseGoal.msg[0m
+[ 52%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingActionResult[0m
+[ 52%] [34m[1mGenerating Javascript code from hector_uav_msgs/RawMagnetic.msg[0m
+[ 52%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseActionGoal.msg[0m
+[ 53%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingResult.msg[0m
+[ 54%] [34m[1mGenerating EusLisp code from hector_uav_msgs/MotorStatus.msg[0m
+[ 54%] [34m[1mGenerating Javascript code from hector_uav_msgs/Supply.msg[0m
+[ 54%] [34m[1mGenerating Python from MSG hector_uav_msgs/RC[0m
+[ 54%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingActionGoal.msg[0m
+[ 54%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseActionFeedback.msg[0m
+[ 54%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseFeedback.msg[0m
+[ 55%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingFeedback.msg[0m
+[ 56%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffFeedback[0m
+[ 57%] [34m[1mGenerating EusLisp code from hector_uav_msgs/MotorPWM.msg[0m
+[ 57%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseActionResult.msg[0m
+[ 58%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingGoal.msg[0m
+[ 59%] [34m[1mGenerating Javascript code from hector_uav_msgs/RawImu.msg[0m
+[ 59%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingActionResult.msg[0m
+[ 59%] [34m[1mGenerating Python from MSG hector_uav_msgs/HeadingCommand[0m
+[ 59%] [34m[1mGenerating Javascript code from hector_uav_msgs/MotorCommand.msg[0m
+[ 59%] [34m[1mGenerating EusLisp code from hector_uav_msgs/RC.msg[0m
+[ 60%] [34m[1mGenerating Python from MSG hector_uav_msgs/RawRC[0m
+[ 61%] [34m[1mGenerating Javascript code from hector_uav_msgs/HeightCommand.msg[0m
+[ 61%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffAction.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffFeedback.msg[0m
+[ 62%] [34m[1mGenerating Javascript code from hector_uav_msgs/ServoCommand.msg[0m
+[ 62%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseGoal.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from hector_uav_msgs/HeadingCommand.msg[0m
+[ 62%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseResult[0m
+[ 62%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseActionGoal.msg[0m
+[ 63%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingActionGoal.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from hector_uav_msgs/RawRC.msg[0m
+[ 64%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingGoal.msg[0m
+[ 64%] [34m[1mGenerating Python from MSG hector_uav_msgs/PoseAction[0m
+[ 65%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffAction.msg[0m
+[ 65%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseResult.msg[0m
+[ 66%] [34m[1mGenerating C++ code from hector_uav_msgs/MotorStatus.msg[0m
+[ 66%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseActionGoal.msg[0m
+[ 67%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffGoal[0m
+[ 68%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PoseAction.msg[0m
+[ 69%] [34m[1mGenerating Javascript code from hector_uav_msgs/MotorStatus.msg[0m
+[ 69%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseFeedback.msg[0m
+[ 69%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseFeedback.msg[0m
+[ 69%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffGoal.msg[0m
+[ 69%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingActionFeedback[0m
+[ 70%] [34m[1mGenerating Javascript code from hector_uav_msgs/MotorPWM.msg[0m
+[ 70%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingActionResult.msg[0m
+[ 70%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingActionFeedback.msg[0m
+[ 70%] [34m[1mGenerating Javascript code from hector_uav_msgs/RC.msg[0m
+[ 71%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffResult[0m
+[ 72%] [34m[1mGenerating C++ code from hector_uav_msgs/MotorPWM.msg[0m
+[ 73%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffResult.msg[0m
+[ 75%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffFeedback.msg[0m
+[ 75%] [34m[1mGenerating Javascript code from hector_uav_msgs/HeadingCommand.msg[0m
+[ 75%] [34m[1mGenerating EusLisp code from hector_uav_msgs/LandingAction.msg[0m
+[ 75%] [34m[1mGenerating Python from MSG hector_uav_msgs/LandingAction[0m
+[ 76%] [34m[1mGenerating Javascript code from hector_uav_msgs/RawRC.msg[0m
+[ 76%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingActionResult.msg[0m
+[ 77%] [34m[1mGenerating EusLisp code from hector_uav_msgs/VelocityZCommand.msg[0m
+[ 77%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseResult.msg[0m
+[ 78%] [34m[1mGenerating Python from MSG hector_uav_msgs/VelocityZCommand[0m
+[ 79%] [34m[1mGenerating Javascript code from hector_uav_msgs/PoseAction.msg[0m
+[ 79%] [34m[1mGenerating EusLisp code from hector_uav_msgs/VelocityXYCommand.msg[0m
+[ 80%] [34m[1mGenerating C++ code from hector_uav_msgs/RC.msg[0m
+[ 80%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffGoal.msg[0m
+[ 81%] [34m[1mGenerating EusLisp code from hector_uav_msgs/PositionXYCommand.msg[0m
+[ 81%] [34m[1mGenerating Python from MSG hector_uav_msgs/VelocityXYCommand[0m
+[ 81%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingActionFeedback.msg[0m
+[ 81%] [34m[1mGenerating EusLisp code from hector_uav_msgs/YawrateCommand.msg[0m
+[ 82%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffResult.msg[0m
+[ 82%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffFeedback.msg[0m
+[ 82%] [34m[1mGenerating Python from MSG hector_uav_msgs/PositionXYCommand[0m
+[ 82%] [34m[1mGenerating Javascript code from hector_uav_msgs/LandingAction.msg[0m
+[ 83%] [34m[1mGenerating Python from MSG hector_uav_msgs/YawrateCommand[0m
+[ 84%] [34m[1mGenerating EusLisp code from hector_uav_msgs/Compass.msg[0m
+[ 85%] [34m[1mGenerating Javascript code from hector_uav_msgs/VelocityZCommand.msg[0m
+[ 85%] [34m[1mGenerating EusLisp code from hector_uav_msgs/TakeoffActionFeedback.msg[0m
+[ 86%] [34m[1mGenerating C++ code from hector_uav_msgs/HeadingCommand.msg[0m
+[ 86%] [34m[1mGenerating Javascript code from hector_uav_msgs/VelocityXYCommand.msg[0m
+[ 86%] [34m[1mGenerating EusLisp code from hector_uav_msgs/AttitudeCommand.msg[0m
+[ 86%] [34m[1mGenerating Python from MSG hector_uav_msgs/Compass[0m
+[ 87%] [34m[1mGenerating Javascript code from hector_uav_msgs/PositionXYCommand.msg[0m
+[ 87%] [34m[1mGenerating Javascript code from hector_uav_msgs/YawrateCommand.msg[0m
+[ 88%] [34m[1mGenerating EusLisp code from hector_uav_msgs/EnableMotors.srv[0m
+[ 88%] [34m[1mGenerating EusLisp manifest code for hector_uav_msgs[0m
+[ 89%] [34m[1mGenerating Javascript code from hector_uav_msgs/Compass.msg[0m
+[ 90%] [34m[1mGenerating Python from MSG hector_uav_msgs/TakeoffActionFeedback[0m
+[ 90%] [34m[1mGenerating C++ code from hector_uav_msgs/RawRC.msg[0m
+[ 90%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseResult.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from hector_uav_msgs/TakeoffActionFeedback.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from hector_uav_msgs/AttitudeCommand.msg[0m
+[ 90%] [34m[1mGenerating Python from MSG hector_uav_msgs/AttitudeCommand[0m
+[ 91%] [34m[1mGenerating Javascript code from hector_uav_msgs/EnableMotors.srv[0m
+[ 92%] [34m[1mGenerating Python code from SRV hector_uav_msgs/EnableMotors[0m
+[ 92%] Built target hector_uav_msgs_generate_messages_nodejs
+[ 93%] [34m[1mGenerating C++ code from hector_uav_msgs/PoseAction.msg[0m
+[ 93%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffGoal.msg[0m
+[ 94%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingActionFeedback.msg[0m
+[ 94%] [34m[1mGenerating Python msg __init__.py for hector_uav_msgs[0m
+[ 95%] [34m[1mGenerating Python srv __init__.py for hector_uav_msgs[0m
+[ 95%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffResult.msg[0m
+[ 96%] [34m[1mGenerating C++ code from hector_uav_msgs/LandingAction.msg[0m
+[ 96%] [34m[1mGenerating C++ code from hector_uav_msgs/VelocityZCommand.msg[0m
+[ 96%] Built target hector_uav_msgs_generate_messages_py
+[ 96%] [34m[1mGenerating C++ code from hector_uav_msgs/VelocityXYCommand.msg[0m
+[ 96%] [34m[1mGenerating C++ code from hector_uav_msgs/YawrateCommand.msg[0m
+[ 97%] [34m[1mGenerating C++ code from hector_uav_msgs/PositionXYCommand.msg[0m
+[ 98%] [34m[1mGenerating C++ code from hector_uav_msgs/Compass.msg[0m
+[ 98%] Built target hector_uav_msgs_generate_messages_eus
+[ 98%] [34m[1mGenerating C++ code from hector_uav_msgs/TakeoffActionFeedback.msg[0m
+[100%] [34m[1mGenerating C++ code from hector_uav_msgs/AttitudeCommand.msg[0m
+[100%] [34m[1mGenerating C++ code from hector_uav_msgs/EnableMotors.srv[0m
+[100%] Built target hector_uav_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target hector_uav_msgs_generate_messages[0m
+[100%] Built target hector_uav_msgs_generate_messages

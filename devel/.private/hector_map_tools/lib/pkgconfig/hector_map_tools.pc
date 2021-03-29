@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_map_tools
+
+Name: hector_map_tools
+Description: Description of hector_map_tools
+Version: 0.3.5
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/src/src/hector_slam/hector_map_tools/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: nav_msgs

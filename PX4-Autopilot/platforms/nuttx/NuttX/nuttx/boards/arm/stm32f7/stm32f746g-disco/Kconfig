@@ -1,0 +1,20 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+if ARCH_BOARD_STM32F746G_DISCO
+
+config STM32F746GDISCO_FLASH
+	bool "MTD driver for external 16Mbyte N25Q128A FLASH on QSPI port"
+	default n
+	select MTD
+	select MTD_N25QXXX
+	select MTD_SMART
+	select FS_SMARTFS
+	select STM32F7_QUADSPI
+	select MTD_BYTE_WRITE
+	---help---
+		Configures an MTD device for use with the onboard flash
+
+endif # ARCH_BOARD_STM32F746G_DISCO

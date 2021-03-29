@@ -1,0 +1,34 @@
+[35m[1mScanning dependencies of target _hector_mapping_generate_messages_check_deps_HectorDebugInfo[0m
+[  0%] Built target _hector_mapping_generate_messages_check_deps_HectorDebugInfo
+[35m[1mScanning dependencies of target _hector_mapping_generate_messages_check_deps_HectorIterData[0m
+[  0%] Built target _hector_mapping_generate_messages_check_deps_HectorIterData
+[35m[1mScanning dependencies of target hector_mapping_generate_messages_cpp[0m
+[  6%] [34m[1mGenerating C++ code from hector_mapping/HectorDebugInfo.msg[0m
+[ 12%] [34m[1mGenerating C++ code from hector_mapping/HectorIterData.msg[0m
+[ 12%] Built target hector_mapping_generate_messages_cpp
+[35m[1mScanning dependencies of target hector_mapping_generate_messages_lisp[0m
+[ 18%] [34m[1mGenerating Lisp code from hector_mapping/HectorDebugInfo.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from hector_mapping/HectorIterData.msg[0m
+[ 25%] Built target hector_mapping_generate_messages_lisp
+[35m[1mScanning dependencies of target hector_mapping_generate_messages_nodejs[0m
+[ 31%] [34m[1mGenerating Javascript code from hector_mapping/HectorDebugInfo.msg[0m
+[ 37%] [34m[1mGenerating Javascript code from hector_mapping/HectorIterData.msg[0m
+[ 37%] Built target hector_mapping_generate_messages_nodejs
+[35m[1mScanning dependencies of target hector_mapping_generate_messages_eus[0m
+[ 43%] [34m[1mGenerating EusLisp code from hector_mapping/HectorDebugInfo.msg[0m
+[ 50%] [34m[1mGenerating EusLisp code from hector_mapping/HectorIterData.msg[0m
+[ 56%] [34m[1mGenerating EusLisp manifest code for hector_mapping[0m
+[ 56%] Built target hector_mapping_generate_messages_eus
+[35m[1mScanning dependencies of target hector_mapping_generate_messages_py[0m
+[ 62%] [34m[1mGenerating Python from MSG hector_mapping/HectorDebugInfo[0m
+[ 68%] [34m[1mGenerating Python from MSG hector_mapping/HectorIterData[0m
+[ 75%] [34m[1mGenerating Python msg __init__.py for hector_mapping[0m
+[ 75%] Built target hector_mapping_generate_messages_py
+[35m[1mScanning dependencies of target hector_mapping[0m
+[35m[1mScanning dependencies of target hector_mapping_generate_messages[0m
+[ 75%] Built target hector_mapping_generate_messages
+[ 81%] [32mBuilding CXX object CMakeFiles/hector_mapping.dir/src/HectorMappingRos.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/hector_mapping.dir/src/main.cpp.o[0m
+[ 93%] [32mBuilding CXX object CMakeFiles/hector_mapping.dir/src/PoseInfoContainer.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_mapping/lib/hector_mapping/hector_mapping[0m
+[100%] Built target hector_mapping

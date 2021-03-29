@@ -1,0 +1,37 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid add_point(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:36:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kx[m[K’; did you mean ‘[01m[Kpx[m[K’?
+   point_t temp_point_t(pt.[01;31m[Kx[m[K,pt.y,pt.z,t_0);
+                           [01;31m[K^[m[K
+                           [32m[Kpx[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:36:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Ky[m[K’
+   point_t temp_point_t(pt.x,pt.[01;31m[Ky[m[K,pt.z,t_0);
+                                [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:36:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kz[m[K’
+   point_t temp_point_t(pt.x,pt.y,pt.[01;31m[Kz[m[K,t_0);
+                                     [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:39:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kx[m[K’; did you mean ‘[01m[Kpx[m[K’?
+   point_t temp_point_t(pt.[01;31m[Kx[m[K,pt.y,pt.z,ros::Time::now().toSec() - t_0);
+                           [01;31m[K^[m[K
+                           [32m[Kpx[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:39:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Ky[m[K’
+   point_t temp_point_t(pt.x,pt.[01;31m[Ky[m[K,pt.z,ros::Time::now().toSec() - t_0);
+                                [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:39:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kz[m[K’
+   point_t temp_point_t(pt.x,pt.y,pt.[01;31m[Kz[m[K,ros::Time::now().toSec() - t_0);
+                                     [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:41:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp_point_t[m[K’ was not declared in this scope
+  PoseData.push_front([01;31m[Ktemp_point_t[m[K);
+                      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:41:22:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpoint_t[m[K’
+  PoseData.push_front([01;36m[Ktemp_point_t[m[K);
+                      [01;36m[K^~~~~~~~~~~~[m[K
+                      [32m[Kpoint_t[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:50:2:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+  [01;31m[K}[m[K
+  [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:50:2:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning 'void' [[01;31m[K-fpermissive[m[K]
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:50:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

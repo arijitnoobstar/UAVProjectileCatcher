@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>panel.ac</path>
+
+    <model>
+      <path>Aircraft/TF-R1/Models/Instruments/fuel/fuelgauge.xml</path>
+      <offsets>
+        <x-m>1.44</x-m>
+        <y-m>-0.237</y-m>
+        <z-m>1.04</z-m>
+      </offsets>
+    </model>
+	<model>
+      <path>Aircraft/TF-R1/Models/Instruments/speedometer/speedometer.xml</path>
+      <offsets>
+        <x-m>1.44</x-m>
+        <y-m>-0.131</y-m>
+        <z-m>1.024</z-m>
+      </offsets>
+    </model>
+    <model>
+      <path>Aircraft/TF-R1/Models/Instruments/current/current.xml</path>
+      <offsets>
+        <x-m>1.44</x-m>
+        <y-m>-0.025</y-m>
+        <z-m>1.04</z-m>
+      </offsets>
+    </model>
+<!--
+    <model>
+      <path>Aircraft/jeep/Models/Instruments/oiltemp/oiltemp.xml</path>
+      <offsets>
+        <x-m>1.44</x-m>
+        <y-m>-0.053</y-m>
+        <z-m>0.964</z-m>
+      </offsets>
+    </model>
+    <model>
+      <path>Aircraft/jeep/Models/Instruments/oiltemp/oiltemp.xml</path>
+      <offsets>
+        <x-m>1.44</x-m>
+        <y-m>-0.213</y-m>
+        <z-m>0.964</z-m>
+      </offsets>
+    </model>
+-->
+ <animation>
+  <type>translate</type>
+  <object-name>light.sw</object-name>
+  <property>sim/rendering/als-secondary-lights/use-landing-light</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>0.01</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.016</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+    <type>pick</type>
+ 		 <object-name>light.sw</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+    <binding>
+     <command>property-toggle</command>
+     <property>sim/rendering/als-secondary-lights/use-landing-light</property>
+    </binding>
+    <mod-up>
+     <binding>
+     <command>property-toggle</command>
+     <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+     </binding>
+    </mod-up>
+    </action>
+ </animation>
+
+</PropertyList>

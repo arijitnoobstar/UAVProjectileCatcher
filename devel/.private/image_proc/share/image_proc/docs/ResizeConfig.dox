@@ -1,0 +1,11 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~interpolation" : \b [int] Interpolation algorithm between source image pixels min: 0, default: 1, max: 4
+- \b "~use_scale" : \b [bool] Flag to use scale instead of static size. min: False, default: True, max: True
+- \b "~scale_height" : \b [double] Scale of height. min: 0.0, default: 1.0, max: 10.0
+- \b "~scale_width" : \b [double] Scale of width min: 0.0, default: 1.0, max: 10.0
+- \b "~height" : \b [int] Destination height. Ignored if negative. min: -1, default: -1, max: 2147483647
+- \b "~width" : \b [int] Destination width. Ignored if negative. min: -1, default: -1, max: 2147483647
+

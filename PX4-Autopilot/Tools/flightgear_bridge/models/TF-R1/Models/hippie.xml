@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+      <name>sparewheel.R</name>
+      <offsets>
+        <x-m>3.464</x-m>
+        <y-m>0.332</y-m>
+        <z-m>1.0</z-m>
+        <pitch-deg>-1.55</pitch-deg>
+        <heading-deg>-90</heading-deg>
+      </offsets>
+  </model>
+
+
+
+</PropertyList>

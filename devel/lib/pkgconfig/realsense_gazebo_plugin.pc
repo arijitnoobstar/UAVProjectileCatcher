@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense_gazebo_plugin/lib/pkgconfig/realsense_gazebo_plugin.pc

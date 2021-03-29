@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/install
+
+Name: hector_gazebo_thermal_camera
+Description: Description of hector_gazebo_thermal_camera
+Version: 0.5.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: gazebo_plugins

@@ -1,0 +1,7 @@
+qmake: could not find a Qt installation of ''
+[31m[1mCMake Error[0m at /usr/share/cmake-3.10/Modules/FindQt4.cmake:1320 (message):
+  Found unsuitable Qt version "" from NOTFOUND, this code requires Qt 4.x
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:12 (find_package)
+
+

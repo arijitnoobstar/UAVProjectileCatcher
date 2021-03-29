@@ -1,0 +1,60 @@
+############################################################################
+# fs/littlefs/Make.defs
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.  The
+# ASF licenses this file to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance with the
+# License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+############################################################################
+
+ifeq ($(CONFIG_FS_LITTLEFS),y)
+# Files required for littlefs file system support
+
+CSRCS += lfs_vfs.c
+
+DEPPATH += --dep-path littlefs
+VPATH += :littlefs
+
+CSRCS += lfs.c lfs_util.c
+
+DEPPATH += --dep-path littlefs/littlefs
+VPATH += :littlefs/littlefs
+
+ifneq ($(CONFIG_DEBUG_FS_INFO),y)
+  CFLAGS += -DLFS_NO_DEBUG
+endif
+
+ifneq ($(CONFIG_DEBUG_FS_WARN),y)
+  CFLAGS += -DLFS_NO_WARN
+endif
+
+LITTLEFS_VERSION ?= 2.2.1
+LITTLEFS_TARBALL = v$(LITTLEFS_VERSION).tar.gz
+
+$(LITTLEFS_TARBALL):
+	$(Q) wget -P littlefs https://github.com/ARMmbed/littlefs/archive/$(LITTLEFS_TARBALL)
+
+.littlefsunpack: $(LITTLEFS_TARBALL)
+	$(Q) tar zxf littlefs/$(LITTLEFS_TARBALL) -C littlefs
+	$(Q) mv littlefs/littlefs-$(LITTLEFS_VERSION) littlefs/littlefs
+	$(Q) touch littlefs/.littlefsunpack
+
+context:: .littlefsunpack
+
+distclean::
+	$(call DELFILE, littlefs/.littlefsunpack)
+	$(call DELFILE, littlefs/$(LITTLEFS_TARBALL))
+	$(call DELDIR, littlefs/littlefs)
+
+endif

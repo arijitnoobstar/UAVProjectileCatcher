@@ -1,0 +1,5 @@
+<launch>
+<rosparam command="load" file="$(find drone_ball_catcher)/config/ball_colour.yaml" />
+<node name = "ball_locator_node" pkg="drone_ball_catcher" type="ball_locator" output = "screen" /> 
+<node name = "filtered_image_node" pkg="drone_ball_catcher" type="ball_image_filter" output = "screen" /> 
+</launch>

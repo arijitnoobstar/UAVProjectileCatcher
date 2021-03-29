@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_xacro_tools
+
+Name: hector_xacro_tools
+Description: Description of hector_xacro_tools
+Version: 0.5.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

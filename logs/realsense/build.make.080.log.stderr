@@ -1,0 +1,42 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:21:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kconst[m[K’
+ [01;31m[Kconst[m[K double TIME_STEP = 0.1 // in seconds
+ [01;31m[K^~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:28:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kconst[m[K’
+ [01;31m[Kconst[m[K double AIR_DENSITY = 1.225 // in kg/m^3
+ [01;31m[K^~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid predict_trajectory()[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:89:21:[m[K [01;31m[Kerror: [m[K‘[01m[KMAX_TIME_PATH_PLANNING[m[K’ was not declared in this scope
+  double max_count = [01;31m[KMAX_TIME_PATH_PLANNING[m[K / TIME_STEP;
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:89:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTIME_STEP[m[K’ was not declared in this scope
+  double max_count = MAX_TIME_PATH_PLANNING / [01;31m[KTIME_STEP[m[K;
+                                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:89:46:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KTIME_UTC[m[K’
+  double max_count = MAX_TIME_PATH_PLANNING / [01;36m[KTIME_STEP[m[K;
+                                              [01;36m[K^~~~~~~~~[m[K
+                                              [32m[KTIME_UTC[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:96:16:[m[K [01;31m[Kerror: [m[K‘[01m[KAIR_DENSITY[m[K’ was not declared in this scope
+   drag = 0.5 * [01;31m[KAIR_DENSITY[m[K * DRAG_COEF * pow(mag_V, 2) * PI * pow(BALL_DIAMETER / 2, 2);
+                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:96:30:[m[K [01;31m[Kerror: [m[K‘[01m[KDRAG_COEF[m[K’ was not declared in this scope
+   drag = 0.5 * AIR_DENSITY * [01;31m[KDRAG_COEF[m[K * pow(mag_V, 2) * PI * pow(BALL_DIAMETER / 2, 2);
+                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:96:58:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+   drag = 0.5 * AIR_DENSITY * DRAG_COEF * pow(mag_V, 2) * [01;31m[KPI[m[K * pow(BALL_DIAMETER / 2, 2);
+                                                          [01;31m[K^~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:97:19:[m[K [01;31m[Kerror: [m[K‘[01m[KMASS[m[K’ was not declared in this scope
+   a_x = - (drag / [01;31m[KMASS[m[K) * sin(phi) * cos(theta);
+                   [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:98:9:[m[K [01;31m[Kerror: [m[K‘[01m[KG[m[K’ was not declared in this scope
+   a_y = [01;31m[KG[m[K - (drag / MASS) * sin(phi) * sin(theta);
+         [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:109:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgoal_type[m[K’ was not declared in this scope
+   if ([01;31m[Kgoal_type[m[K == "plane_fixed"){
+       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:109:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kdecltype[m[K’
+   if ([01;36m[Kgoal_type[m[K == "plane_fixed"){
+       [01;36m[K^~~~~~~~~[m[K
+       [32m[Kdecltype[m[K
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

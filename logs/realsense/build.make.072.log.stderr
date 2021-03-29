@@ -1,0 +1,9 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:56:2:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+  [01;31m[K}[m[K
+  [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:56:2:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning 'void' [[01;31m[K-fpermissive[m[K]
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:56:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

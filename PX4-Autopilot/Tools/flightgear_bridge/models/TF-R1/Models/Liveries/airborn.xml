@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <view n="100">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="101">
+      <enabled type="bool">true</enabled>
+    </view>
+    <model>
+      <livery>
+        <name type="string">Brit. Airborn Jeep</name>
+        <default>0</default>
+        <screen>0</screen>
+        <grille>0</grille>
+        <roof>0</roof>
+        <canister>0</canister>
+        <spare>0</spare>
+        <bumperends>0</bumperends>
+        <tools>0</tools>
+        <screenstops>0</screenstops>
+        <carrierframe>1</carrierframe>
+        <texture>Liveries/jeep-1d.png</texture>
+        <texture-roof>Liveries/softroof-a.png</texture-roof>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

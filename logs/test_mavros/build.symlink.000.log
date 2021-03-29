@@ -1,0 +1,5 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/libmavros_sitl_test.so
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/test_mavros/sitl_test_node
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/test_mavros.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/test_mavros/cmake/test_mavrosConfig.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/test_mavros/cmake/test_mavrosConfig-version.cmake

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+      <name>sparewheel.R</name>
+      <offsets>
+        <x-m>3.464</x-m>
+        <y-m>0.332</y-m>
+        <z-m>1.05</z-m>
+        <pitch-deg>-1.55</pitch-deg>
+        <heading-deg>-90</heading-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/canister.ac</path>
+    <name>rearcan</name>
+    <nopreview/>
+    <offsets>
+      <x-m>3.39</x-m>
+      <y-m>-0.35</y-m>
+      <z-m>0.79</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/axe.ac</path>
+    <name>axe</name>
+    <nopreview/>
+    <offsets>
+      <x-m>1.715</x-m>
+      <y-m>-0.762</y-m>
+      <z-m>0.649</z-m>
+      <heading-deg>-2.77</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/shovel.ac</path>
+    <name>shovel</name>
+    <nopreview/>
+    <offsets>
+      <x-m>1.481</x-m>
+      <y-m>-0.713</y-m>
+      <z-m>0.74</z-m>
+      <heading-deg>-3.149</heading-deg>
+    </offsets>
+  </model>
+
+
+</PropertyList>

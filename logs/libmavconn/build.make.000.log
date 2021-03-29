@@ -1,0 +1,8 @@
+[35m[1mScanning dependencies of target mavconn[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/mavconn.dir/src/serial.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/mavconn.dir/catkin_generated/src/mavlink_helpers.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mavconn.dir/src/interface.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/mavconn.dir/src/tcp.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/mavconn.dir/src/udp.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/libmavconn/lib/libmavconn.so[0m
+[100%] Built target mavconn

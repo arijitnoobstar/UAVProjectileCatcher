@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_mapping/share/gennodejs/ros/hector_mapping/_index.js

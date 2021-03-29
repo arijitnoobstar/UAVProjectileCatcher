@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24f7d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_24f7d.dir/build.make CMakeFiles/cmTC_24f7d.dir/build
+make[1]: Entering directory '/home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24f7d.dir/CheckSymbolExists.c.o
+/usr/bin/cc -DcmTC_24f7d_EXPORTS  -fPIE   -o CMakeFiles/cmTC_24f7d.dir/CheckSymbolExists.c.o   -c /home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_24f7d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24f7d.dir/link.txt --verbose=1
+/usr/bin/cc      -Wl,--export-dynamic -rdynamic CMakeFiles/cmTC_24f7d.dir/CheckSymbolExists.c.o  -o cmTC_24f7d 
+CMakeFiles/cmTC_24f7d.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_24f7d.dir/build.make:97: recipe for target 'cmTC_24f7d' failed
+make[1]: *** [cmTC_24f7d] Error 1
+make[1]: Leaving directory '/home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_24f7d/fast' failed
+make: *** [cmTC_24f7d/fast] Error 2
+
+File /home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c129a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c129a.dir/build.make CMakeFiles/cmTC_c129a.dir/build
+make[1]: Entering directory '/home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c129a.dir/CheckFunctionExists.c.o
+/usr/bin/cc -DcmTC_c129a_EXPORTS  -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE   -o CMakeFiles/cmTC_c129a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c129a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c129a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -Wl,--export-dynamic -rdynamic CMakeFiles/cmTC_c129a.dir/CheckFunctionExists.c.o  -o cmTC_c129a -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c129a.dir/build.make:97: recipe for target 'cmTC_c129a' failed
+make[1]: *** [cmTC_c129a] Error 1
+make[1]: Leaving directory '/home/arijitnoobstar/UAVProjectileCatcher/build/px4/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c129a/fast' failed
+make: *** [cmTC_c129a/fast] Error 2
+
+

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!-- Version: 2016-12-27 -->
+<PropertyList>
+    <name>groundservice_dialog</name>
+    <layout>vbox</layout>
+    <default-padding>5</default-padding>
+    <modal>false</modal>
+    <width>250</width>
+    <!-- title bar -->
+    <group>
+        <layout>hbox</layout>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <text>
+            <label>Ground Services</label>
+        </text>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <button>
+            <legend/>
+            <key>Esc</key>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <border>2</border>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+    <hrule/>
+    <layout>hbox</layout>
+    <empty>
+        <stretch>true</stretch>
+    </empty>
+    <checkbox>
+        <enable>
+            <and>
+                <less-than>
+                    <property>velocities/groundspeed-kt</property>
+                    <value>15</value>
+                </less-than>
+                <property>gear/gear[1]/wow</property>
+            </and>
+        </enable>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Wing holder</label>
+        <property>/controls/gear/assist-1</property>
+        <live>true</live><!--
+        <binding>
+        <command>dialog-apply</command>
+        </binding>-->
+        <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/assist-1</property>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <checkbox>
+        <enable>
+            <and>
+                <less-than>
+                    <property>velocities/groundspeed-kt</property>
+                    <value>20</value>
+                </less-than>
+                <property>gear/gear[1]/wow</property>
+            </and>
+        </enable>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Ground handling</label>
+        <property>/controls/ground-handling</property>
+        <live>true</live><!--
+        <binding>
+            <command>dialog-apply</command>
+        </binding>-->
+        <binding>
+            <command>property-toggle</command>
+            <property>/controls/ground-handling</property>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <!-- bottom line -->
+    <group>
+        <layout>hbox</layout>
+        <row>2</row>
+        <col>1</col>
+        <label>For more information, see Aircraft Help</label>
+    </group>
+    <group>
+        <layout>hbox</layout>
+        <button>
+            <legend>Aircraft Help</legend>
+            <equal>true</equal>
+            <default>true</default>
+            <key>?</key>
+            <name>aircraft-keys</name>
+            <halign>center</halign>
+            <binding>
+                    <command>nasal</command>
+                    <script>gui.showHelpDialog("/sim/help")</script>
+            </binding>
+        </button>
+    </group>
+</PropertyList>

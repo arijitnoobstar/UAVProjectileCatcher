@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros_msgs
+
+Name: mavros_msgs
+Description: Description of mavros_msgs
+Version: 1.5.1
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros_msgs/include -I/home/arijitnoobstar/UAVProjectileCatcher/src/mavros/mavros_msgs/include
+Libs: -L${prefix}/lib 
+Requires: geographic_msgs geometry_msgs message_runtime sensor_msgs std_msgs

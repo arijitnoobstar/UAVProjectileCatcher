@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/arijitnoobstar/UAVProjectileCatcher/src/realsense_gazebo_plugin/build/devel/setup.sh

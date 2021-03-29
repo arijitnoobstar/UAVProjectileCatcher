@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros/share/gennodejs/ros/mavros/_index.js

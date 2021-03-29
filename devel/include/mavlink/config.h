@@ -1,0 +1,1 @@
+#define MAVLINK_VERSION "2021.1.4"

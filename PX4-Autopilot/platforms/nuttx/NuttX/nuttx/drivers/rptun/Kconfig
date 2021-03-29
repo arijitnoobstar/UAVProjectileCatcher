@@ -1,0 +1,23 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+menuconfig RPTUN
+	bool "Remote Proc Tunnel Driver Support"
+	default n
+	depends on OPENAMP
+	---help---
+		RPTUN driver is used for multi-cores' communication.
+
+if RPTUN
+
+config RPTUN_PRIORITY
+	int "rpturn thread priority"
+	default 224
+
+config RPTUN_STACKSIZE
+	int "rptun stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif # RPTUN

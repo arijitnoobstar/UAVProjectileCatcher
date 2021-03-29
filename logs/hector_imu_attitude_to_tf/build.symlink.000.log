@@ -1,0 +1,4 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/hector_imu_attitude_to_tf.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/hector_imu_attitude_to_tf/imu_attitude_to_tf_node
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_imu_attitude_to_tf/cmake/hector_imu_attitude_to_tfConfig.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_imu_attitude_to_tf/cmake/hector_imu_attitude_to_tfConfig-version.cmake

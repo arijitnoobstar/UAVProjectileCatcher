@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/install
+
+Name: mavros
+Description: Description of mavros
+Version: 1.5.1
+Cflags: -I${prefix}/include -I/usr/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib -lmavros /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libGeographic.so
+Requires: diagnostic_msgs diagnostic_updater eigen_conversions geographic_msgs geometry_msgs libmavconn mavros_msgs message_runtime nav_msgs pluginlib roscpp sensor_msgs std_msgs tf2_ros trajectory_msgs message_runtime

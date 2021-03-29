@@ -17,9 +17,11 @@ geometry_msgs/Point.h
 -
 geometry_msgs/PoseArray.h
 -
-numeric
+cmath
 -
-queue
+string
+-
+deque
 -
 
 /opt/ros/melodic/include/geometry_msgs/Point.h

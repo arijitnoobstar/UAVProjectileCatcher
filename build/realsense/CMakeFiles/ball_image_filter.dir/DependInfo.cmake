@@ -18,8 +18,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/include"
+  "/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros_msgs/include"
+  "/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros/include"
+  "/home/arijitnoobstar/UAVProjectileCatcher/devel/include"
+  "/home/arijitnoobstar/UAVProjectileCatcher/src/mavros/libmavconn/include"
+  "/home/arijitnoobstar/UAVProjectileCatcher/src/mavros/mavros_msgs/include"
+  "/home/arijitnoobstar/UAVProjectileCatcher/src/mavros/mavros/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
   "/usr/include/eigen3"
   "/usr/include/pcl-1.8"
   "/usr/include/ni"

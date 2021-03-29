@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: realsense_gazebo_plugin
+Description: Description of realsense_gazebo_plugin
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp gazebo_ros image_transport camera_info_manager sensor_msgs

@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/share/drone_ball_catcher/cmake/drone_ball_catcherConfig-version.cmake

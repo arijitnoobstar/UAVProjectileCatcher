@@ -1,0 +1,906 @@
+<PropertyList>
+ <path>jeep.ac</path>
+
+	<offsets>
+		<z-m>-0.01</z-m>
+	</offsets>
+
+  <nasal>
+    <load>
+      var update = aircraft.overlay_update.new();
+      update.add("Aircraft/TF-R1/Models/AI-Liveries", "sim/model/livery/file");
+
+    </load>
+    <unload>
+			print ("bye");
+			loopid += 1;
+    </unload>
+  </nasal>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/panel.xml</path>
+<!--
+    <condition>
+      <equals>
+        <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+        <value>1</value>
+      </equals>
+    </condition>
+-->
+  </model>
+
+
+<!-- Lighting -->
+  <model>
+    <path>Aircraft/TF-R1/Models/Effects/headlight.xml</path>
+    <offsets>
+      <x-m>0.26</x-m>
+      <y-m>0.39</y-m>
+      <z-m>0.99</z-m>
+    </offsets>
+    <condition>
+      <equals>
+        <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/headlight.xml</path>
+      <offsets>
+        <x-m>0.26</x-m>
+        <y-m>-0.39</y-m>
+        <z-m>0.99</z-m>
+      </offsets>
+    <condition>
+      <equals>
+<property>sim/rendering/als-secondary-lights/use-landing-light</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/rearlight.xml</path>
+      <name>rearlight.R</name>
+      <offsets>
+        <x-m>3.3</x-m>
+        <y-m>0.52935</y-m>
+        <z-m>0.66444</z-m>
+      </offsets>
+  </model>
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/rearlight.xml</path>
+      <name>rearlight.L</name>
+      <offsets>
+        <x-m>3.3</x-m>
+        <y-m>-0.52935</y-m>
+        <z-m>0.66444</z-m>
+      </offsets>
+  </model>
+
+ <animation>
+  <type>select</type>
+  <object-name>rearlight.R</object-name>
+  <object-name>rearlight.L</object-name>
+  <condition>
+   <less-than>
+    <property>controls/flight/elevator</property>
+    <value>-0.2</value>
+   </less-than>
+  </condition>
+ </animation>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/indicatorF.xml</path>
+      <offsets>
+        <x-m>0.26</x-m>
+        <y-m>-0.36158</y-m>
+        <z-m>0.82749</z-m>
+      </offsets>
+    <condition>
+      <equals>
+        <property>sim/model/TF-R1/lighting/indicator_left/state</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/indicatorF.xml</path>
+      <offsets>
+        <x-m>0.26</x-m>
+        <y-m>0.36158</y-m>
+        <z-m>0.82749</z-m>
+      </offsets>
+    <condition>
+      <equals>
+        <property>sim/model/TF-R1/lighting/indicator_right/state</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/indicatorR.xml</path>
+      <offsets>
+        <x-m>3.3</x-m>
+        <y-m>-0.63643</y-m>
+        <z-m>0.60887</z-m>
+      </offsets>
+    <condition>
+      <equals>
+        <property>sim/model/TF-R1/lighting/indicator_left/state</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+  <model>
+      <path>Aircraft/TF-R1/Models/Effects/indicatorR.xml</path>
+      <offsets>
+        <x-m>3.3</x-m>
+        <y-m>0.63643</y-m>
+        <z-m>0.60887</z-m>
+      </offsets>
+    <condition>
+      <equals>
+        <property>sim/model/TF-R1/lighting/indicator_right/state</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </model>
+
+<!-- wheels -->
+
+  <model>
+      <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+      <name>fwheel.L</name>
+      <offsets>
+        <x-m>0.55394</x-m>
+        <y-m>-0.66036</y-m>
+        <z-m>0.40773</z-m>
+        <heading-deg>180</heading-deg>
+      </offsets>
+  </model>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+      <name>rwheel.L</name>
+      <offsets>
+        <x-m>2.69645</x-m>
+        <y-m>-0.66036</y-m>
+        <z-m>0.40773</z-m>
+        <heading-deg>180</heading-deg>
+      </offsets>
+  </model>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+      <name>fwheel.R</name>
+      <offsets>
+        <x-m>0.55394</x-m>
+        <y-m>0.66036</y-m>
+        <z-m>0.40773</z-m>
+      </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+    <name>rwheel.R</name>
+    <offsets>
+        <x-m>2.69645</x-m>
+        <y-m>0.66036</y-m>
+        <z-m>0.40773</z-m>
+    </offsets>
+  </model>
+
+
+
+<!-- Front Axle -->
+ <animation>
+  <type>translate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>frontaxle.L</object-name>
+  <object-name>fscrews.L</object-name>
+<!--
+  <object-name>fwheel.R</object-name>
+  <object-name>frontaxle.R</object-name>
+  <object-name>fscrews.R</object-name>
+-->
+  <object-name>frontaxle</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+<!--
+    <condition>
+        <greater-than-equals>
+          <property>gear/gear[1]/compression-norm</property>
+          <property>gear/gear[0]/compression-norm</property>
+        </greater-than-equals>
+    </condition>
+-->
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.15</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>
+<!--
+  <object-name>fwheel.L</object-name>
+  <object-name>frontaxle.L</object-name>
+  <object-name>fscrews.L</object-name>
+-->
+  <object-name>fwheel.R</object-name>
+  <object-name>frontaxle.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+<!--
+    <condition>
+        <greater-than>
+          <property>gear/gear[0]/compression-norm</property>
+          <property>gear/gear[1]/compression-norm</property>
+        </greater-than>
+    </condition>
+-->
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.15</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>frontaxle.L</object-name>
+  <object-name>fscrews.L</object-name>
+  <object-name>fwheel.R</object-name>
+  <object-name>frontaxle.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <factor>7.5</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>frontaxle.L</object-name>
+  <object-name>fscrews.L</object-name>
+  <object-name>fwheel.R</object-name>
+  <object-name>frontaxle.R</object-name>
+  <object-name>fscrews.R</object-name>
+  <object-name>frontaxle</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>7.5</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>frontaxle.L</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>-0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>rotate</type>
+  <object-name>fwheel.R</object-name>
+  <object-name>frontaxle.R</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-25</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>spin</type>
+  <object-name>fwheel.L</object-name>
+  <object-name>frontaxle.L</object-name>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>-0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>spin</type>
+  <object-name>fwheel.R</object-name>
+  <object-name>frontaxle.R</object-name>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>0.554</x-m>
+   <y-m>0.439</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+<!-- Rear Axle  -->
+ <animation>
+  <type>translate</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+<!--
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+-->
+  <object-name>rearaxle</object-name>
+  <object-name>rearaxle.L</object-name>
+
+  <property>gear/gear[2]/compression-norm</property>
+<!--
+    <condition>
+        <greater-than-equals>
+          <property>gear/gear[3]/compression-norm</property>
+          <property>gear/gear[2]/compression-norm</property>
+        </greater-than-equals>
+    </condition>
+-->
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.15</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>
+<!--
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+-->
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
+
+  <object-name>rearaxle.R</object-name>
+  <property>gear/gear[3]/compression-norm</property>
+<!--
+    <condition>
+        <greater-than>
+          <property>gear/gear[2]/compression-norm</property>
+          <property>gear/gear[3]/compression-norm</property>
+        </greater-than>
+    </condition>
+-->
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.15</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
+  <object-name>rearaxle.R</object-name>
+  <object-name>rearaxle.L</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>7.5</factor>
+  <center>
+   <x-m>2.696</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle</object-name>
+  <object-name>rearaxle.R</object-name>
+  <object-name>rearaxle.L</object-name>
+  <property>gear/gear[3]/compression-norm</property>
+  <factor>7.5</factor>
+  <center>
+   <x-m>2.696</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+  <object-name>rearaxle.L</object-name>
+  <property>gear/gear[2]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>2.696</x-m>
+   <y-m>-0.746</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>spin</type>
+  <object-name>rwheel.R</object-name>
+  <object-name>rwheel2.R</object-name>
+  <object-name>rscrews.R</object-name>
+  <object-name>rearaxle.R</object-name>
+  <property>gear/gear[3]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>2.696</x-m>
+   <y-m>-0.746</y-m>
+   <z-m>0.408</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>steerwheel</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-100</factor>
+  <center>
+   <x-m>1.467</x-m>
+   <y-m>-0.331</y-m>
+   <z-m>1.008</z-m>
+  </center>
+  <axis>
+   <x1-m>1.185</x1-m>
+   <y1-m>-0.331</y1-m>
+   <z1-m>0.713</z1-m>
+   <x2-m>1.750</x2-m>
+   <y2-m>-0.331</y2-m>
+   <z2-m>1.303</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>screen</object-name>
+  <object-name>screen.1</object-name>
+  <object-name>mirror</object-name>
+  <object-name>mirrorarm</object-name>
+  <object-name>mirrorglass</object-name>
+  <object-name>wipermotor.R</object-name>
+  <object-name>wipermotor.L</object-name>
+  <object-name>screenadjust1</object-name>
+  <object-name>screenadjust2</object-name>
+  <object-name>screenadjust3</object-name>
+  <object-name>screenglass</object-name>
+  <object-name>wiper.L</object-name>
+  <object-name>wiper.R</object-name>
+  <property>controls/gear/screen</property>
+  <factor>-108</factor>
+  <center>
+   <x-m>1.167</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.992</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+    <model>
+      <path>Aircraft/TF-R1/Models/pilot.xml</path>
+	  <name>pilot</name>
+		<nopreview/>
+      <offsets>
+        <x-m>2.1</x-m>
+        <y-m>-0.32</y-m>
+        <z-m>0.9</z-m>
+        <pitch-deg>14</pitch-deg>
+      </offsets>
+    </model>
+ <animation>
+  <type>select</type>
+  <object-name>pilot</object-name>
+  <condition>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0.0</value>
+   </greater-than>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>roof1</object-name>
+  <object-name>roof2</object-name>
+  <condition>
+   <equals>
+    <property>controls/gear/roof</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>chassis</object-name>
+    <object-name>light</object-name>
+    <object-name>guard</object-name>
+    <object-name>lock1.L</object-name>
+    <object-name>lock2.L</object-name>
+    <object-name>lock1.R</object-name>
+    <object-name>lock2.R</object-name>
+    <object-name>stop.R</object-name>
+    <object-name>stop.L</object-name>
+    <object-name>handgrips</object-name>
+    <object-name>hood</object-name>
+    <object-name>chassis.001</object-name>
+    <object-name>Cylinder.001</object-name>
+    <object-name>canister.RL</object-name>
+    <object-name>wheel2</object-name>
+    <object-name>frontaxle.L</object-name>
+    <object-name>frontaxle.R</object-name>
+    <object-name>rearaxle.L</object-name>
+    <object-name>rearaxle.R</object-name>
+    <object-name>sparewheel</object-name>
+<!--
+    <object-name>steerwheel</object-name>
+-->
+    <object-name>Circle.007</object-name>
+    <object-name>Circle.008</object-name>
+    <object-name>frontbumper</object-name>
+    <object-name>grille</object-name>
+    <object-name>holes</object-name>
+    <object-name>screen</object-name>
+    <object-name>screen.1</object-name>
+
+    <object-name>canisterholder</object-name>
+    <object-name>rearcan</object-name>
+    <object-name>sparewheel</object-name>
+    <object-name>reserveholder</object-name>
+    <object-name>chassis.005</object-name>
+    <object-name>chassis.006</object-name>
+    <object-name>axe.m</object-name>
+    <object-name>spade.m</object-name>
+    <object-name>mount.1</object-name>
+    <object-name>mount.2</object-name>
+    <object-name>frontbumper.001</object-name>
+    <object-name>carrierframe</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>jeep-1.png</texture>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>roof</object-name>
+  <object-name>door</object-name>
+  <object-name>sidecurtain</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture-roof</texture-prop>
+    <texture>softroof.png</texture>
+  </animation>
+
+<!-- Variants -->
+  <model>
+    <path>Aircraft/TF-R1/Models/default.xml</path>
+    <name>Default Jeep</name>
+    <condition>
+      <not-equals>
+        <property>sim/model/livery/default</property>
+        <value>0</value>
+      </not-equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/airborn.xml</path>
+    <name>British Airborn Jeep</name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/name</property>
+        <value>Brit. Airborn Jeep</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/hippie.xml</path>
+    <name>British Airborn Jeep</name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/name</property>
+        <value>Hippie pink</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/followme.xml</path>
+    <name>Followme Jeep</name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/name</property>
+        <value>Followme Jeep</value>
+      </equals>
+    </condition>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/armygun.xml</path>
+    <name>Army Jeep with M2 gun</name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/name</property>
+        <value>US Army Jeep with M2 gun</value>
+      </equals>
+    </condition>
+  </model>
+
+ <animation>
+  <type>select</type>
+  <object-name>roof</object-name>
+  <object-name>roof1.o</object-name>
+  <object-name>roof2.o</object-name>
+  <object-name>noshadow.roofwdw</object-name>
+  <condition>
+    <and>
+      <equals>
+        <property>controls/gear/roof</property>
+        <value>1</value>
+      </equals>
+      <not-equals>
+        <property>sim/model/livery/roof</property>
+        <value>0</value>
+      </not-equals>
+    </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>sidecurtain</object-name>
+  <object-name>door</object-name>
+  <object-name>doorglass</object-name>
+  <object-name>sideglass</object-name>
+  <condition>
+   <equals>
+    <property>controls/gear/winterset</property>
+    <value>1</value>
+   </equals>
+  </condition>
+ </animation>
+
+
+
+<!-- Select Animations for different Parts -->
+
+
+ <animation>
+  <type>select</type>
+  <object-name>screen</object-name>
+  <object-name>screen.1</object-name>
+  <object-name>wiper.L</object-name>
+  <object-name>wiper.R</object-name>
+  <object-name>screenglass</object-name>
+  <object-name>wipermotor.L</object-name>
+  <object-name>wipermotor.R</object-name>
+  <object-name>screenadjust1</object-name>
+  <object-name>screenadjust2</object-name>
+  <object-name>screenadjust3</object-name>
+  <object-name>mirror</object-name>
+  <object-name>mirrorarm</object-name>
+  <object-name>mirrorglass</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/screen</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>holes</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/grille</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>reserveholder</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/spare</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>canisterholder</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/canister</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>roof1</object-name>
+  <object-name>roof2</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/roof</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>frontbumper.001</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/bumperends</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>toolmount</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/tools</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>carrierframe</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/carrierframe</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>stop.L</object-name>
+  <condition>
+   <not-equals>
+    <property>sim/model/livery/screenstops</property>
+    <value>0</value>
+   </not-equals>
+  </condition>
+ </animation>
+
+
+</PropertyList>

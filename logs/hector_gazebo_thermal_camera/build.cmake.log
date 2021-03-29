@@ -1,0 +1,132 @@
+Not searching for unused variables given on the command line.
+[36m--[0m The C compiler identification is GNU 7.5.0
+[36m--[0m The CXX compiler identification is GNU 7.5.0
+[36m--[0m Check for working C compiler: /usr/bin/cc
+[36m--[0m Check for working C compiler: /usr/bin/cc -- works
+[36m--[0m Detecting C compiler ABI info
+[36m--[0m Detecting C compiler ABI info - done
+[36m--[0m Detecting C compile features
+[36m--[0m Detecting C compile features - done
+[36m--[0m Check for working CXX compiler: /usr/bin/c++
+[36m--[0m Check for working CXX compiler: /usr/bin/c++ -- works
+[36m--[0m Detecting CXX compiler ABI info
+[36m--[0m Detecting CXX compiler ABI info - done
+[36m--[0m Detecting CXX compile features
+[36m--[0m Detecting CXX compile features - done
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_thermal_camera
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/arijitnoobstar/UAVProjectileCatcher/devel;/opt/ros/melodic
+[36m--[0m This workspace overlays: /home/arijitnoobstar/UAVProjectileCatcher/devel;/opt/ros/melodic
+[36m--[0m Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2")
+[36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python2
+[36m--[0m Using Debian Python package layout
+[36m--[0m Using empy: /usr/bin/empy
+[36m--[0m Using CATKIN_ENABLE_TESTING: ON
+[36m--[0m Call enable_testing()
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/arijitnoobstar/UAVProjectileCatcher/build/hector_gazebo_thermal_camera/test_results
+[36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
+[36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
+[36m--[0m Found PythonInterp: /usr/bin/python2 (found version "2.7.17")
+[36m--[0m Looking for pthread.h
+[36m--[0m Looking for pthread.h - found
+[36m--[0m Looking for pthread_create
+[36m--[0m Looking for pthread_create - not found
+[36m--[0m Looking for pthread_create in pthreads
+[36m--[0m Looking for pthread_create in pthreads - not found
+[36m--[0m Looking for pthread_create in pthread
+[36m--[0m Looking for pthread_create in pthread - found
+[36m--[0m Found Threads: TRUE
+[36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
+[36m--[0m catkin 0.7.29
+[36m--[0m BUILD_SHARED_LIBS is on
+[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
+[36m--[0m Checking for module 'bullet>=2.82'
+[36m--[0m   Found bullet, version 2.87
+[36m--[0m Found Simbody: /usr/include/simbody
+[36m--[0m Boost version: 1.65.1
+[36m--[0m Found the following Boost libraries:
+[36m--[0m   thread
+[36m--[0m   system
+[36m--[0m   filesystem
+[36m--[0m   program_options
+[36m--[0m   regex
+[36m--[0m   iostreams
+[36m--[0m   date_time
+[36m--[0m   chrono
+[36m--[0m   atomic
+[36m--[0m Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.0.0")
+[36m--[0m Boost version: 1.65.1
+[36m--[0m Looking for OGRE...
+[36m--[0m OGRE_PREFIX_WATCH changed.
+[36m--[0m Checking for module 'OGRE'
+[36m--[0m   Found OGRE, version 1.9.0
+[36m--[0m Found Ogre Ghadamon (1.9.0)
+[36m--[0m Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[36m--[0m Looking for OGRE_Paging...
+[36m--[0m Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[36m--[0m Looking for OGRE_Terrain...
+[36m--[0m Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[36m--[0m Looking for OGRE_Property...
+[36m--[0m Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[36m--[0m Looking for OGRE_RTShaderSystem...
+[36m--[0m Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[36m--[0m Looking for OGRE_Volume...
+[36m--[0m Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[36m--[0m Looking for OGRE_Overlay...
+[36m--[0m Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[36m--[0m Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread;-lpthread (found suitable version "3.0.0", minimum required is "2.3.0")
+[36m--[0m Config-file not installed for ZeroMQ -- checking for pkg-config
+[36m--[0m Checking for module 'libzmq >= 4'
+[36m--[0m   Found libzmq , version 4.2.5
+[36m--[0m Found ZeroMQ: TRUE (Required is at least version "4")
+[36m--[0m Checking for module 'uuid'
+[36m--[0m   Found uuid, version 2.31.1
+[36m--[0m Found UUID: TRUE
+[36m--[0m Checking for module 'tinyxml2'
+[36m--[0m   Found tinyxml2, version 6.0.0
+[36m--[0m Looking for dlfcn.h - found
+[36m--[0m Looking for libdl - found
+[36m--[0m Found DL: TRUE
+[36m--[0m FreeImage.pc not found, we will search for FreeImage_INCLUDE_DIRS and FreeImage_LIBRARIES
+[36m--[0m Checking for module 'gts'
+[36m--[0m   Found gts, version 0.7.6
+[36m--[0m Found GTS: TRUE
+[36m--[0m Checking for module 'libswscale'
+[36m--[0m   Found libswscale, version 4.8.100
+[36m--[0m Found SWSCALE: TRUE
+[36m--[0m Checking for module 'libavdevice >= 56.4.100'
+[36m--[0m   Found libavdevice , version 57.10.100
+[36m--[0m Found AVDEVICE: TRUE (Required is at least version "56.4.100")
+[36m--[0m Checking for module 'libavformat'
+[36m--[0m   Found libavformat, version 57.83.100
+[36m--[0m Found AVFORMAT: TRUE
+[36m--[0m Checking for module 'libavcodec'
+[36m--[0m   Found libavcodec, version 57.107.100
+[36m--[0m Found AVCODEC: TRUE
+[36m--[0m Checking for module 'libavutil'
+[36m--[0m   Found libavutil, version 55.78.100
+[36m--[0m Found AVUTIL: TRUE
+[36m--[0m Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.58.0")
+[36m--[0m Checking for module 'jsoncpp'
+[36m--[0m   Found jsoncpp, version 1.7.4
+[36m--[0m Found JSONCPP: TRUE
+[36m--[0m Checking for module 'yaml-0.1'
+[36m--[0m   Found yaml-0.1, version 0.1.7
+[36m--[0m Found YAML: TRUE
+[36m--[0m Checking for module 'libzip'
+[36m--[0m   Found libzip, version 1.1.2
+[36m--[0m Found ZIP: TRUE
+[36m--[0m Checking for module 'OGRE'
+[36m--[0m   Found OGRE, version 1.9.0
+[36m--[0m Checking for module 'OGRE-Paging'
+[36m--[0m   Found OGRE-Paging, version 1.9.0
+[36m--[0m Boost version: 1.65.1
+[36m--[0m Found the following Boost libraries:
+[36m--[0m   thread
+[36m--[0m   chrono
+[36m--[0m   system
+[36m--[0m   date_time
+[36m--[0m   atomic
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/arijitnoobstar/UAVProjectileCatcher/build/hector_gazebo_thermal_camera

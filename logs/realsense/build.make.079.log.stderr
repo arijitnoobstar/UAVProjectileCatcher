@@ -1,0 +1,7 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid predict_trajectory()[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:93:54:[m[K [01;31m[Kerror: [m[Kinvalid type argument of unary ‘[01m[K*[m[K’ (have ‘[01m[K__gnu_cxx::__promote_2<float, int, float, double>::__type {aka double}[m[K’)
+   drag = 0.5 * AIR_DENSITY * DRAG_COEF * pow(mag_V, 2[01;31m[K)[m[K * PI * pow(BALL_DIAMETER / 2, 2);
+                                                      [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

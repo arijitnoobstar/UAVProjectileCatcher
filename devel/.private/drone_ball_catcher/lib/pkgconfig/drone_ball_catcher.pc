@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher
+
+Name: drone_ball_catcher
+Description: Description of drone_ball_catcher
+Version: 0.0.0
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/include
+Libs: -L${prefix}/lib -ldrone_ball_catcher
+Requires: roscpp rospy std_msgs geometry_msgs

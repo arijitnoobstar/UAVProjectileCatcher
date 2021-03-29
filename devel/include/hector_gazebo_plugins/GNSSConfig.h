@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/include/hector_gazebo_plugins/GNSSConfig.h

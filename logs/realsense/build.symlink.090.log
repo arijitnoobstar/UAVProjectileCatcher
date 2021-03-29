@@ -1,0 +1,7 @@
+Linked: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/pkgconfig/realsense.pc, /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/realsense.pc)
+Linked: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/realsense/ball_trajectory, /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/ball_trajectory)
+Linked: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/realsense/ball_locator, /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/ball_locator)
+Linked: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/lib/realsense/ball_image_filter, /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/ball_image_filter)
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/realsense/drone_test_1
+Linked: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/share/realsense/cmake/realsenseConfig.cmake, /home/arijitnoobstar/UAVProjectileCatcher/devel/share/realsense/cmake/realsenseConfig.cmake)
+Linked: (/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/realsense/share/realsense/cmake/realsenseConfig-version.cmake, /home/arijitnoobstar/UAVProjectileCatcher/devel/share/realsense/cmake/realsenseConfig-version.cmake)

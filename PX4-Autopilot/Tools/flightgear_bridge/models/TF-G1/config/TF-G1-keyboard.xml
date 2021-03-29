@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>  
+  
+	<key n="114">
+	<name>r</name>
+		<desc>Apply rotor brake</desc>
+		<binding>
+			<command>nasal</command>
+			<script>gyro.apply_rotor_brake()</script>
+		</binding>
+		<mod-up>
+		<binding>
+			<command>nasal</command>
+			<script>gyro.release_rotor_brake()</script>
+		</binding>
+		</mod-up>
+	</key>
+		
+		
+	<key n="108">
+	<name>l</name>
+	<desc>Toggle Look Down</desc>
+		<binding>
+		<command>nasal</command>
+		<script>heli.look_down();</script>
+		</binding>
+	</key>
+	 
+	<key n="107">
+	<name>k</name>
+	<desc>Toggle Look Up</desc>
+		<binding>
+		<command>nasal</command>
+		<script>heli.look_up();</script>
+		</binding>
+	</key>
+		
+
+</PropertyList>
+

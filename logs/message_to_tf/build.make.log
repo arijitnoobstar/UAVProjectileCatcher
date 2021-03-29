@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target message_to_tf[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/message_to_tf.dir/src/message_to_tf.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/message_to_tf/lib/message_to_tf/message_to_tf[0m
+[100%] Built target message_to_tf

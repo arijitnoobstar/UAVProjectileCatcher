@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros/share/mavros/cmake/mavrosConfig.cmake

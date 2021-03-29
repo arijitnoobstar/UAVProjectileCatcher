@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/depth_image_proc/lib/pkgconfig/depth_image_proc.pc

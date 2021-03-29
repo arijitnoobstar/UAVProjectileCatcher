@@ -1,0 +1,128 @@
+############################################################################
+# arch/risc-v/src/rv32im/Toolchain.defs
+#
+#   Copyright (C) 2012-2013, 2015 Gregory Nutt. All rights reserved.
+#   Author: Gregory Nutt <gnutt@nuttx.org>
+#
+#   modified for RISC-V:
+#
+#   Copyright (C) 2016 Ken Pettit. All rights reserved.
+#   Author: Ken Pettit <pettitkd@gmail.com>
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+# OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+############################################################################
+
+# Setup for the selected toolchain
+
+#
+# Handle old-style chip-specific toolchain names in the absence of
+# a new-style toolchain specification, force the selection of a single
+# toolchain and allow the selected toolchain to be overridden by a
+# command-line selection.
+#
+
+ifeq ($(filter y, $(CONFIG_RV32IM_TOOLCHAIN_GNU_RVGL)),y)
+  CONFIG_RISCV_TOOLCHAIN ?= GNU_RVG
+endif
+
+ifeq ($(filter y, $(CONFIG_RV32IM_TOOLCHAIN_GNU_RVGW)),y)
+  CONFIG_RISCV_TOOLCHAIN ?= GNU_RVG
+endif
+
+ifeq ($(filter y, $(CONFIG_RI5CY_GAP8_TOOLCHAIN)),y)
+  CONFIG_RISCV_TOOLCHAIN ?= GNU_RISCY
+endif
+
+#
+# Supported toolchains
+#
+# Each toolchain definition should set:
+#
+#  CROSSDEV         The GNU toolchain triple (command prefix)
+#  ARCHCPUFLAGS     CPU-specific flags selecting the instruction set
+#                   options, etc.
+#  MAXOPTIMIZATION  The maximum optimization level that results in
+#                   reliable code generation.
+#
+
+ifeq ($(CONFIG_DEBUG_CUSTOMOPT),y)
+  MAXOPTIMIZATION := $(CONFIG_DEBUG_OPTLEVEL)
+endif
+
+# Generic GNU RVG toolchain
+
+ifeq ($(CONFIG_RISCV_TOOLCHAIN),GNU_RVG)
+  CROSSDEV ?= riscv64-unknown-elf-
+  ifeq ($(CONFIG_ARCH_FPU),y)
+      ARCHCPUFLAGS = -march=rv32imf -mabi=ilp32f
+  else
+      ARCHCPUFLAGS = -march=rv32im -mabi=ilp32
+  endif
+  ifeq ($(CONFIG_RV32IM_HW_MULDIV),y)
+    ARCHCPUFLAGS += -mdiv
+  else
+    ARCHCPUFLAGS += -mno-div
+  endif
+endif
+
+ifeq ($(CONFIG_RISCV_TOOLCHAIN),GNU_RISCY)
+  CROSSDEV ?= riscv32-unknown-elf-
+  ARCHCPUFLAGS = -march=rv32imcxgap8 -mPE=8 -mFC=1 -D__riscv__ -D__pulp__ -D__GAP8__
+endif
+
+# Individual tools may limit the optimization level but, by default, the
+# optimization level will be set to -Os
+
+ifeq ($(CONFIG_DEBUG_SYMBOLS),)
+MAXOPTIMIZATION ?= -Os
+endif
+
+# Default toolchain
+
+CC = $(CROSSDEV)gcc
+CXX = $(CROSSDEV)g++
+CPP = $(CROSSDEV)gcc -E -P -x c
+LD = $(CROSSDEV)ld
+STRIP = $(CROSSDEV)strip --strip-unneeded
+AR = $(CROSSDEV)ar rcs
+NM = $(CROSSDEV)nm
+OBJCOPY = $(CROSSDEV)objcopy
+OBJDUMP = $(CROSSDEV)objdump
+
+# Add the builtin library
+
+EXTRA_LIBS += -lgcc
+EXTRA_LIBPATHS += -L "${shell dirname "`$(CC) $(ARCHCPUFLAGS) --print-libgcc-file-name`"}"
+
+ifneq ($(CONFIG_LIBM),y)
+  EXTRA_LIBS += -lm
+  EXTRA_LIBPATHS += -L "${shell dirname "`$(CC) $(ARCHCPUFLAGS) --print-file-name=libm.a`"}"
+endif
+
+ifeq ($(CONFIG_CXX_LIBSUPCXX),y)
+  EXTRA_LIBS += -lsupc++
+  EXTRA_LIBPATHS += -L "${shell dirname "`$(CC) $(ARCHCPUFLAGS) --print-file-name=libsupc++.a`"}"
+endif

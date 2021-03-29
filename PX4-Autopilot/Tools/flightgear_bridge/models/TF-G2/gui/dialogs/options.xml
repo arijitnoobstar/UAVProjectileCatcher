@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!-- Version: 2016-12-27 -->
+<PropertyList>
+    <name>options_dialog</name>
+    <layout>vbox</layout>
+    <default-padding>5</default-padding>
+    <modal>false</modal>
+    <width>200</width>
+    <!-- title bar -->
+    <group>
+        <layout>hbox</layout>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <text>
+            <label>Options</label>
+        </text>
+        <empty>
+            <stretch>true</stretch>
+        </empty>
+        <button>
+            <legend/>
+            <key>Esc</key>
+            <pref-width>16</pref-width>
+            <pref-height>16</pref-height>
+            <border>2</border>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+    <hrule/>
+    <layout>hbox</layout>
+    <empty>
+        <stretch>true</stretch>
+    </empty>
+    <checkbox>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Glass visibility</label>
+        <property>/sim/model/window</property>
+        <live>true</live>
+        <binding>
+            <command>property-toggle</command>
+            <property>/sim/model/window</property>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <checkbox>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Glass shader</label>
+        <property>/sim/model/window-shader</property>
+        <live>true</live>
+        <enable>
+            <condition>
+                <property>/sim/model/window</property>
+            </condition>
+        </enable>
+        <binding>
+            <command>property-toggle</command>
+            <property>/sim/model/window-shader</property>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <checkbox>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Enable pilot models</label>
+        <property>/sim/model/pilots-enabled</property>
+        <live>true</live>
+        <binding>
+            <command>property-toggle</command>
+        <property>/sim/model/pilots-enabled</property>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <checkbox>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Enable shadow</label>
+            <property>/sim/model/shadow</property>
+        <live>true</live>
+        <binding>
+            <command>property-toggle</command>
+            <property>/sim/model/shadow</property>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <checkbox>
+        <row>2</row>
+        <col>1</col>
+        <halign>left</halign>
+        <label>Enable fake instrument light</label>
+        <property>/sim/model/instruments-light</property>
+        <live>true</live>
+        <binding>
+            <command>property-cycle</command>
+            <property>/sim/model/instruments-light</property>
+            <value type="int">0</value>
+            <value type="int">1</value>
+        </binding>
+    </checkbox>
+    <hrule/>
+    <button>
+            <pref-width>140</pref-width>
+            <pref-height>50</pref-height>
+            <legend>Regain canopy - front</legend>
+            <default>1</default>
+            <border>2</border>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/door-positions/canopyFJ/position-norm</property>
+                <value>0</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>controls/canopy/lock-jettison</property>
+                <value>0</value>
+            </binding>
+    </button>
+    <hrule/>
+</PropertyList>

@@ -1,0 +1,6 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~interpolation" : \b [int] Interpolation algorithm between source image pixels min: 0, default: 1, max: 4
+

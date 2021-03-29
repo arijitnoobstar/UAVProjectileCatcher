@@ -1,0 +1,69 @@
+#
+# For a description of the syntax of this configuration file,
+# see misc/tools/kconfig-language.txt.
+#
+
+menu "User-space networking stack API"
+
+config NET_USRSOCK
+	bool "User-space networking stack API"
+	default n
+	depends on NET
+	---help---
+		Enable or disable user-space networking stack support.
+
+		User-space networking stack API allows user-space daemon to
+		provide TCP/IP stack implementation for NuttX network.
+
+		Main use for this is to allow use and integration of
+		HW-provided TCP/IP stacks for NuttX.
+
+		For example, user-space daemon can translate /dev/usrsock API
+		requests to HW TCP/IP API requests while rest of the user-space
+		can access standard socket API, with socket descriptors that
+		can be used with NuttX system calls.
+
+if NET_USRSOCK
+
+config NET_USRSOCK_CONNS
+	int "Number of usrsock connections"
+	default 6
+	---help---
+		Maximum number of usrsock connections (all tasks).
+
+		Note: Usrsock daemon can impose additional restrictions for
+		maximum number of concurrent connections supported.
+
+config NET_USRSOCK_NPOLLWAITERS
+	int "Number of usrsock poll waiters"
+	default 1
+
+config NET_USRSOCK_NO_INET
+	bool "Disable PF_INET for usrsock"
+	default n
+	---help---
+
+config NET_USRSOCK_NO_INET6
+	bool "Disable PF_INET6 for usrsock"
+	default n
+	---help---
+
+config NET_USRSOCK_UDP
+	bool "User-space daemon provides UDP sockets"
+	default n
+	select NET_UDP
+	---help---
+
+config NET_USRSOCK_TCP
+	bool "User-space daemon provides TCP sockets"
+	default n
+	select NET_TCP
+	---help---
+
+config NET_USRSOCK_OTHER
+	bool "Enable other protocol families in addition of INET & INET6"
+	default n
+	---help---
+
+endif # NET_USRSOCK
+endmenu # User-space networking stack API

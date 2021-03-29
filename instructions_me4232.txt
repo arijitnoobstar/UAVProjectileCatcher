@@ -1,0 +1,25 @@
+This is an instruction file to get the drone running with a MAVROS interfacing with a PX4 Controller on a SIMULATED drone with a depth camera.
+NOTE: The original "realsense" library has been renamed to "drone_ball_catcher" as it makes more sense
+
+Step 1: Set up 3 different terminals and source the workspace (for people like Jasper)
+
+source devel/setup.bash
+
+Step 2: In one terminal, set up maxros & PX4 with the px4.launch to localhost
+
+roslaunch mavros px4.launch fcu_url:="udp://:14540@192.168.1.36:14557"
+
+Step 3: Go to another terminal and enter the PX4-Autopilot folder and run the following code to set up the Gazebo Launch with the iris drone with depth camera
+
+cd PX4-Autopilot
+DONT_RUN=1 make px4_sitl_default gazebo
+source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
+roslaunch px4 posix_sitl.launch
+
+Step 4: Now you should see gazebo launch with a drone chilling there. Rostopic List should have all the mavros topics. Now, in the third terminal, you can run your DEMONSTRATION CODE for our system. As of 30 MArch 2021, the implementation of the drone hitting a frozen ball in space has happened. In gazebo, add the ping_pong ball by adding the path "~/<name_of_workspace>/src/drone_ball_catcher/models" (click on the folder "models" and click open). You can switch gravity off for the ball by clicking on it, click "link" and set gravity to False. Then you can change the position of the ball by manipulating the x,y,z values. Afterwards, you can run the drone code for "drone_test_1" where the drone goes 2m into the air and looks for the ball and tries to collide with it. Run the following:
+
+roslaunch drone_ball_catcher drone_test_1.launch
+
+Note: I have no idea why the drone keeps rotating once it takes off, it does not match the setpoint orientation given (qx, qy, qz, qw as 0,0,0,0) or even 0,1,0,0

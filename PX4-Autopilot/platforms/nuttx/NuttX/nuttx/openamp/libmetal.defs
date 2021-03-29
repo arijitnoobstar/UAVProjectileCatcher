@@ -1,0 +1,88 @@
+############################################################################
+# openamp/libmetal.defs
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.  The
+# ASF licenses this file to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance with the
+# License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+############################################################################
+
+ifeq ($(CONFIG_OPENAMP),y)
+
+ifeq ($(CONFIG_ARCH), sim)
+LIBMETAL_ARCH = x86_64
+else ifeq ($(CONFIG_ARCH), risc-v)
+LIBMETAL_ARCH = riscv
+else
+LIBMETAL_ARCH = $(CONFIG_ARCH)
+endif
+
+CSRCS += libmetal/lib/system/nuttx/condition.c
+CSRCS += libmetal/lib/system/nuttx/device.c
+CSRCS += libmetal/lib/system/nuttx/init.c
+CSRCS += libmetal/lib/system/nuttx/io.c
+CSRCS += libmetal/lib/system/nuttx/irq.c
+CSRCS += libmetal/lib/system/nuttx/shmem.c
+CSRCS += libmetal/lib/system/nuttx/time.c
+CSRCS += libmetal/lib/device.c
+CSRCS += libmetal/lib/dma.c
+CSRCS += libmetal/lib/init.c
+CSRCS += libmetal/lib/io.c
+CSRCS += libmetal/lib/irq.c
+CSRCS += libmetal/lib/log.c
+CSRCS += libmetal/lib/shmem.c
+CSRCS += libmetal/lib/version.c
+
+CFLAGS += -DMETAL_INTERNAL
+
+LIBMETAL_HDRS_SEDEXP := \
+	"s/@PROJECT_VER_MAJOR@/0/g; \
+	 s/@PROJECT_VER_MINOR@/1/g; \
+	 s/@PROJECT_VER_PATCH@/0/g; \
+	 s/@PROJECT_VER@/0.1.0/g; \
+	 s/@PROJECT_SYSTEM@/nuttx/g; \
+	 s/@PROJECT_PROCESSOR@/$(LIBMETAL_ARCH)/g; \
+	 s/@PROJECT_MACHINE@/$(CONFIG_ARCH_CHIP)/g; \
+	 s/@PROJECT_SYSTEM_UPPER@/nuttx/g; \
+	 s/@PROJECT_PROCESSOR_UPPER@/$(LIBMETAL_ARCH)/g; \
+	 s/@PROJECT_MACHINE_UPPER@/$(CONFIG_ARCH_CHIP)/g; \
+	 s/cmakedefine/undef/g"
+
+libmetal.zip:
+	$(Q) wget https://github.com/OpenAMP/libmetal/archive/v$(VERSION).zip -O libmetal.zip
+	$(Q) unzip -o libmetal.zip
+	$(Q) mv libmetal-$(VERSION) libmetal
+	$(Q) patch -p0 < 0001-system-nuttx-change-clock_systimespec-to-clock_systi.patch
+
+.libmetal_headers: libmetal.zip
+	$(eval headers := $(wildcard libmetal/lib/compiler/gcc/*.h))
+	$(eval headers += $(wildcard libmetal/lib/processor/$(LIBMETAL_ARCH)/*.h))
+	$(eval headers += $(wildcard libmetal/lib/system/nuttx/*.h))
+	$(eval headers += $(wildcard libmetal/lib/*.h))
+	$(foreach header,$(headers), \
+		$(eval hobj := $(patsubst libmetal$(DELIM)lib$(DELIM)%,$(TOPDIR)$(DELIM)include$(DELIM)metal$(DELIM)%,$(header))) \
+		$(shell if [ ! -d $(dir $(hobj)) ];then mkdir -p $(dir $(hobj)); fi) \
+		$(shell sed $(LIBMETAL_HDRS_SEDEXP) $(header) > $(hobj)) \
+	)
+	touch $@
+
+dirlinks:: .libmetal_headers
+
+distclean::
+	$(call DELDIR, $(TOPDIR)$(DELIM)include$(DELIM)metal)
+	$(call DELDIR, libmetal)
+	$(call DELFILE, libmetal.zip)
+	$(call DELFILE, .libmetal_headers)
+
+endif

@@ -1,0 +1,12 @@
+\subsubsection usage Usage
+\verbatim
+<node name="image_proc" pkg="image_proc" type="image_proc">
+  <param name="interpolation" type="int" value="1" />
+  <param name="use_scale" type="bool" value="True" />
+  <param name="scale_height" type="double" value="1.0" />
+  <param name="scale_width" type="double" value="1.0" />
+  <param name="height" type="int" value="-1" />
+  <param name="width" type="int" value="-1" />
+</node>
+\endverbatim
+

@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_mapping/lib/pkgconfig/hector_mapping.pc

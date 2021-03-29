@@ -1,0 +1,5 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/libgazebo_ros_thermal_camera.so
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/libgazebo_ros_thermal_depth_camera.so
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/hector_gazebo_thermal_camera.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_gazebo_thermal_camera/cmake/hector_gazebo_thermal_cameraConfig.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_gazebo_thermal_camera/cmake/hector_gazebo_thermal_cameraConfig-version.cmake

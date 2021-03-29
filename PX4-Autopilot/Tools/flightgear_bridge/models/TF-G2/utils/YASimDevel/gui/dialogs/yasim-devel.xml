@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<name>yasimdevel</name>
+    <layout>vbox</layout>
+	<pref-width>180</pref-width>
+	<color>
+		<red>0.3</red>
+		<green>0.6</green>
+		<blue>0.6</blue>
+		<alpha>0.9</alpha>
+	</color>	
+    <group>
+		<layout>hbox</layout>
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+		<text>
+			<label>YaSim Devel Options</label>
+		</text>
+		<empty>
+			<stretch>1</stretch>
+		</empty>
+		<button>
+			<color>
+				<red>0.5</red>
+				<green>0.5</green>
+				<blue>0.5</blue>
+				<alpha>0.8</alpha>
+			</color>	
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend>X</legend>
+			<keynum>27</keynum>
+			<border>2</border>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
+    <hrule />
+	<group>
+		<layout>vbox</layout>
+		<valign>top</valign>
+        <checkbox>
+            <halign>left</halign>
+            <label>Show chords</label>
+            <property>/fdm/yasim/nasal/show-chords</property>
+            <binding>
+					<command>dialog-apply</command>
+            </binding>
+            <live type="bool">true</live>
+        </checkbox>        
+        <checkbox>
+            <halign>left</halign>
+            <label>Show labels</label>
+            <property>/fdm/yasim/nasal/show-labels</property>
+            <binding>
+					<command>dialog-apply</command>
+            </binding>
+            <live type="bool">true</live>
+        </checkbox>        
+		<group>
+			<layout>hbox</layout>
+			<input>
+				<pref-width>100</pref-width>
+				<halign>left</halign>
+				<property>/fdm/yasim/nasal/txt-node-name</property>
+				<label>Label prop</label>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live type="bool">true</live>
+			</input>
+		</group>
+        <button>
+            <legend>Apply</legend>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </button>
+    </group>
+</PropertyList>

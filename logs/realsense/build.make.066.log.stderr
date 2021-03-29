@@ -1,0 +1,32 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid add_point(geometry_msgs::Point)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:36:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kpoint_t::point_t(geometry_msgs::Point_<std::allocator<void> >::_x_type&, geometry_msgs::Point_<std::allocator<void> >::_y_type&, geometry_msgs::Point_<std::allocator<void> >::_z_type&, double&)[m[K’
+   PoseData.push_front(point_t(pt.x,pt.y,pt.z,t_0[01;31m[K)[m[K);
+                                                 [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: point_t::point_t()
+ struct [01;36m[Kpoint_t[m[K{
+        [01;36m[K^~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 4 provided
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: constexpr point_t::point_t(const point_t&)
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: constexpr point_t::point_t(point_t&&)
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:39:76:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kpoint_t::point_t(geometry_msgs::Point_<std::allocator<void> >::_x_type&, geometry_msgs::Point_<std::allocator<void> >::_y_type&, geometry_msgs::Point_<std::allocator<void> >::_z_type&, double)[m[K’
+   PoseData.push_front(point_t(pt.x,pt.y,pt.z,ros::Time::now().toSec() - t_0[01;31m[K)[m[K);
+                                                                            [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: point_t::point_t()
+ struct [01;36m[Kpoint_t[m[K{
+        [01;36m[K^~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 4 provided
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: constexpr point_t::point_t(const point_t&)
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: constexpr point_t::point_t(point_t&&)
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:49:2:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+  [01;31m[K}[m[K
+  [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:49:2:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning 'void' [[01;31m[K-fpermissive[m[K]
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:49:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

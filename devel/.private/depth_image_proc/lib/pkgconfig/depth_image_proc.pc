@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/depth_image_proc
+
+Name: depth_image_proc
+Description: Description of depth_image_proc
+Version: 1.15.3
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/src/depth_image_proc/include
+Libs: -L${prefix}/lib -ldepth_image_proc
+Requires: 

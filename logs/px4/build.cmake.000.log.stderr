@@ -1,0 +1,5 @@
+fatal: not a git repository: /home/arijitnoobstar/UAVProjectileCatcher/src/PX4-Autopilot/src/lib/ecl/../../../.git/modules/src/lib/ecl
+[31m[1mCMake Error[0m at /home/arijitnoobstar/UAVProjectileCatcher/src/PX4-Autopilot/src/lib/version/CMakeLists.txt:47 (message):
+  is not a git repository
+
+

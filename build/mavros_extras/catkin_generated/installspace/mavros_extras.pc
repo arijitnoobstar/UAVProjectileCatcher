@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/install
+
+Name: mavros_extras
+Description: Description of mavros_extras
+Version: 1.5.1
+Cflags: -I/usr/include
+Libs: -L${prefix}/lib /usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: geometry_msgs mavros mavros_msgs roscpp sensor_msgs std_msgs visualization_msgs

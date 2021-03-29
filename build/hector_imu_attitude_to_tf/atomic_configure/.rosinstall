@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_imu_attitude_to_tf/setup.sh

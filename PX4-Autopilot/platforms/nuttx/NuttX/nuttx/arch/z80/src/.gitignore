@@ -1,0 +1,9 @@
+/z80_mem.h
+/asm_mem.h
+/board
+/chip
+/*.rst
+/*.lnk
+/*.mem
+/*.linkcmd
+/*.noi

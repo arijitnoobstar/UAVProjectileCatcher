@@ -1,0 +1,12 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~decimation_x" : \b [int] Number of pixels to decimate to one horizontally min: 1, default: 1, max: 16
+- \b "~decimation_y" : \b [int] Number of pixels to decimate to one vertically min: 1, default: 1, max: 16
+- \b "~x_offset" : \b [int] X offset of the region of interest min: 0, default: 0, max: 2447
+- \b "~y_offset" : \b [int] Y offset of the region of interest min: 0, default: 0, max: 2049
+- \b "~width" : \b [int] Width of the region of interest min: 0, default: 0, max: 2448
+- \b "~height" : \b [int] Height of the region of interest min: 0, default: 0, max: 2050
+- \b "~interpolation" : \b [int] Sampling algorithm min: 0, default: 0, max: 4
+

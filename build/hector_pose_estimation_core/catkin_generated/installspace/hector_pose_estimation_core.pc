@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/install
+
+Name: hector_pose_estimation_core
+Description: Description of hector_pose_estimation_core
+Version: 0.4.0
+Cflags: -I${prefix}/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib -lhector_pose_estimation
+Requires: rostime rosconsole roscpp sensor_msgs geometry_msgs nav_msgs geographic_msgs tf

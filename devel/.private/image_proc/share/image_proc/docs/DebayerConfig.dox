@@ -1,0 +1,6 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~debayer" : \b [int] Debayering algorithm min: 0, default: 0, max: 3
+

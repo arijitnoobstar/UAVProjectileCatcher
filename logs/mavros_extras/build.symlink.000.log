@@ -1,0 +1,6 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/libmavros_extras.so
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/mavros_extras.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/mavros_extras/servo_state_publisher
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/mavros_extras/visualization
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/mavros_extras/cmake/mavros_extrasConfig.cmake

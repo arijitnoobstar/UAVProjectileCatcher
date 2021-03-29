@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/pkgconfig/drone_ball_catcher.pc

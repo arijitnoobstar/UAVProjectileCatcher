@@ -1,0 +1,64 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+if ARCH_Z80
+choice
+	prompt "ZiLOG 8-bit MCU"
+	default ARCH_CHIP_Z80
+
+config ARCH_CHIP_Z80
+	bool "Classic z80"
+	select ARCH_NOINTC
+	select MM_SMALL
+	---help---
+		Classic ZiLOG z80 chip
+
+config ARCH_CHIP_Z180
+	bool "z180 Family"
+	select MM_SMALL
+	select ARCH_NOINTC
+	select ARCH_HAVE_ADDRENV
+	select ARCH_ADDRENV
+	---help---
+		ZiLOG z80 architecture with MMU
+
+config ARCH_CHIP_EZ80
+	bool "eZ80 Family (ez80 Acclaim)"
+	select CYGWIN_WINTOOL if WINDOWS_CYGWIN
+	select MM_SMALL if EZ80_Z80MODE
+	select ARCH_HAVE_PHY
+	---help---
+		ZiLOG z80 architecture with 24-bit addressability
+
+config ARCH_CHIP_Z8
+	bool "z8 Family"
+	select CYGWIN_WINTOOL if WINDOWS_CYGWIN
+	select MM_SMALL
+	select ENDIAN_BIG
+	---help---
+		ZiLOG z8 architecture
+
+config ARCH_CHIP_Z80_CUSTOM
+	bool "Custom Z80 chip"
+	select ARCH_CHIP_CUSTOM
+	---help---
+		Select this option if there is no directory for the chip under arch/z80/src/.
+
+endchoice
+
+config ARCH_CHIP
+	string
+	default "z80"		if ARCH_CHIP_Z80
+	default "z180"		if ARCH_CHIP_Z180
+	default "z8"		if ARCH_CHIP_Z8
+	default "ez80"		if ARCH_CHIP_EZ80
+
+source "arch/z80/src/common/Kconfig"
+source "arch/z80/src/z80/Kconfig"
+source "arch/z80/src/z180/Kconfig"
+source "arch/z80/src/z8/Kconfig"
+source "arch/z80/src/ez80/Kconfig"
+
+endif

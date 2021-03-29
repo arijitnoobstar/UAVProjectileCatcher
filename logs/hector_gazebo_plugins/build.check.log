@@ -1,0 +1,4 @@
+CMake Error: The source directory "/home/arijitnoobstar/UAVProjectileCatcher/src/src/hector_gazebo/hector_gazebo_plugins" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+Makefile:1752: recipe for target 'cmake_check_build_system' failed
+make: *** [cmake_check_build_system] Error 1

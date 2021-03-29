@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target pose_and_orientation_to_imu_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_imu_tools/lib/hector_imu_tools/pose_and_orientation_to_imu_node[0m
+[100%] Built target pose_and_orientation_to_imu_node

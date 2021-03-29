@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins
+
+Name: hector_gazebo_plugins
+Description: Description of hector_gazebo_plugins
+Version: 0.5.1
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/include -I/home/arijitnoobstar/UAVProjectileCatcher/src/src/hector_gazebo/hector_gazebo_plugins/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs geometry_msgs nav_msgs tf message_runtime

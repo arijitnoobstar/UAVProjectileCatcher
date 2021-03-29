@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_thermal_camera/lib/pkgconfig/hector_gazebo_thermal_camera.pc

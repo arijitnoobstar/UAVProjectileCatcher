@@ -1,0 +1,24 @@
+[35m[1mScanning dependencies of target hector_pose_estimation[0m
+[  4%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/global_reference.cpp.o[0m
+[  9%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/pose_estimation.cpp.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/parameters.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/types.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/state.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/filter.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/filter/ekf.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/system.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/system/generic_quaternion_system_model.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/system/ground_vehicle_model.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/system/imu_model.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurement.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/gravity.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/zerorate.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/heading.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/magnetic.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/height.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/baro.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/gps.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/poseupdate.cpp.o[0m
+[ 95%] [32mBuilding CXX object CMakeFiles/hector_pose_estimation.dir/src/measurements/rate.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_pose_estimation_core/lib/libhector_pose_estimation.so[0m
+[100%] Built target hector_pose_estimation

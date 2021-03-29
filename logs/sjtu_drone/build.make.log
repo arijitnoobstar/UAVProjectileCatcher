@@ -1,0 +1,43 @@
+[35m[1mScanning dependencies of target drone_keyboard_autogen[0m
+[35m[1mScanning dependencies of target plugin_ros_init[0m
+[35m[1mScanning dependencies of target plugin_ros_imu[0m
+[35m[1mScanning dependencies of target plugin_ros_cam[0m
+[35m[1mScanning dependencies of target plugin_ros_sonar_autogen[0m
+[35m[1mScanning dependencies of target plugin_drone[0m
+[  4%] [34m[1mAutomatic UIC for target drone_keyboard[0m
+[  9%] [34m[1mAutomatic UIC for target plugin_ros_sonar[0m
+[  9%] Built target drone_keyboard_autogen
+[  9%] Built target plugin_ros_sonar_autogen
+[ 13%] [34m[1mGenerating include/moc_DialogKeyboard.cpp[0m
+[ 18%] [34m[1mGenerating qrc_drone_keyboard.cpp[0m
+[35m[1mScanning dependencies of target plugin_ros_sonar[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/plugin_ros_imu.dir/src/plugin_ros_imu_native.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/plugin_ros_init.dir/src/plugin_ros_init.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/plugin_drone.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/plugin_ros_cam.dir/src/plugin_ros_cam.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/plugin_ros_sonar.dir/src/plugin_ros_sonar.cpp.o[0m
+[35m[1mScanning dependencies of target drone_keyboard[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/drone_keyboard.dir/src/DialogKeyboard.cpp.o[0m
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/src/DialogKeyboard.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kui_DialogKeyboard.h: No such file or directory
+ #include [01;31m[K"ui_DialogKeyboard.h"[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+CMakeFiles/drone_keyboard.dir/build.make:71: recipe for target 'CMakeFiles/drone_keyboard.dir/src/DialogKeyboard.cpp.o' failed
+make[2]: *** [CMakeFiles/drone_keyboard.dir/src/DialogKeyboard.cpp.o] Error 1
+CMakeFiles/Makefile2:1042: recipe for target 'CMakeFiles/drone_keyboard.dir/all' failed
+make[1]: *** [CMakeFiles/drone_keyboard.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 50%] [32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/pid_controller.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/plugin_ros_cam.dir/src/util_ros_cam.cpp.o[0m
+[ 59%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/plugins/libplugin_ros_sonar.so[0m
+[ 63%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/plugins/libplugin_ros_imu.so[0m
+[ 63%] Built target plugin_ros_sonar
+[ 63%] Built target plugin_ros_imu
+[ 68%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/plugins/libplugin_drone.so[0m
+[ 68%] Built target plugin_drone
+[ 72%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/plugins/libplugin_ros_init.so[0m
+[ 72%] Built target plugin_ros_init
+[ 77%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/plugins/libplugin_ros_cam.so[0m
+[ 77%] Built target plugin_ros_cam
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

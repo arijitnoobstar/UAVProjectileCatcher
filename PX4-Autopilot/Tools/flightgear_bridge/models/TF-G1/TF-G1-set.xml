@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="config/TF-G1-yasim-cnf.xml">
+
+  <sim>
+    <description>TF-G1 Autogyro (YASim)</description>
+    <author>ThunderFly s.r.o.</author>
+    <status>Alpha 0.1</status>
+    <rating>
+      <FDM type="int">2</FDM>
+      <systems type="int">3</systems>
+      <model type="int">2</model>
+      <cockpit type="int">3</cockpit>
+    </rating>
+
+    <current-view>
+        <view-number type="int">5</view-number>
+    </current-view>
+
+ <chase-distance-m type="double" archive="y">-3.0</chase-distance-m>
+
+ <view n="100">
+    <name>Mast Camera View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y">  1.01  </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -0.2 </z-offset-m> <!--Back-->
+      <default-field-of-view-deg type="double">95</default-field-of-view-deg>
+      <pitch-offset-deg>-25</pitch-offset-deg>
+    </config>
+  </view>
+
+  <view n="0">
+    <name>Pilot View</name>
+    <internal archive="y">true</internal>
+    <config>
+      <x-offset-m archive="y">  0.000 </x-offset-m> <!--right-->
+      <y-offset-m archive="y">  0.4 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -0.253 </z-offset-m> <!--back 0.553-->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg> 76 </default-field-of-view-deg>
+    </config>
+  </view>
+
+ <!--
+
+  <view n="103">
+    <name>Model View</name>
+    <enabled type="bool" userarchive="y">true</enabled>
+    <type>lookat</type>
+    <config>
+      <from-model type="bool">false</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <eye-lat-deg-path>/sim/viewer/eye/latitude-deg</eye-lat-deg-path>
+      <eye-lon-deg-path>/sim/viewer/eye/longitude-deg</eye-lon-deg-path>
+      <eye-alt-ft-path>/sim/viewer/eye/altitude-ft</eye-alt-ft-path>
+      <eye-heading-deg-path>/sim/viewer/eye/heading-deg</eye-heading-deg-path>
+      <eye-pitch-deg-path>/sim/viewer/eye/pitch-deg</eye-pitch-deg-path>
+      <eye-roll-deg-path>/sim/viewer/eye/roll-deg</eye-roll-deg-path>
+      <at-model type="bool">false</at-model>
+      <at-model-idx type="int">0</at-model-idx>
+      <target-lat-deg-path>/sim/viewer/target/latitude-deg</target-lat-deg-path>
+      <target-lon-deg-path>/sim/viewer/target/longitude-deg</target-lon-deg-path>
+      <target-alt-ft-path>/sim/viewer/target/altitude-ft</target-alt-ft-path>
+      <target-heading-deg-path>/sim/viewer/target/heading-deg</target-heading-deg-path>
+      <target-pitch-deg-path>/sim/viewer/target/pitch-deg</target-pitch-deg-path>
+      <target-roll-deg-path>/sim/viewer/target/roll-deg</target-roll-deg-path>
+      <target-x-offset-m type="double">0</target-x-offset-m>
+      <target-y-offset-m type="double">0</target-y-offset-m>
+      <target-z-offset-m type="double">0</target-z-offset-m>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+      <x-offset-m type="double">0</x-offset-m>
+      <y-offset-m type="double">0</y-offset-m>
+      <z-offset-m type="double">100</z-offset-m>
+      <heading-offset-deg type="double">0</heading-offset-deg>
+      <pitch-offset-deg type="double">0</pitch-offset-deg>
+      <roll-offset-deg type="double">0</roll-offset-deg>
+    </config>
+  </view>
+
+  -->
+
+  <view n="1">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="2">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="3">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="4">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="5">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="6">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <menubar>
+      <default>
+          <menu n="10">
+              <label>TF-G1</label>
+              <enabled type="bool">true</enabled>
+              <item>
+                  <label>Aerotow Settings</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>aerotow_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Winch Settings</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>winch_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Rope Breakage</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>breakage</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Simulation Options</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>options_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+                  <label>Ground services</label>
+                  <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>groundservice_dialog</dialog-name>
+                  </binding>
+              </item>
+              <item>
+              <label>Select Livery</label>
+              <binding>
+                  <command>nasal</command>
+                  <script>aircraft.livery.dialog.open()</script>
+              </binding>
+              </item>
+              <item>
+              <label>Select Immatriculation</label>
+              <binding>
+                      <command>dialog-show</command>
+                      <dialog-name>Immatriculation</dialog-name>
+              </binding>
+              </item>
+          </menu>
+      </default>
+  </menubar>
+  <hitches>
+      <!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+      <!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
+              should fix this somehow-->
+      <hook-open type="bool">false</hook-open>
+      <aerotow>
+          <tow>
+              <length type="float">60</length>
+              <elastic-constant type="float">10000</elastic-constant>
+              <weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
+              <dist type="float">1</dist>
+              <connected-to-property-node type="bool"/>
+              <brake-force type="float">100000</brake-force>
+              <connected-to-ai-or-mp-callsign type="string">*</connected-to-ai-or-mp-callsign>
+              <end-force-x type="float">-3.50</end-force-x>
+              <end-force-y type="float">0</end-force-y>
+              <end-force-z type="float">0</end-force-z>
+          </tow>
+          <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+          <open type="bool">true</open>
+          <is-slave type="bool">false</is-slave>
+      </aerotow>
+      <winch>
+          <automatic-release-angle-deg type="float">90.0</automatic-release-angle-deg>
+      </winch>
+  </hitches>
+  </sim>
+
+  <controls>
+        <cabin>
+            <armrests type="bool">0</armrests><!--Black armrests off by default-->
+        </cabin>
+        <breakage>
+            <enabled type="bool">0</enabled><!--Rope Breakage by default disabled-->
+            <altitude-m type="double">50</altitude-m>
+        </breakage>
+        <flight>
+            <rudder2 type="double">0</rudder2>
+        </flight>
+        <gear>
+            <assist-1 type="bool">false</assist-1>
+        </gear>
+        <winch>
+            <place type="bool">false</place>
+        </winch>
+        <aerotow>
+            <find-aircraft type="bool">false</find-aircraft>
+        </aerotow>
+        <smoke type="bool">false</smoke>
+  </controls>
+
+  <input>
+      <keyboard>
+          <key n="23">
+              <name>Ctrl-w</name>
+              <desc>Place winch in front of aircraft</desc>
+              <binding>
+                  <command>nasal</command>
+                  <script>towing.setWinchPositionAuto()</script>
+              </binding>
+          </key>
+          <key n="87">
+              <name>W</name>
+              <desc>Increase winch speed</desc>
+              <binding>
+                  <command>nasal</command>
+                  <script>
+                      throttle = getprop("/sim/hitches/winch/winch/rel-speed") + 0.05;
+                      if (throttle > 1) throttle = 1;
+                      setprop("/sim/hitches/winch/winch/rel-speed", throttle);
+                      speed = throttle * getprop("/sim/hitches/winch/winch/max-speed-m-s");
+                      force = getprop("/sim/hitches/winch/force");
+                      gui.popupTip(sprintf("Winch throttle %d%%, speed %0.2f m/s, force %0.2f", throttle * 100, speed, force));
+                  </script>
+              </binding>
+          </key>
+          <key n="119">
+              <name>w</name>
+              <desc>Decrease winch speed</desc>
+              <binding>
+                  <command>nasal</command>
+                  <script>
+                      throttle = getprop("/sim/hitches/winch/winch/rel-speed") - 0.05;
+                      if (0 > throttle) throttle = 0;
+                      setprop("/sim/hitches/winch/winch/rel-speed", throttle);
+                      speed = throttle * getprop("/sim/hitches/winch/winch/max-speed-m-s");
+                      force = getprop("/sim/hitches/winch/force");
+                      gui.popupTip(sprintf("Winch throttle %d%%, speed %0.2f m/s, force %0.2f", throttle * 100, speed, force));
+                  </script>
+              </binding>
+          </key>
+          <key n="15">
+              <name>Ctrl-o</name>
+              <desc>Find aircraft for aerotow</desc>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/controls/aerotow/find-aircraft</property>
+                  <value type="bool">true</value>
+              </binding>
+              <mod-up>
+                  <binding>
+                      <command>property-assign</command>
+                      <property>/controls/aerotow/find-aircraft</property>
+                      <value type="bool">false</value>
+                  </binding>
+              </mod-up>
+          </key>
+          <key n="111">
+              <name>o</name>
+              <desc>Open hook</desc>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/sim/hitches/hook-open</property>
+                  <value type="bool">true</value>
+              </binding>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/sim/hitches/aerotow/open</property>
+                  <value type="bool">true</value>
+              </binding>
+              <binding>
+                  <command>property-assign</command>
+                  <property>/sim/hitches/winch/open</property>
+                  <value type="bool">true</value>
+              </binding>
+              <mod-up>
+                  <binding>
+                      <command>property-assign</command>
+                      <property>/sim/hitches/hook-open</property>
+                      <value type="bool">false</value>
+                  </binding>
+              </mod-up>
+
+          </key>
+          <key n="19">
+              <name>Ctrl-s</name>
+              <desc>Start/stop smoke</desc>
+              <binding>
+                  <command>property-toggle</command>
+                  <property>controls/smoke</property>
+              </binding>
+          </key>
+      </keyboard>
+  </input>
+
+</PropertyList>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <view n="100">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="101">
+      <enabled type="bool">false</enabled>
+    </view>
+    <model>
+      <livery>
+        <name type="string">Hippie pink</name>
+        <default>0</default>
+        <screen>1</screen>
+        <grille>0</grille>
+        <roof>1</roof>
+        <canister>0</canister>
+        <spare>1</spare>
+        <bumperends>1</bumperends>
+        <tools>0</tools>
+        <screenstops>1</screenstops>
+        <carrierframe>0</carrierframe>
+        <texture>Liveries/jeep-1c.png</texture>
+        <texture-roof>softroof.png</texture-roof>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

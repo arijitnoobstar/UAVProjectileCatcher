@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/mavros/share/common-lisp/ros/mavros/msg/_package.lisp

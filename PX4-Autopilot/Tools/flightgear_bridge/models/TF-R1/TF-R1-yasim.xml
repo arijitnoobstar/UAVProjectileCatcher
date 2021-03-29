@@ -1,0 +1,74 @@
+<airplane mass="2400" version="YASIM_VERSION_CURRENT">
+
+<approach speed="35" /> <!-- reduce to increase compression -->
+<cruise speed="45" />
+
+<!-- dummy rotor to avoid automatic Yasim trimming -->
+<rotorgear
+  yasimdragfactor="1"
+  yasimliftfactor="1" >
+</rotorgear>
+
+<fuselage ax="-0.0"  ay="0" az="0.7" bx="-3.3" by="0" bz="0.7"
+width="0.5" taper="1" cx="2.5" cz="2.5"/>
+
+<wing x="-1.00" y="0.0" z="0.6" taper="1.0" camber="0"
+      length="0.7" chord="1.0" >
+</wing>
+<mstab x="-3.4" y="0.2" z="0.7" length="1.8" chord="1.2" >
+
+</mstab>
+
+<thruster x="-2.69646" y="0.0" z="0.1" vx="1" vy="0" vz="0" thrust="2000">
+  <control-input axis="/controls/engines/engine[0]/throttle-c" control="THROTTLE"/>
+  <control-input axis="/velocities/groundspeed-kt" control="THROTTLE"
+ src0="0.1" src1="55.0"
+ dst0="0.0" dst1="-1"/>
+</thruster>
+<!--
+<thruster x="-2.69646" y="0.0" z="0.1" vx="-1" vy="0" vz="0" thrust="1500">
+  <control-input axis="/controls/engines/engine[0]/throttle-r" control="THROTTLE"/>
+  <control-input axis="/velocities/groundspeed-kt" control="THROTTLE"
+ src0="0.1" src1="15.0"
+ dst0="0.0" dst1="-1"/>
+</thruster>
+-->
+<tank x="-1.8" y="0" z="0.1" capacity="91"/>
+
+<gear x="-0.5" y="0.7" z="-0.1" compression="0.45" dfric="1.5" sfric="1.5"
+	spring="4.0" damp="5.8">
+  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+<control-input axis="/controls/flight/aileron" control="STEER" square="true"
+ src0="-1.0" src1="1.0"
+ dst0="-0.6" dst1="0.6"/>
+</gear>
+<gear x="-0.5" y="-0.7" z="-0.1" compression="0.45" dfric="1.5" sfric="1.5"
+	spring="4.0" damp="5.8">
+  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+  <control-input axis="/controls/flight/aileron" control="STEER" square="true"
+ src0="-0.8" src1="0.8"
+ dst0="-0.6" dst1="0.6"/>
+</gear>
+
+  <gear x="-2.696" y="0.7" z="-0.1" compression="0.45" dfric="1.1" sfric="1.3"
+	spring="4.0" damp="5.8">
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  </gear>
+
+  <gear x="-2.696" y="-0.7" z="-0.1" compression="0.45" dfric="1.1" sfric="1.3"
+	spring="4.0" damp="5.8">
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  </gear>
+
+  <ballast x="-0.8" y="0" z="0.20" mass="1200"/>
+
+  <hitch name="aerotow" x="-2.75" y="0" z="0.1" force-is-calculated-by-other="1">
+    <tow length="50" weight-per-meter="0.0035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+    <winch max-tow-length="100" min-tow-length="20" initial-tow-length="50"/>
+    <control-input axis="/controls/aerotow/find-aircraft" control="FINDAITOW"/>
+  </hitch>
+
+
+
+
+</airplane>

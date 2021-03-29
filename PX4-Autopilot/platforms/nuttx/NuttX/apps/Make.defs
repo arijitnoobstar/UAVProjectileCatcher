@@ -1,0 +1,120 @@
+############################################################################
+# apps/Make.defs
+# Common make definitions provided to all applications
+#
+#   Copyright (C) 2011, 2014, 2016, 2018 Gregory Nutt. All rights reserved.
+#   Author: Gregory Nutt <gnutt@nuttx.org>
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+# 3. Neither the name NuttX nor the names of its contributors may be
+#    used to endorse or promote products derived from this software
+#    without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+# OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+############################################################################
+
+TOPDIR ?= $(APPDIR)/import
+include $(TOPDIR)/Make.defs
+
+# The GNU make CURDIR will always be a POSIX-like path with forward slashes
+# as path segment separators.  This is fine for the above inclusions but
+# will cause problems later for the native build.  If we know that this is
+# a native build, then we need to fix up the APPDIR path for subsequent
+# use
+
+ifeq ($(CONFIG_WINDOWS_NATIVE),y)
+APPDIR := ${shell echo %CD%}
+endif
+
+# Application Directories
+
+# BUILDIRS is the list of top-level directories containing Make.defs files
+# CLEANDIRS is the list of all top-level directories containing Makefiles.
+#   It is used only for cleaning.
+
+BUILDIRS   := $(dir $(wildcard $(APPDIR)$(DELIM)*$(DELIM)Make.defs))
+BUILDIRS   := $(filter-out $(APPDIR)$(DELIM)import$(DELIM),$(BUILDIRS))
+CONFIGDIRS := $(filter-out $(APPDIR)$(DELIM)builtin$(DELIM),$(BUILDIRS))
+CONFIGDIRS := $(filter-out $(dir $(wildcard $(APPDIR)$(DELIM)*$(DELIM)Kconfig)),$(CONFIGDIRS))
+CLEANDIRS  := $(dir $(wildcard $(APPDIR)$(DELIM)*$(DELIM)Makefile))
+
+# CONFIGURED_APPS is the application directories that should be built in
+#   the current configuration.
+
+CONFIGURED_APPS :=
+
+define Add_Application
+	include $(1)Make.defs
+endef
+
+$(foreach BDIR, $(BUILDIRS), $(eval $(call Add_Application,$(BDIR))))
+
+# File extensions
+
+CXXEXT ?= .cxx
+
+# Library path
+
+LIBPATH ?= $(TOPDIR)$(DELIM)staging
+
+# The install path
+
+BINDIR ?= $(APPDIR)$(DELIM)bin
+
+# The final build target
+
+BIN ?= $(APPDIR)$(DELIM)libapps$(LIBEXT)
+
+# Tools
+
+ifeq ($(CONFIG_WINDOWS_NATIVE),y)
+  MKKCONFIG ?= $(APPDIR)$(DELIM)tools$(DELIM)mkkconfig.bat
+else
+  MKKCONFIG ?= $(APPDIR)$(DELIM)tools$(DELIM)mkkconfig.sh
+endif
+
+# Builtin Registration
+
+BUILTIN_REGISTRY = $(APPDIR)$(DELIM)builtin$(DELIM)registry
+DEPCONFIG = $(TOPDIR)$(DELIM).config
+
+define REGISTER
+	$(Q) echo Register: $1
+	$(Q) echo { \"$1\", $2, $3, $4 }, > "$(BUILTIN_REGISTRY)$(DELIM)$1.bdat"
+	$(Q) if [ ! -z $4 ]; then \
+	        echo "int $4(int argc, char *argv[]);" > "$(BUILTIN_REGISTRY)$(DELIM)$1.pdat"; \
+	     fi;
+	$(Q) touch "$(BUILTIN_REGISTRY)$(DELIM).updated"
+endef
+
+# Standard include path
+
+CFLAGS   += ${shell $(INCDIR) "$(CC)" "$(APPDIR)$(DELIM)include"}
+CXXFLAGS += ${shell $(INCDIR) "$(CC)" "$(APPDIR)$(DELIM)include"}
+
+ifeq ($(CONFIG_CYGWIN_WINTOOL),y)
+  NUTTXLIB ?= "${shell cygpath -w $(TOPDIR)$(DELIM)staging}"
+else
+  NUTTXLIB ?= "$(TOPDIR)$(DELIM)staging"
+endif

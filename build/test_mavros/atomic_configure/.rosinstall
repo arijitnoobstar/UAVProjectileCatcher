@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/test_mavros/setup.sh

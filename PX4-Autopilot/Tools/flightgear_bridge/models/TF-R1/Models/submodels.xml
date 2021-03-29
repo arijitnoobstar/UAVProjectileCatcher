@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!--non tracer-->
+
+  <submodel>
+    <name>Browning 50</name>
+    <trigger>sim/armament/gun[0]/fire</trigger>
+    <offsets>
+      <x-m>2.249</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.9</z-m>
+      <heading-deg>
+        <property>sim/armament/browning/heading</property>
+      </heading-deg>
+      <pitch-deg>
+        <property>sim/armament/browning/elevation</property>
+      </pitch-deg>
+    </offsets>
+    <model alias="../../Browning50/model"/>
+    <speed alias="../../Browning50/speed"/>
+    <repeat alias="../../Browning50/repeat"/>
+    <delay alias="../../Browning50/delay"/>
+    <count alias="../../Browning50/count"/>
+    <life alias="../../Browning50/life"/>
+    <wind alias="../../Browning50/wind"/>
+    <weight alias="../../Browning50/weight"/>
+    <cd alias="../../Browning50/cd"/>
+    <eda alias="../../Browning50/eda"/>
+    <collision alias="../../Browning50/collision"/>
+    <collision-reports alias="../../Browning50/collision-reports"/>
+    <impact alias="../../Browning50/impact"/>
+    <impact-reports alias="../../Browning50/impact-reports"/>
+    <submodel-path alias="../../Browning50/submodel-path"/>
+  </submodel>
+
+  <submodel>
+    <name>Browning 30</name>
+    <trigger>sim/armament/gun[1]/fire</trigger>
+    <offsets>
+      <x-m>1.2</x-m>
+      <y-m>0.5</y-m>
+      <z-m>1.4</z-m>
+      <heading-deg>
+        <property>sim/armament/browning30/heading</property>
+      </heading-deg>
+      <pitch-deg>
+        <property>sim/armament/browning30/elevation</property>
+      </pitch-deg>
+    </offsets>
+    <model alias="../../Browning30/model"/>
+    <speed alias="../../Browning30/speed"/>
+    <repeat alias="../../Browning30/repeat"/>
+    <delay alias="../../Browning30/delay"/>
+    <count alias="../../Browning30/count"/>
+    <life alias="../../Browning30/life"/>
+    <wind alias="../../Browning30/wind"/>
+    <weight alias="../../Browning30/weight"/>
+    <cd alias="../../Browning30/cd"/>
+    <eda alias="../../Browning50/eda"/>
+    <collision alias="../../Browning30/collision"/>
+    <collision-reports alias="../../Browning30/collision-reports"/>
+    <impact alias="../../Browning30/impact"/>
+    <impact-reports alias="../../Browning30/impact-reports"/>
+    <submodel-path alias="../../Browning30/submodel-path"/>
+  </submodel>
+
+  <submodel>
+    <name>cases</name>
+    <model>Aircraft/TF-R1/Models/case.ac</model>
+    <trigger>sim/armament/gun[0]/fire</trigger>
+    <speed>20.0</speed>
+    <life>3.0</life>
+    <offsets>
+      <x-m>1.249</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.9</z-m>
+      <yaw-offset>90</yaw-offset>
+      <heading-deg>
+        <property>sim/armament/browning/heading</property>
+      </heading-deg>
+      <pitch-deg>
+        <property>sim/armament/browning/elevation</property>
+      </pitch-deg>
+    </offsets>
+    <delay alias="../../Browning50/delay"/>
+    <count alias="../../Browning50/count"/>
+    <repeat alias="../../Browning50/repeat"/>
+  </submodel>
+
+  <Browning50>
+    <model>Models/Geometry/null.ac</model>
+    <speed>2900.0</speed>
+    <repeat>true</repeat>
+    <delay>0.25</delay>
+    <count>-1</count>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.1069</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda>
+    <collision>true</collision>
+    <collision-reports>model-impact</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+    <submodel-path>Aircraft/TF-R1/Models/subsubmodels.xml</submodel-path>
+  </Browning50>
+
+  <Browning30>
+    <model>Models/Geometry/null.ac</model>
+    <speed>2800.0</speed>
+    <repeat>true</repeat>
+    <delay>0.14</delay>
+    <count>-1</count>
+    <life>3.0</life>
+    <wind>false</wind>
+    <weight>0.0249</weight>
+    <cd>0.193</cd>
+    <eda>0.00136354</eda>
+    <collision>true</collision>
+    <collision-reports>ai/models/model-impact</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+    <submodel-path>Aircraft/spitfireIX/Models/subsubmodels.xml</submodel-path>
+  </Browning30>
+
+</PropertyList>

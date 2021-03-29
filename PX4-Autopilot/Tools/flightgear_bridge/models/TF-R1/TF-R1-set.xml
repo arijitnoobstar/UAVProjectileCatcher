@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+  <sim>
+
+    <description>ThunderFly TF-R1 UAV rover</description>
+    <author>Detlef Faber</author>
+    <status>alpha</status>
+    <flight-model>yasim</flight-model>
+    <aero>TF-R1-yasim</aero>
+
+    <virtual-cockpit archive="y">true</virtual-cockpit>
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+    <rendering>
+      <als-secondary-lights>
+        <landing-light2-offset-deg>10</landing-light2-offset-deg>
+        <landing-light2-offset-deg>4</landing-light2-offset-deg>
+      </als-secondary-lights>
+    </rendering>
+    <sound>
+      <path>Aircraft/Generic/generic-sound.xml</path>
+    </sound>
+
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/TF-R1/Models/submodels.xml</path>
+    </submodels>
+
+    <model>
+      <path>Aircraft/TF-R1/Models/Jeep.xml</path>
+      <crew>
+        <pilot>
+          <visible type="int">1</visible>
+        </pilot>
+      </crew>
+      <livery>
+        <file/>
+        <name type="string">Followme Jeep</name>
+        <default>0</default>
+        <screen>1</screen>
+        <grille>1</grille>
+        <roof>1</roof>
+        <canister>0</canister>
+        <spare>0</spare>
+        <bumperends>1</bumperends>
+        <tools>0</tools>
+        <screenstops>1</screenstops>
+        <carrierframe>0</carrierframe>
+        <texture>Liveries/jeep-1e.png</texture>
+        <texture-roof>Liveries/softroof-b.png</texture-roof>
+      </livery>
+    </model>
+
+    <chase-distance-m type="double" archive="y">-9.0</chase-distance-m>
+    <view n="0">
+      <internal archive="y">true</internal>
+      <config>
+        <x-offset-m archive="y" type="double">-0.35</x-offset-m>
+        <y-offset-m archive="y" type="double">1.5</y-offset-m>
+        <z-offset-m archive="y" type="double">2.295</z-offset-m>
+        <pitch-offset-deg>-15.0</pitch-offset-deg>
+      </config>
+    </view>
+
+    <view n="1">
+      <config>
+        <target-z-offset-m archive="y" type="double">1.6</target-z-offset-m>
+        <pitch-offset-deg>15.0</pitch-offset-deg>
+      </config>
+    </view>
+
+    <view n="2">
+      <config>
+        <target-z-offset-m archive="y" type="double">1.6</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="3">
+      <config>
+        <target-z-offset-m archive="y" type="double">1.6</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="4">
+      <config>
+        <target-z-offset-m archive="y" type="double">1.6</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="5">
+      <config>
+        <target-z-offset-m archive="y" type="double">1.6</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="6">
+      <config>
+        <target-z-offset-m archive="y" type="double">1.6</target-z-offset-m>
+      </config>
+    </view>
+
+    <view n="100">
+      <name>Browning Gunner</name>
+      <type>lookat</type>
+      <config>
+        <from-model type="bool">false</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+        <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+        <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+        <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+        <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+        <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+        <at-model type="bool">true</at-model>
+        <at-model-idx type="int">0</at-model-idx>
+        <target-y-offset-m type="double">1.9</target-y-offset-m>
+        <target-z-offset-m type="double">2.249</target-z-offset-m>
+        <ground-level-nearplane-m type="double">0.1</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <x-offset-m archive="y" type="double">0.0</x-offset-m>
+        <y-offset-m archive="y" type="double">0.09</y-offset-m>
+        <z-offset-m archive="y" type="double">-1.1</z-offset-m>
+      </config>
+    </view>
+
+    <view n="101">
+      <name>Browning Front</name>
+      <type>lookat</type>
+      <config>
+        <from-model type="bool">false</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+        <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+        <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+        <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+        <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+        <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+        <at-model type="bool">true</at-model>
+        <at-model-idx type="int">0</at-model-idx>
+        <target-x-offset-m type="double">0.5</target-x-offset-m>
+        <target-y-offset-m type="double">1.4</target-y-offset-m>
+        <target-z-offset-m type="double">1.2</target-z-offset-m>
+        <ground-level-nearplane-m type="double">0.1</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <x-offset-m archive="y" type="double">0.0</x-offset-m>
+        <y-offset-m archive="y" type="double">0.09</y-offset-m>
+        <z-offset-m archive="y" type="double">-1.1</z-offset-m>
+      </config>
+    </view>
+
+
+    <hud>
+      <path n="1">Aircraft/TF-R1/config/hud.xml</path>
+            <visibility n="1">true</visibility>
+            <enable3d n="1">false</enable3d>
+            <transparent n="1">false</transparent>
+    </hud>
+
+    <help>
+      <key>
+        <name>,</name>
+        <desc>Brakes</desc>
+      </key>
+      <key>
+        <name>.</name>
+        <desc>Accelerator</desc>
+      </key>
+    </help>
+    <menubar>
+      <default>
+        <menu n="10">
+          <label>TF-R1</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>tilt Windscreen forward</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>/controls/gear/screen</property>
+            </binding>
+          </item>
+          <item>
+            <label>put Softroof on</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>/controls/gear/roof</property>
+            </binding>
+          </item>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
+    <multiplay>
+      <generic>
+        <float>0</float>
+        <string>0</string>
+        <string n="1">0</string>
+      </generic>
+    </multiplay>
+
+    <systems>
+      <property-rule n="100">
+        <name>Engine</name>
+        <path>Aircraft/TF-R1/Systems/engine.xml</path>
+      </property-rule>
+    </systems>
+  </sim>
+
+ <engines>
+  <engine>
+   <rpm type="double">200</rpm>
+    <throttle-c type="float">0</throttle-c>
+  <transmission>
+    <auto_shift type="bool">true</auto_shift>
+    <gear n="0">
+       <max_throttle type="float">1.0</max_throttle>
+       <max_speed type="float">0</max_speed>
+    </gear>
+    <gear n="1">
+       <max_throttle type="float">1.0</max_throttle>
+       <max_speed type="float">20</max_speed>
+    </gear>
+    <gear n="2">
+       <max_throttle type="float">0.6</max_throttle>
+       <max_speed type="float">50</max_speed>
+    </gear>
+    <gear n="3">
+       <max_throttle type="float">0.4</max_throttle>
+       <max_speed type="float">110</max_speed>
+    </gear>
+    <gear n="4">
+       <max_throttle type="float">0.2</max_throttle>
+       <max_speed type="float">160</max_speed>
+    </gear>
+
+  </transmission>
+        <magnetos>3</magnetos>
+        <on-startup-running type="bool">1</on-startup-running>
+        <throttle-c type="float">0</throttle-c>
+        <rpm-c type="float">0</rpm-c>
+ </engine>
+ </engines>
+  <controls>
+    <flight>
+      <mousesteer type="bool">true</mousesteer>
+    </flight>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+        <transmission>
+          <damp-norm>550</damp-norm>
+          <reduction type="float">0.9</reduction>
+        </transmission>
+      </engine>
+    </engines>
+    <gear>
+      <shift type="int">1</shift>
+      <fourwd type="bool">false</fourwd>
+      <axle>
+        <difflock type="bool">false</difflock>
+      </axle>
+      <axle>
+        <difflock type="bool">false</difflock>
+      </axle>
+      <screen type="bool">false</screen>
+      <roof type="bool">false</roof>
+    </gear>
+  </controls>
+<input>
+    <keyboard>
+        <key n="77">
+          <name>M</name>
+          <desc>engage Reverse</desc>
+          <binding>
+            <command>property-assign</command>
+            <property>controls/engines/engine[0]/mixture</property>
+            <value type="double">0.0</value>
+          </binding>
+        </key>
+
+        <key n="109">
+          <name>m</name>
+          <desc>disengage Reverse</desc>
+          <binding>
+            <command>property-assign</command>
+            <property>controls/engines/engine[0]/mixture</property>
+            <value type="double">1.0</value>
+          </binding>
+      </key>
+
+    </keyboard>
+  </input>
+  <nasal>
+    <TF-R1>
+      <file>Aircraft/TF-R1/Nasal/jeep.nas</file>
+    </TF-R1>
+<!--
+    <hitcheck>
+      <file>Aircraft/jeep/Nasal/hitcheck.nas</file>
+    </hitcheck>
+-->
+    <failure>
+      <file>Aircraft/TF-R1/Nasal/failure.nas</file>
+    </failure>
+    <engine>
+      <file>Aircraft/TF-R1/Nasal/engine.nas</file>
+    </engine>
+ </nasal>
+</PropertyList>

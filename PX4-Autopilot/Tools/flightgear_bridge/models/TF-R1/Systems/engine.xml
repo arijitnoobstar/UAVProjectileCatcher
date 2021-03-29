@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<filter>
+    <name>engine rpm</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <gain>1.0</gain>
+    <input>
+      <expression>
+        <table>
+          <property>/controls/engines/engine[0]/throttle</property>
+
+          <entry>
+            <ind>0.0</ind>
+            <dep>200.0</dep>
+          </entry>
+          <entry>
+            <ind>0.35</ind>
+            <dep>2000.0</dep>
+          </entry>
+          <entry>
+            <ind>0.80</ind>
+            <dep>3000.0</dep>
+          </entry>
+          <entry>
+            <ind>1.0</ind>
+            <dep>4000.0</dep>
+          </entry>
+
+
+        </table>
+      </expression>
+    </input>
+    <output>
+      <property>controls/engines/engine[0]/engine-out-rpm</property>
+    </output>
+  </filter>
+
+  <filter>
+    <name>Damping of engine RPM</name>
+    <debug>false</debug>
+    <type>noise-spike</type>
+    <input>controls/engines/engine[0]/engine-out-rpm</input>
+    <output>engines/engine[0]/rpm</output>
+    <max-rate-of-change>
+      <prop>controls/engines/engine[0]/transmission/damp-norm</prop>
+    </max-rate-of-change>
+  </filter>
+
+<filter>
+    <name>engine rpmto wheels</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <gain>
+      <property>controls/engines/engine[0]/transmission/reduction</property>
+    </gain>
+    <input>
+      <expression>
+        <table>
+          <property>engines/engine[0]/rpm</property>
+
+          <entry>
+            <ind>0.0</ind>
+            <dep>0.0</dep>
+          </entry>
+          <entry>
+            <ind>220.0</ind>
+            <dep>0.0</dep>
+          </entry>
+          <entry>
+            <ind>1000.0</ind>
+            <dep>0.55</dep>
+          </entry>
+          <entry>
+            <ind>2000.0</ind>
+            <dep>0.7</dep>
+          </entry>
+
+          <entry>
+            <ind>4000.0</ind>
+            <dep>1.0</dep>
+          </entry>
+
+        </table>
+      </expression>
+    </input>
+    <output>
+      <property>controls/engines/engine[0]/throttle-c</property>
+    </output>
+  </filter>
+
+
+</PropertyList>
+

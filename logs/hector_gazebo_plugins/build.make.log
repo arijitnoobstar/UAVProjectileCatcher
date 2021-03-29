@@ -1,0 +1,75 @@
+[35m[1mScanning dependencies of target hector_servo_plugin[0m
+[  3%] [32mBuilding CXX object CMakeFiles/hector_servo_plugin.dir/src/servo_plugin.cpp.o[0m
+[35m[1mScanning dependencies of target hector_gazebo_plugins_gencfg[0m
+[  7%] [34m[1mGenerating dynamic reconfigure files from cfg/SensorModel.cfg: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/include/hector_gazebo_plugins/SensorModelConfig.h /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/python2.7/dist-packages/hector_gazebo_plugins/cfg/SensorModelConfig.py[0m
+Generating reconfiguration files for SensorModel in hector_gazebo_plugins
+Wrote header file in /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/include/hector_gazebo_plugins/SensorModelConfig.h
+[ 11%] [34m[1mGenerating dynamic reconfigure files from cfg/GNSS.cfg: /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/include/hector_gazebo_plugins/GNSSConfig.h /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/python2.7/dist-packages/hector_gazebo_plugins/cfg/GNSSConfig.py[0m
+Generating reconfiguration files for GNSS in hector_gazebo_plugins
+Wrote header file in /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/include/hector_gazebo_plugins/GNSSConfig.h
+[ 11%] Built target hector_gazebo_plugins_gencfg
+[35m[1mScanning dependencies of target diffdrive_plugin_multi_wheel[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/diffdrive_plugin_multi_wheel.dir/src/diffdrive_plugin_multi_wheel.cpp.o[0m
+[35m[1mScanning dependencies of target diffdrive_plugin_6w[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/diffdrive_plugin_6w.dir/src/diffdrive_plugin_6w.cpp.o[0m
+[ 22%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libhector_servo_plugin.so[0m
+[ 22%] Built target hector_servo_plugin
+[35m[1mScanning dependencies of target hector_gazebo_ros_gps[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_gps.dir/src/gazebo_ros_gps.cpp.o[0m
+[ 29%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libdiffdrive_plugin_multi_wheel.so[0m
+[ 29%] Built target diffdrive_plugin_multi_wheel
+[35m[1mScanning dependencies of target _hector_gazebo_plugins_generate_messages_check_deps_SetBias[0m
+[ 29%] Built target _hector_gazebo_plugins_generate_messages_check_deps_SetBias
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[ 29%] Built target geometry_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target gazebo_ros_force_based_move[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/gazebo_ros_force_based_move.dir/src/gazebo_ros_force_based_move.cpp.o[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[ 33%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[ 33%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[ 33%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[ 33%] Built target geometry_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target hector_gazebo_reset_plugin[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/hector_gazebo_reset_plugin.dir/src/reset_plugin.cpp.o[0m
+[ 40%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libdiffdrive_plugin_6w.so[0m
+[ 40%] Built target diffdrive_plugin_6w
+[35m[1mScanning dependencies of target hector_gazebo_ros_sonar[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_sonar.dir/src/gazebo_ros_sonar.cpp.o[0m
+[ 48%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libhector_gazebo_ros_gps.so[0m
+[ 48%] Built target hector_gazebo_ros_gps
+[35m[1mScanning dependencies of target hector_gazebo_ros_magnetic[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_magnetic.dir/src/gazebo_ros_magnetic.cpp.o[0m
+[ 55%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libhector_gazebo_reset_plugin.so[0m
+[ 55%] Built target hector_gazebo_reset_plugin
+[35m[1mScanning dependencies of target hector_gazebo_plugins_generate_messages_cpp[0m
+[ 59%] [34m[1mGenerating C++ code from hector_gazebo_plugins/SetBias.srv[0m
+[ 59%] Built target hector_gazebo_plugins_generate_messages_cpp
+[ 62%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libgazebo_ros_force_based_move.so[0m
+[ 62%] Built target gazebo_ros_force_based_move
+[35m[1mScanning dependencies of target hector_gazebo_plugins_generate_messages_nodejs[0m
+[ 66%] [34m[1mGenerating Javascript code from hector_gazebo_plugins/SetBias.srv[0m
+[ 66%] Built target hector_gazebo_plugins_generate_messages_nodejs
+[ 70%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libhector_gazebo_ros_sonar.so[0m
+[35m[1mScanning dependencies of target hector_gazebo_plugins_generate_messages_py[0m
+[ 74%] [34m[1mGenerating Python code from SRV hector_gazebo_plugins/SetBias[0m
+[ 77%] [34m[1mGenerating Python srv __init__.py for hector_gazebo_plugins[0m
+[ 77%] Built target hector_gazebo_plugins_generate_messages_py
+[ 77%] Built target hector_gazebo_ros_sonar
+[35m[1mScanning dependencies of target hector_gazebo_plugins_generate_messages_eus[0m
+[ 81%] [34m[1mGenerating EusLisp code from hector_gazebo_plugins/SetBias.srv[0m
+[ 85%] [34m[1mGenerating EusLisp manifest code for hector_gazebo_plugins[0m
+[ 85%] Built target hector_gazebo_plugins_generate_messages_eus
+[35m[1mScanning dependencies of target hector_gazebo_plugins_generate_messages_lisp[0m
+[ 88%] [34m[1mGenerating Lisp code from hector_gazebo_plugins/SetBias.srv[0m
+[ 88%] Built target hector_gazebo_plugins_generate_messages_lisp
+[35m[1mScanning dependencies of target hector_gazebo_ros_imu[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/hector_gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.o[0m
+[ 96%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libhector_gazebo_ros_magnetic.so[0m
+[ 96%] Built target hector_gazebo_ros_magnetic
+[35m[1mScanning dependencies of target hector_gazebo_plugins_generate_messages[0m
+[ 96%] Built target hector_gazebo_plugins_generate_messages
+[100%] [32m[1mLinking CXX shared library /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_plugins/lib/libhector_gazebo_ros_imu.so[0m
+[100%] Built target hector_gazebo_ros_imu

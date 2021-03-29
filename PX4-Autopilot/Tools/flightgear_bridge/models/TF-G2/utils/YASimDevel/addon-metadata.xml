@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+    <meta>
+        <file-type type="string">FlightGear add-on metadata</file-type>
+        <format-version type="int">1</format-version>
+    </meta>
+
+    <addon>
+        <identifier type="string">org.flightgear.addons.YASimDevel</identifier>
+        <name type="string">YASim development tools</name>
+        <version type="string">1.1.0</version>
+
+        <authors>
+            <author>
+                <name type="string">Henning Stahlke</name>
+                <email type="string"></email>
+                <url type="string"></url>
+            </author>
+        </authors>
+
+        <maintainers>
+            <maintainer>
+                <name type="string">FlightGear developers</name>
+                <url type="string">
+                    https://sourceforge.net/p/flightgear/mailman/flightgear-devel/
+                </url>
+            </maintainer>
+        </maintainers>
+
+        <short-description type="string">
+            Add-on to help YASim aircraft developers.
+        </short-description>
+
+        <long-description type="string">
+            This add-on can display Canvas windows that show internals like the mass distribution, position of the center of gravity and forces.
+        </long-description>
+
+        <license>
+            <designation type="string">
+                GNU GPL version 2 or later
+            </designation>
+            <url type="string">
+                https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+            </url>
+        </license>
+
+        <min-FG-version type="string">2017.4.0</min-FG-version>
+        <max-FG-version type="string">none</max-FG-version>
+
+        <urls>
+            <home-page type="string">
+                http://wiki.flightgear.org/YASim_Development_Tools
+            </home-page>
+
+            <download type="string">
+                https://sourceforge.net/p/flightgear/fgaddon/HEAD/tree/trunk/Addons/YASimDevel/
+            </download>
+
+            <support type="string">
+                http://wiki.flightgear.org/YASim_Development_Tools
+            </support>
+
+            <code-repository type="string">
+                https://sourceforge.net/p/flightgear/fgaddon/HEAD/tree/trunk/Addons/YASimDevel/
+            </code-repository>
+        </urls>
+
+        <tags>
+            <tag type="string">YASim</tag>
+            <tag type="string">FDM</tag>
+            <tag type="string">force</tag>
+            <tag type="string">development</tag>
+            <tag type="string">Canvas</tag>
+        </tags>
+    </addon>
+</PropertyList>

@@ -1,0 +1,5 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/libmavconn.so
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/libmavconn.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/libmavconn/cmake/libmavconnConfig-version.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/libmavconn/cmake/libmavconn-extras.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/libmavconn/cmake/libmavconnConfig.cmake

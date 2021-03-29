@@ -1,0 +1,100 @@
+############################################################################
+# apps/examples/thttpd/content/Makefile.nxflat
+#
+#   Copyright (C) 2009, 2011, 2015 Gregory Nutt. All rights reserved.
+#   Author: Gregory Nutt <gnutt@nuttx.org>
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in
+#    the documentation and/or other materials provided with the
+#    distribution.
+# 3. Neither the name NuttX nor the names of its contributors may be
+#    used to endorse or promote products derived from this software
+#    without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+# OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+############################################################################
+
+include $(APPDIR)/Make.defs
+
+SUBDIRS = hello tasks
+INSTALL_FILES = index.html style.css
+
+THTTPD_DIR = $(APPDIR)/examples/thttpd
+CONTENT_DIR = $(THTTPD_DIR)/content
+ROMFS_DIR = $(CONTENT_DIR)/romfs
+ROMFS_IMG = $(CONTENT_DIR)/romfs.img
+ROMFS_SRC = $(CONTENT_DIR)/romfs.c
+ROMFSCGI_DIR = $(ROMFS_DIR)/cgi-bin
+SYMTAB_SRC = $(CONTENT_DIR)/symtab.c
+
+define DIR_template
+$(1)_$(2):
+	+$(Q) $(MAKE) -C $(1) $(2) TOPDIR="$(TOPDIR)" APPDIR="$(APPDIR)" CROSSDEV=$(CROSSDEV) CGI_DIR="$(ROMFSCGI_DIR)"
+endef
+
+all: $(ROMFS_SRC) $(SYMTAB_SRC)
+.PHONY: all clean distclean install context depend
+
+$(foreach DIR, $(SUBDIRS), $(eval $(call DIR_template,$(DIR),clean)))
+$(foreach DIR, $(SUBDIRS), $(eval $(call DIR_template,$(DIR),install)))
+
+# Install each program in the romfs directory
+
+install: $(foreach DIR, $(SUBDIRS), $(DIR)_install)
+	$(Q) ( for file in $(INSTALL_FILES); do\
+		install -m 0644 -D $${file} $(ROMFS_DIR)/$${file}; \
+	done; )
+
+# Create the romfs.img file from the populated romfs directory
+
+$(ROMFS_IMG): install
+	$(Q) genromfs -f $@.tmp -d $(ROMFS_DIR) -V "THTTPDTEST"
+	$(Q) $(call TESTANDREPLACEFILE, $@.tmp, $@)
+
+# Create the romfs.c file from the romfs.img file
+
+$(ROMFS_SRC): $(ROMFS_IMG)
+	$(Q) (cd $(CONTENT_DIR); xxd -i romfs.img | sed -e "s/^unsigned/const unsigned/g" >$@)
+
+# Create the exported symbol table list from the derived *-thunk.S files
+
+$(SYMTAB_SRC): install
+	$(Q) $(APPDIR)/tools/mksymtab.sh $(CONTENT_DIR) g_thttpd >$@.tmp
+	$(Q) $(call TESTANDREPLACEFILE, $@.tmp, $@)
+
+# Nothing special needs to be done during the context phase
+
+context:
+
+# Clean each subdirectory
+
+clean: $(foreach DIR, $(SUBDIRS), $(DIR)_clean)
+	$(call DELFILE, $(ROMFS_SRC))
+	$(call DELFILE, $(ROMFS_IMG))
+	$(call DELFILE, $(SYMTAB_SRC))
+	$(Q) rm -rf $(ROMFS_DIR)
+
+distclean: clean
+
+# No dependencies
+
+depend:

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+Normal rotor speed is 600 rpm with a Vmax of 1000 rpm,
+and the blades have been tested up to 4000N static tensile strength,
+with a maximum centrifugal load of five tons at 300 rpm in a 3-G pull-up maneuver.
+
+Vne:	95 kts
+Max Cruise: 80 kts
+Economy Cruise:  70 kts
+Best Climb: 52 kts
+
+Rotor Diameter: 7 m
+Rotorblade Chord:180 mm
+Fuselage Length: 3.5 m
+Height: 2.0 m
+Wheel Track: 1.7 m
+Propeller Diameter: 1.2 m
+Rotor Disk Area: 38.5 sqm
+Empty Weight: 167 kg
+Gross Weight: 290 kg
+Max Disc Loading: 7.5 kg/sqm
+Max Power Loading: 3.9 kg/hp
+Vne: 170 kmh
+Max Cruise: 140 kmh
+Economy Cruise: 120 kmh
+Minimum Speed: 40 kmh
+Max ROC: 3 m/s
+Service Ceiling (estimated): 4000 m (13000 ft)
+Takeoff Run 10 m
+Landing Run: 5 m
+Range: 250 km
+
+-->
+
+<airplane version="YASIM_VERSION_CURRENT" mass-kg="1.2" mtow-kg="1.6">
+
+  <approach speed="20" aoa="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.60"/>
+  </approach>
+
+  <cruise speed="26" alt="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
+  </cruise>
+
+  <rotor name="main"
+       x="-0.17" y="0.0" z="0.229"
+       nx="0" ny="0" nz="1"
+       fx="1" fy="0" fz="0"  ccw="1"
+       maxcollective="3.5" mincollective="3.5"
+       maxcyclicele="0" mincyclicele="0"
+       maxcyclicail="0" mincyclicail="0"
+       diameter="0.98"
+       numblades="2"
+       weightperblade="0.083"
+       twist="0"
+       chord="0.045"
+       rpm="700"
+       tiltcenterx="-0.15" tiltcentery="0" tiltcenterz="0.229"
+       mintiltpitch=" 2"
+       maxtiltpitch="22"
+       mintiltroll="-3"
+       maxtiltroll="1"
+       relbladecenter="0.55"
+       dynamic="1"
+       sharedflaphinge="0"
+       rellenflaphinge="0.0"
+       delta3="1"
+       delta="0.8"
+       pitch-a="6.3"
+       pitch-b="6.3"
+       flapmin="-8"
+       flapmax="8"
+       flap0="-3"
+       flap0factor="0"
+       notorque="0"
+       translift-ve="15"
+       translift-maxfactor="1"
+       ground-effect-constant="0.2"
+       taper="1"
+       number-of-segments="8"
+       number-of-parts="8"
+       rel-len-where-incidence-is-measured="0.5"
+       rel-len-blade-start="0.125"
+  		 airfoil-lift-coefficient="6.8"
+  		 airfoil-drag-coefficient0="0.0075"
+  		 airfoil-drag-coefficient1="0.325"
+  		 airfoil-incidence-no-lift="0"
+  		 incidence-stall-zero-speed="15"
+  		 incidence-stall-half-sonic-speed="14.5"
+  		 lift-factor-stall="0.6"
+  		 stall-change-over="10"
+  		 drag-factor-stall="1.5"
+       cyclic-factor="0.8"
+       rotor-correction-factor="0.95"
+       downwashfactor="0.0"
+       balance="0.999995"
+	 >
+         <control-input axis="/controls/flight/aileron-trim" control="TILTROLL" split="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+         <control-input axis="/controls/flight/aileron" control="TILTROLL" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="TILTPITCH" split="true" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+         <control-input axis="/controls/flight/elevator" control="TILTPITCH" src0="-1.0" src1="1.0" dst0="1.0" dst1="-1.0"/>
+
+ </rotor>
+  <rotorgear max-power-engine="0.750"
+             max-power-rotor-brake="0.050"
+             rotorgear-friction="0.0005"
+             engine-prop-factor="0.02"
+	           engine-accel-limit="5"
+             yasimdragfactor="30"
+             yasimliftfactor="140"
+	>
+  <!-- ROTORGEARENGINEON is unable to handle proportional input (https://sourceforge.net/p/flightgear/flightgear/ci/next/tree/src/FDM/YASim/Rotor.cpp#l1533)-->
+ 	<control-input axis="/controls/engines/engine[0]/starter" control="ROTORGEARENGINEON"/>
+	<control-input axis="/controls/rotor/brake" control="ROTORBRAKE" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
+  </rotorgear>
+
+  <!-- a fixed pitch propeller ommiting the  max-rpm, min-rpm, fine-stop and coarse-stop, the pitch is set by cruise speed and power parameters. -->
+  <propeller x="0.02" y="0" z="0.026"
+      mass="0.05"
+      moment="0.0006"
+      radius="0.113"
+      cruise-speed="26"
+      cruise-rpm="7000"
+      cruise-power="0.1"
+      cruise-alt="2000"
+      takeoff-power="0.2"
+      takeoff-rpm="9200"
+      contra="1">
+	    <actionpt x="0.02" y="0" z="0.026"/>
+    	<electric-engine Kv="750" voltage="12" Rm="0.02" >
+    		<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+    	</electric-engine>
+  </propeller>
+
+
+
+ <!-- main fuselage -->
+ <fuselage ax="0" ay="0" az="0" bx="-0.62" by="0" bz="0" width="0.2" taper="0" midpoint="0.25"/>
+  <!-- main tube -->
+ <fuselage ax="0" ay="0" az="0" bx="-0.92" by="0" bz="0" width="0.03" taper="1" midpoint="0.6"/>
+
+
+  <hstab x="-0.7" y="0.0" z="-0.035"
+         incidence="-3"
+         taper="1"
+         length="0.15"
+         chord="0.08"
+         sweep="10"
+	      dihedral = "0">
+	<stall aoa="14" width="4" peak="1.5"/>
+  </hstab>
+
+  <vstab x="-0.82" y="0" z="-0.02"
+         chord="0.08"
+         length="0.17"
+         taper="1"
+         sweep="13">
+         <stall aoa="16" width="4" peak="1.5"/>
+         <flap0 start="0.1" end="0.9" lift="1.2" drag="0.8"/>
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- two front gears -->
+
+  <gear x="-0.05" y="0.15" z="-0.13"
+    spring="0.9"
+    damp="0.8"
+    dfric="0.9"
+    sfric="1.1"
+    compression="0.051">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <gear x="-0.05" y="-0.15" z="-0.13"
+    spring="0.9"
+    damp="0.8"
+    dfric="0.9"
+    sfric="1.1"
+    compression="0.051">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+
+  <!-- rear gear -->
+
+  <gear x="-0.83" y="0.0" z="-0.065"
+    spring="0.9"
+    damp="0.8"
+    dfric="0.9"
+    sfric="1.1"
+    compression="0.051">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.3" dst1="0.3"/>
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+
+
+<!-- fuel tank for moddeled engine-->
+ <!-- <tank x="-0.1" y="0.0" z="-0.05" capacity="0.2"/> -->
+
+<!-- rotor ballast -->
+<ballast  x="-0.15" y="0.0" z="0.23" mass-kg="0.1"/>
+
+<!-- body balast -->
+<ballast  x="-0.17" y="0.0" z="0.02" mass-kg="0.7"/>
+
+
+
+<!-- motor balast -->
+<ballast  x="0.01" y="0.01" z="0.03" mass-kg="0.18"/>
+
+<!-- accumulator balast -->
+<ballast  x="-0.09" y="0.01" z="0.03" mass-kg="0.15"/>
+
+<!-- tail balast -->
+<!-- Toto nastaveni predpoklada ocas v nejblizsi poloze -->
+<ballast  x="-0.66" y="0.0" z="-0.003" mass-kg="0.13"/>
+
+
+
+<!-- hitch -->
+<hitch name="winch" x="0.0" y="0.0" z="0.0">
+    <tow length="50" weight-per-meter="0.0035" elastic-constant="40000" break-force="10000"/>
+    <!-- 3mm paracord-->
+    <winch max-tow-length="1000" min-tow-length="1" initial-tow-length="1000" max-winch-speed="20" power="2" max-force="80"/>
+    <control-input axis="/controls/winch/place" control="PLACEWINCH"/>
+</hitch>
+<hitch name="aerotow" x="0.0" y="0.0" z="0.0" force-is-calculated-by-other="0">
+    <tow length="60" weight-per-meter="0.0035" elastic-constant="9000" break-force="100" mp-auto-connect-period="0.0"/>
+    <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+    <control-input axis="/controls/aerotow/find-aircraft" control="FINDAITOW"/>
+</hitch>
+
+</airplane>

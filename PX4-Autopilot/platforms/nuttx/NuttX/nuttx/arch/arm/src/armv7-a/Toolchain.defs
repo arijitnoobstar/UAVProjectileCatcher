@@ -1,0 +1,129 @@
+############################################################################
+# arch/arm/src/armv7-a/Toolchain.defs
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.  The
+# ASF licenses this file to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance with the
+# License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+############################################################################
+
+# Setup for the selected toolchain
+
+#
+# Select and allow the selected toolchain to be overridden by a command-line
+#selection.
+#
+
+ifeq ($(filter y, \
+      $(CONFIG_ARMV7A_TOOLCHAIN_BUILDROOT) \
+    ),y)
+  CONFIG_ARMV7A_TOOLCHAIN ?= BUILDROOT
+endif
+
+ifeq ($(filter y, \
+      $(CONFIG_ARMV7A_TOOLCHAIN_GNU_EABIL) \
+    ),y)
+  CONFIG_ARMV7A_TOOLCHAIN ?= GNU_EABI
+endif
+
+ifeq ($(filter y, \
+      $(CONFIG_ARMV7A_TOOLCHAIN_GNU_EABIW) \
+    ),y)
+  CONFIG_ARMV7A_TOOLCHAIN ?= GNU_EABI
+endif
+
+#
+# Supported toolchains
+#
+# Each toolchain definition should set:
+#
+#  CROSSDEV         The GNU toolchain triple (command prefix)
+#  ARCHCPUFLAGS     CPU-specific flags selecting the instruction set
+#                   FPU options, etc.
+#  MAXOPTIMIZATION  The maximum optimization level that results in
+#                   reliable code generation.
+#
+
+ifeq ($(CONFIG_ARM_THUMB),y)
+ARCHCPUFLAGS += -mthumb
+endif
+
+ifeq ($(CONFIG_ARCH_FPU),y)
+ARCHCPUFLAGS += -mfloat-abi=hard
+endif
+
+ifeq ($(CONFIG_ARCH_CORTEXA5),y)
+ARCHCPUFLAGS += -mcpu=cortex-a5
+else ifeq ($(CONFIG_ARCH_CORTEXA7),y)
+ARCHCPUFLAGS += -mcpu=cortex-a7
+else ifeq ($(CONFIG_ARCH_CORTEXA8),y)
+ARCHCPUFLAGS += -mcpu=cortex-a8
+else ifeq ($(CONFIG_ARCH_CORTEXA9),y)
+ARCHCPUFLAGS += -mcpu=cortex-a9
+endif
+
+ifeq ($(CONFIG_DEBUG_CUSTOMOPT),y)
+  MAXOPTIMIZATION := $(CONFIG_DEBUG_OPTLEVEL)
+endif
+
+ifeq ($(CONFIG_ENDIAN_BIG),y)
+  TARGET_ARCH := armeb
+else
+  TARGET_ARCH := arm
+endif
+
+# NuttX buildroot under Linux or Cygwin
+
+ifeq ($(CONFIG_ARMV7A_TOOLCHAIN),BUILDROOT)
+ifeq ($(CONFIG_ARMV7A_OABI_TOOLCHAIN),y)
+  CROSSDEV ?= $(TARGET_ARCH)-nuttx-elf-
+else
+  CROSSDEV ?= $(TARGET_ARCH)-nuttx-eabi-
+endif
+  MAXOPTIMIZATION ?= -Os
+endif
+
+# Generic GNU EABI toolchain
+
+ifeq ($(CONFIG_ARMV7A_TOOLCHAIN),GNU_EABI)
+  CROSSDEV ?= $(TARGET_ARCH)-none-eabi-
+  MAXOPTIMIZATION ?= -Os
+endif
+
+# Default toolchain
+
+CC = $(CROSSDEV)gcc
+CXX = $(CROSSDEV)g++
+CPP = $(CROSSDEV)gcc -E -P -x c
+LD = $(CROSSDEV)ld
+STRIP = $(CROSSDEV)strip --strip-unneeded
+AR = $(CROSSDEV)ar rcs
+NM = $(CROSSDEV)nm
+OBJCOPY = $(CROSSDEV)objcopy
+OBJDUMP = $(CROSSDEV)objdump
+
+# Add the builtin library
+
+EXTRA_LIBS += -lgcc
+EXTRA_LIBPATHS += -L "${shell dirname "`$(CC) $(ARCHCPUFLAGS) --print-libgcc-file-name`"}"
+
+ifneq ($(CONFIG_LIBM),y)
+  EXTRA_LIBS += -lm
+  EXTRA_LIBPATHS += -L "${shell dirname "`$(CC) $(ARCHCPUFLAGS) --print-file-name=libm.a`"}"
+endif
+
+ifeq ($(CONFIG_CXX_LIBSUPCXX),y)
+  EXTRA_LIBS += -lsupc++
+  EXTRA_LIBPATHS += -L "${shell dirname "`$(CC) $(ARCHCPUFLAGS) --print-file-name=libsupc++.a`"}"
+endif

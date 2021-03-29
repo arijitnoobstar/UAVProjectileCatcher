@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copied from the Boeing 737-100
+http://helijah.free.fr/flightgear/hangar.htm
+embaranger@free.fr
+Fix required:
+when the aircraft is flying at a high/low pitch or is rolling over far,
+the shadow seems to disappear into the ground.
+-->
+
+<PropertyList>
+
+  <path>shadow.ac</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>1.85</z-m>
+  </offsets>
+
+  <animation>
+    <!-- opaque objects -->
+    <!-- transparent objects -->
+    <object-name>shadow</object-name>
+  </animation>
+    
+
+<!-- only for 2.8 and up-->
+  <animation>
+    <type>select</type>
+	<object-name>shadow</object-name>
+    <condition>
+      <equals>
+        <property>sim/rendering/rembrandt/enabled</property>
+        <value>false</value>
+      </equals>
+    </condition>
+  </animation>
+ <!-- end 2.8 section-->
+  
+  <animation>
+    <type>noshadow</type>
+    <object-name>shadow</object-name>
+  </animation>
+
+
+  <!-- Une ombre pour OSG en attendant mieux ;) basé sur l'ombre du DC 3-->
+  <!-- pitch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>shadow</object-name>
+    <property>orientation/pitch-deg</property>
+    <factor>-1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- roll -->
+  <animation>
+    <type>rotate</type>
+    <object-name>shadow</object-name>
+    <property>orientation/roll-deg</property>
+    <factor>1.0</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!--Translate to ground level  -->
+  <animation>
+   <type>translate</type>
+   <object-name>shadow</object-name>
+   <property>sim/multiplay/generic/float[0]</property>
+   <factor>-0.3048</factor>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+ </animation>
+
+</PropertyList>
+

@@ -1,0 +1,8 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/sjtu-drone/src/DialogKeyboard.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kui_DialogKeyboard.h: No such file or directory
+ #include [01;31m[K"ui_DialogKeyboard.h"[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/drone_keyboard.dir/src/DialogKeyboard.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_keyboard.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

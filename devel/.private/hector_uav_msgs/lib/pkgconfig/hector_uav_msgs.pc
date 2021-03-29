@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_uav_msgs
+
+Name: hector_uav_msgs
+Description: Description of hector_uav_msgs
+Version: 0.3.5
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_uav_msgs/include -I/home/arijitnoobstar/UAVProjectileCatcher/src/src/hector_quadrotor/hector_uav_msgs/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

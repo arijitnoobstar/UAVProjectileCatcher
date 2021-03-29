@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_pose_estimation_core/lib/pkgconfig/hector_pose_estimation_core.pc

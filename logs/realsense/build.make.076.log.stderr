@@ -1,0 +1,10 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:59:13:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst Point& {aka const geometry_msgs::Point_<std::allocator<void> >&}[m[K’ from expression of type ‘[01m[Kconst ConstPtr {aka const boost::shared_ptr<const geometry_msgs::Point_<std::allocator<void> > >}[m[K’
+   add_point([01;31m[Kmsg[m[K);
+             [01;31m[K^~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/realsense/src/ball_trajectory.cpp:32:6:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kvoid add_point(const Point&)[m[K’
+ void [01;36m[Kadd_point[m[K(const geometry_msgs::Point& pt){
+      [01;36m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

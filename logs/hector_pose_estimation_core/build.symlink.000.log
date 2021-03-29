@@ -1,0 +1,5 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/libhector_pose_estimation.so
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/hector_pose_estimation_core.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_pose_estimation_core/cmake/hector_pose_estimation_coreConfig-version.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_pose_estimation_core/cmake/hector_pose_estimation_coreConfig.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/include/hector_pose_estimation/matrix_config.h

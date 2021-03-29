@@ -1,0 +1,4 @@
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/hector_imu_tools.pc
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_imu_tools/cmake/hector_imu_toolsConfig.cmake
+Symlinking /home/arijitnoobstar/UAVProjectileCatcher/devel/share/hector_imu_tools/cmake/hector_imu_toolsConfig-version.cmake

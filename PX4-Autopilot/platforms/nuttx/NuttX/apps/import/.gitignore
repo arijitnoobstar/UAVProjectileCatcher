@@ -1,0 +1,10 @@
+/.config
+/arch
+/include
+/libs
+/scripts
+/startup
+/System.map
+/tmp
+/tools
+/User.map

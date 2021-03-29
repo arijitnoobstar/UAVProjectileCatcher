@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target imu_attitude_to_tf_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_imu_attitude_to_tf/lib/hector_imu_attitude_to_tf/imu_attitude_to_tf_node[0m
+[100%] Built target imu_attitude_to_tf_node

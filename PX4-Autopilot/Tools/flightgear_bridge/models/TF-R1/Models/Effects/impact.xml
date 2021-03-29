@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<PropertyList>
+   <particlesystem>
+	    <name>spark</name>
+			<type>normal</type>
+      <texture>spark.png</texture>
+	    <emissive>true</emissive>
+	    <lighting>false</lighting>
+	    
+	    <offsets>
+	      <x-m>2</x-m>
+	      <y-m>0</y-m>
+	      <z-m>1</z-m>
+	      <!--<pitch-deg>90</pitch-deg>-->
+	    </offsets>
+	    
+	      
+	    <attach>local</attach>
+	    
+	    <placer>
+	      <type>point</type>
+	    </placer>
+	    
+	    <shooter>
+	      <theta-min-deg>-10</theta-min-deg>
+	      <theta-max-deg>10</theta-max-deg>
+	      <phi-min-deg>-98</phi-min-deg>
+	      <phi-max-deg>98</phi-max-deg>
+	      <speed-mps>
+	        <value>0</value>
+	        <spread>10</spread>
+	      </speed-mps>
+	      <rotation-speed>
+	        <x-min-deg-sec>0</x-min-deg-sec>
+	        <y-min-deg-sec>0</y-min-deg-sec>
+	        <z-min-deg-sec>0</z-min-deg-sec>
+	        <x-max-deg-sec>0</x-max-deg-sec>
+	        <y-max-deg-sec>0</y-max-deg-sec>
+	        <z-max-deg-sec>0</z-max-deg-sec>
+	      </rotation-speed>
+	    </shooter>
+	    
+	    <counter>
+	      <particles-per-sec>
+	        <value>7</value>
+	        <spread>2</spread>
+	      </particles-per-sec>
+	    </counter>
+	    
+	    <align>billboard</align>
+	    
+	    <particle>
+	      <start>
+	        <color>
+	          <red>
+	            <value>0.8</value>
+	          </red>
+	          <green>
+	            <value>0.8</value>
+	          </green>
+	          <blue>
+	            <value>0.3</value>
+	          </blue>
+	          <alpha>
+	            <value>0.7</value>
+	          </alpha>
+	        </color>
+	        <size>
+	          <value>1.5</value>
+	        </size>
+	      </start>
+	      <end>
+	        <color>
+	          <red>
+	            <value>0.8</value>
+	          </red>
+	          <green>
+	            <value>0.8</value>
+	          </green>
+	          <blue>
+	            <value>0.3</value>
+	          </blue>
+	          <alpha>
+	            <value>0.5</value>
+	          </alpha>
+	        </color>
+	        <size>
+	          <value>4.5</value>
+	        </size>
+	      </end>
+	      <life-sec>
+	        <value>0.05</value>
+	      </life-sec>
+	      <mass-kg>0.05</mass-kg>
+	      <radius-m>0.07</radius-m>
+	    </particle>
+	    
+	    <program>
+	      <fluid>air</fluid>
+	      <gravity>true</gravity>
+	      <wind>false</wind>
+	    </program>
+	   
+   </particlesystem>
+
+</PropertyList>

@@ -1,0 +1,10 @@
+{
+    "FgModel":"Rascal110-Electric-YASim",
+    "Url":"https://github.com/ThunderFly-aerospace/FlightGear-Rascal/archive/master.zip",
+    "Controls": [
+                ["5","/controls/flight/aileron","-1"],
+                ["7","/controls/flight/elevator","-1"],
+                ["2","/controls/flight/rudder","1"],
+                ["4","/controls/engines/engine/throttle","1"]
+                ]
+}

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="config/TF-G1_views.xml">
+
+    <fuel-fraction>0.8</fuel-fraction>
+
+
+    <startup>
+      <splash-texture>Aircraft/TF-G1/splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/TF-G1/Sounds/TF-G1-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/TF-G1/Models/TF-G1.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <TF-G1>
+        <rotor-step-deg type="float">-1.0</rotor-step-deg>
+      </TF-G1>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+
+	  <float n="0" alias="/position/altitude-agl-ft">0</float>
+
+      </generic>
+    </multiplay>
+
+	<flight-recorder>
+    <replay-config type="int">0</replay-config>
+			<config n="0" include="/Aircraft/Generic/flightrecorder/generic-piston-propeller-1.xml">
+			<name type="string">My Aircraft's Flight Recorder</name>
+				<signal>
+				    <type>int</type>
+				    <property type="string">/rotors/main/rpm</property>
+				</signal>
+
+				<signal>
+					<type>double</type>
+					<property type="string">/rotors/main/tilt/roll-deg</property>
+				</signal>
+
+				<signal>
+					<type>double</type>
+					<property type="string">/rotors/main/tilt/pitch-deg</property>
+				</signal>
+			</config>
+	</flight-recorder>
+
+    <help>
+			<key>
+                <name>s</name>
+                <desc>Start Engine</desc>
+            </key>
+			<key>
+                <name>B</name>
+                <desc>Toggle parking brake</desc>
+            </key>
+			<key>
+                <name>r</name>
+                <desc>Apply rotor brake</desc>
+            </key>
+			<key>
+                <name>k</name>
+                <desc>Toggle Look Up</desc>
+            </key>
+			<key>
+                <name>l</name>
+                <desc>Toggle Look Down</desc>
+            </key>
+
+      <title>TF-G1 (Autogyro)</title>
+      <line>   Start And Take Off</line>
+      <line>1:Start engine (S-Key)</line>
+      <line>2:Prerotate rotor to 250 rpm (hold S-Key)</line>
+      <line>3:Release parking-brake ('B'-key)</line>
+      <line>4:Add power to accelerate and pull the stick back 1/3</line>
+      <line>5:Wait to accelerate then add full power</line>
+      <line>6:Wait for the rotor to reach sufficient rpm (~350)</line>
+      <line>7:Use the stick to slowly pull up and fly</line>
+      <line></line>
+      <line>   Landing</line>
+      <line>1:Reduce power to 1/4</line>
+      <line>2:Wait to slow down. Don't force forward pitch.</line>
+      <line>3:When you slow down to 40-50 pitch down and hold ~50kt</line>
+      <line>4:Over the runway round off then reduce power and pitch up a little</line>
+      <line>5:Touch down and wait rotor to slow down somewhat.</line>
+      <line>6:Pull the stick full back to use rotor to slow down.</line>
+      <line></line>
+      <line>   Good to know</line>
+      <line>The rotor accelerates faster the more you pull the stick</line>
+      <line>This aircraft doesn't stall, but the rotor can slow down.</line>
+      <line>The rotor rpm should be kept over 450...</line>
+      <line>Max rotor rpm 600 or 3-G. Max speed 90kts.</line>
+      <line></line>
+      <line>   Warning!</line>
+      <line>Avoid sudden movements. This can cause Pilot Induced Oscillation (PIO).</line>
+	  <line>Never force forward pitch. This can cause negative G.</line>
+	  <line>Use throttle first, stick later.</line>
+	  <line>Avoid flying at zero G! It is dangerous!</line>
+	  <line>Negative and zero G can cause a Power Pushover (PPO).</line>
+	  </help>
+
+    <hud>
+      <path n="1">Aircraft/TF-G1/config/TF-G1_hud.xml</path>
+            <visibility n="1">true</visibility>
+            <enable3d n="1">false</enable3d>
+            <transparent n="1">false</transparent>
+    </hud>
+
+
+		<weight n="0">
+			<name>Internal_Front</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>100</max-lb>
+		</weight>
+
+		<weight n="1">
+			<name>Internal_LeftGear</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>100</max-lb>
+		</weight>
+
+		<weight n="2">
+			<name>Internal_RightGear</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>100</max-lb>
+		</weight>
+
+
+  <menubar>
+        <default>
+            <menu n="10">
+                <label>TF-G1 Autogyro</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle()</script>
+                    </binding>
+                </item>
+
+
+            </menu>
+        </default>
+    </menubar>
+
+   <!-- Payload  -->
+
+  </sim>
+
+  <input>
+    <keyboard include="config/TF-G1-keyboard.xml"/>
+  </input>
+
+
+  <controls>
+
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+
+    <lighting>
+      <strobe type="bool">true</strobe>
+      <beacon type="bool">true</beacon>
+      <nav-lights type="bool">true</nav-lights>
+    </lighting>
+
+    <rotor>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+
+  </controls>
+
+
+  <rotors>
+    <main>
+      <rpm type="double">400</rpm>
+    </main>
+  </rotors>
+
+  <engines>
+		<engine>
+		  <rpm type="double">900</rpm>
+		</engine>
+  </engines>
+
+  <systems>
+      <electrical>
+      </electrical>
+  </systems>
+
+	<nasal>
+  	<TF-G1>
+  		<file>Aircraft/TF-G1/Nasal/liveries.nas</file>
+  	</TF-G1>
+
+  	<gyro>
+  		<file>Aircraft/TF-G1/Nasal/gyro.nas</file>
+  	</gyro>
+
+  	<heli>
+  		<file>Aircraft/TF-G1/Nasal/heli.nas</file>
+  	</heli>
+	</nasal>
+
+</PropertyList>

@@ -1,0 +1,164 @@
+############################################################################
+# arch/arm/src/lc823450/Make.defs
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.  The
+# ASF licenses this file to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance with the
+# License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+# License for the specific language governing permissions and limitations
+# under the License.
+#
+############################################################################
+
+CMN_ASRCS  = arm_saveusercontext.S arm_fullcontextrestore.S arm_switchcontext.S
+CMN_ASRCS += vfork.S
+
+ifeq ($(CONFIG_ARCH_SETJMP_H),y)
+ifeq ($(CONFIG_ARCH_TOOLCHAIN_GNU),y)
+CMN_ASRCS += arm_setjmp.S
+endif
+endif
+
+CMN_CSRCS  = arm_assert.c arm_blocktask.c arm_copyfullstate.c
+CMN_CSRCS += arm_createstack.c arm_mdelay.c arm_udelay.c arm_exit.c
+CMN_CSRCS += arm_initialize.c arm_initialstate.c arm_interruptcontext.c
+CMN_CSRCS += arm_memfault.c arm_modifyreg8.c arm_modifyreg16.c arm_modifyreg32.c
+CMN_CSRCS += arm_releasepending.c arm_releasestack.c arm_reprioritizertr.c
+CMN_CSRCS += arm_schedulesigaction.c arm_sigdeliver.c arm_systemreset.c
+CMN_CSRCS += arm_unblocktask.c arm_usestack.c arm_doirq.c arm_hardfault.c
+CMN_CSRCS += arm_svcall.c arm_vfork.c arm_trigger_irq.c
+
+# CMN_CSRCS += up_dwt.c
+
+CMN_CSRCS += arm_stackframe.c
+CMN_ASRCS += arm_exception.S
+CMN_CSRCS += arm_vectors.c
+
+ifeq ($(CONFIG_ARCH_RAMVECTORS),y)
+CMN_CSRCS += arm_ramvec_initialize.c arm_ramvec_attach.c
+endif
+
+ifeq ($(CONFIG_BUILD_PROTECTED),y)
+CMN_CSRCS += arm_task_start.c arm_pthread_start.c
+CMN_CSRCS += arm_signal_dispatch.c
+CMN_UASRCS += arm_signal_handler.S
+endif
+
+ifeq ($(CONFIG_ARCH_MEMCPY),y)
+CMN_ASRCS += memcpy-armv7m.S
+endif
+
+ifeq ($(CONFIG_ARCH_MEMMOVE),y)
+CMN_CSRCS += up_memmove.c
+endif
+
+ifeq ($(CONFIG_STACK_COLORATION),y)
+CMN_CSRCS += arm_checkstack.c
+endif
+
+CHIP_CSRCS  = lc823450_allocateheap2.c lc823450_start.c lc823450_irq.c lc823450_timer.c
+CHIP_CSRCS += lc823450_lowputc.c lc823450_serial.c lc823450_clockconfig.c
+CHIP_CSRCS += lc823450_syscontrol.c lc823450_gpio.c
+
+# Configuration-dependent LC823450 files
+
+ifneq ($(CONFIG_ARCH_IDLE_CUSTOM),y)
+CHIP_CSRCS += lc823450_idle.c
+endif
+
+ifeq ($(CONFIG_WATCHDOG),y)
+CHIP_CSRCS += lc823450_wdt.c
+endif
+
+ifeq ($(CONFIG_LC823450_SPIFI), y)
+CHIP_CSRCS += lc823450_spifi2.c
+endif
+
+ifeq ($(CONFIG_LC823450_SDIF), y)
+CHIP_CSRCS += lc823450_sdc.c
+CHIP_CSRCS += lc823450_sddrv_dep.c
+endif
+
+ifeq ($(CONFIG_PWM), y)
+CHIP_CSRCS += lc823450_pwm.c
+endif
+
+ifeq ($(CONFIG_I2C), y)
+CHIP_CSRCS += lc823450_i2c.c
+endif
+
+ifeq ($(CONFIG_SPI), y)
+CHIP_CSRCS += lc823450_spi.c
+endif
+
+ifeq ($(CONFIG_ARCH_DMA), y)
+CMN_CSRCS += lc823450_dma.c
+endif
+
+ifeq ($(CONFIG_RTC),y)
+CHIP_CSRCS += lc823450_rtc.c
+endif
+
+ifeq ($(CONFIG_FS_EVFAT),y)
+CHIP_CSRCS += lc823450_evfat.c
+endif
+
+ifeq ($(CONFIG_USBDEV),y)
+CHIP_CSRCS += lc823450_usbdev.c
+endif
+
+ifeq ($(CONFIG_ADC),y)
+CHIP_CSRCS += lc823450_adc.c
+endif
+
+ifeq ($(CONFIG_LC823450_IPL2),y)
+CHIP_CSRCS += lc823450_ipl2.c
+endif
+
+ifeq ($(CONFIG_DVFS),y)
+CHIP_CSRCS += lc823450_dvfs2.c
+CHIP_CSRCS += lc823450_procfs_dvfs.c
+endif
+
+ifeq ($(CONFIG_PM),y)
+CHIP_CSRCS += lc823450_pminitialize.c
+CHIP_CSRCS += lc823450_sleep.c
+endif
+
+ifeq ($(CONFIG_SMP), y)
+CHIP_CSRCS += lc823450_cpuidlestack.c
+CHIP_CSRCS += lc823450_cpuindex.c
+CHIP_CSRCS += lc823450_cpupause.c
+CHIP_CSRCS += lc823450_cpustart.c
+CHIP_CSRCS += lc823450_testset.c
+endif
+
+ifeq ($(CONFIG_LC823450_SDRAM), y)
+CHIP_CSRCS += lc823450_sdram.c
+endif
+
+ifeq ($(CONFIG_LC823450_MTD),y)
+CHIP_CSRCS += lc823450_mtd.c
+CHIP_CSRCS += lc823450_mmcl.c
+endif
+
+ifeq ($(CONFIG_LC823450_I2S0),y)
+CHIP_CSRCS += lc823450_i2s.c
+endif
+
+ifeq ($(CONFIG_BUILD_PROTECTED),y)
+CHIP_CSRCS += lc823450_userspace.c
+endif
+
+ifeq ($(CONFIG_ARM_MPU),y)
+CMN_CSRCS  += arm_mpu.c
+CHIP_CSRCS += lc823450_mpuinit2.c
+endif

@@ -1,0 +1,1 @@
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/libmavconn/share/libmavconn/cmake/libmavconnConfig.cmake

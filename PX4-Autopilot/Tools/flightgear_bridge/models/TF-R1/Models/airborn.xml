@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/Loads/browning30.xml</path>
+    <name>browning30 front</name>
+    <nopreview/>
+
+    <offsets>
+      <x-m>1.2</x-m>
+      <y-m>0.5</y-m>
+      <z-m>1.4</z-m>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+      <path>Aircraft/TF-R1/Models/wheel1.xml</path>
+      <name>sparewheel.F</name>
+      <offsets>
+        <x-m>0.17</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.761</z-m>
+        <pitch-deg>1.55</pitch-deg>
+        <heading-deg>-90</heading-deg>
+      </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/canister.ac</path>
+    <name>rearcan</name>
+    <nopreview/>
+    <offsets>
+      <x-m>2.23</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.69</z-m>
+      <heading-deg>0.0</heading-deg>
+        <pitch-deg>0.0</pitch-deg>
+      <roll-deg>0.0</roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/TF-R1/Models/shovel.ac</path>
+    <name>shovel</name>
+    <nopreview/>
+    <offsets>
+      <x-m>-0.0281</x-m>
+      <y-m>0.243</y-m>
+      <z-m>0.629</z-m>
+      <heading-deg>-87.189</heading-deg>
+      <roll-deg>-22.09</roll-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_gazebo_worlds
+
+Name: hector_gazebo_worlds
+Description: Description of hector_gazebo_worlds
+Version: 0.5.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

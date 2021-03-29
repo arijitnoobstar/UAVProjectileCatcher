@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <view n="100">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="101">
+      <enabled type="bool">false</enabled>
+    </view>
+    <model>
+      <livery>
+        <name type="string">US Navy blue</name>
+        <default>1</default>
+        <screen>1</screen>
+        <grille>1</grille>
+        <roof>1</roof>
+        <canister>1</canister>
+        <spare>1</spare>
+        <bumperends>1</bumperends>
+        <tools>1</tools>
+        <screenstops>1</screenstops>
+        <carrierframe>0</carrierframe>
+        <texture>Liveries/jeep-1a.png</texture>
+        <texture-roof>Liveries/softroof-a.png</texture-roof>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

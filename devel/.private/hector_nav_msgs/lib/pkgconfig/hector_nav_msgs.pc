@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_nav_msgs
+
+Name: hector_nav_msgs
+Description: Description of hector_nav_msgs
+Version: 0.3.5
+Cflags: -I/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/hector_nav_msgs/include
+Libs: -L${prefix}/lib 
+Requires: nav_msgs geometry_msgs message_runtime

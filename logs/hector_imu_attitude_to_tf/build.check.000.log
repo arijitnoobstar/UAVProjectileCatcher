@@ -1,0 +1,4 @@
+CMake Error: The source directory "/home/arijitnoobstar/UAVProjectileCatcher/src/src/hector_slam/hector_imu_attitude_to_tf" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+Makefile:994: recipe for target 'cmake_check_build_system' failed
+make: *** [cmake_check_build_system] Error 1

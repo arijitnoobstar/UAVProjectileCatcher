@@ -1,0 +1,8 @@
+prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel
+exec_prefix=/home/arijitnoobstar/UAVProjectileCatcher/devel
+includedir=${prefix}/include
+
+Name: mavlink
+Description: MAVLink micro air vehicle marshalling / communication library
+Version: 2021.1.4
+Cflags: -I${includedir}

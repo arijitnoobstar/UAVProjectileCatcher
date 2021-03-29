@@ -1,0 +1,7 @@
+\subsubsection usage Usage
+\verbatim
+<node name="image_proc" pkg="image_proc" type="image_proc">
+  <param name="debayer" type="int" value="0" />
+</node>
+\endverbatim
+

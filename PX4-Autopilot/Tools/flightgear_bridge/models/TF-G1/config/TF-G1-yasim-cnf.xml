@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<PropertyList include="TF-G1-base.xml">
+
+  <sim>
+
+    <flight-model>yasim</flight-model>
+    <aero>TF-G1-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+

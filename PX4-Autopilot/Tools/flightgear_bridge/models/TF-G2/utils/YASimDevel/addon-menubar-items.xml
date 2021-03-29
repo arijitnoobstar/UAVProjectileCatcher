@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this file requires FlightGear version 2018.2 or newer -->
+<!-- 
+    2018-12 WARNING: 
+    PUI menu items must have a globally unique label to make bindings work 
+    correctly. Bindings of all items with the same label will be triggered
+    if any of them is selected from the menu.
+-->
+<PropertyList>
+    <meta>
+        <file-type type="string">FlightGear add-on menu bar items</file-type>
+        <format-version type="int">1</format-version>
+    </meta>
+    <menubar-items>
+        <menu>
+            <label>YASim development</label>
+            <enabled type="bool">true</enabled>
+            
+            <item>
+                <label>YaSimDevel Options</label>
+                <binding>
+                    <command>dialog-show</command>
+                    <dialog-name>yasimdevel</dialog-name>
+                </binding>
+            </item>
+            <item>
+                <label>Display forces</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>FDM.yasim.displayForces();</script>
+                </binding>
+            </item>
+            <item>
+                <label>Display masses</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>FDM.yasim.displayMasses();</script>
+                </binding>
+            </item>
+            <item>
+                <label>Reload YASimDevel</label>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/addons/by-id/org.flightgear.addons.YASimDevel/reload</property>
+                </binding>
+            </item>            
+        </menu>
+    </menubar-items>
+</PropertyList>
