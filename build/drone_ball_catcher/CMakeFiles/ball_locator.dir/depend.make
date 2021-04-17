@@ -3,6 +3,7 @@
 
 CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o: /home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp
 CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o: /opt/ros/melodic/include/geometry_msgs/Point.h
+CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o: /opt/ros/melodic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o: /opt/ros/melodic/include/pcl_conversions/pcl_conversions.h
 CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o: /opt/ros/melodic/include/pcl_msgs/ModelCoefficients.h
 CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o: /opt/ros/melodic/include/pcl_msgs/PointIndices.h

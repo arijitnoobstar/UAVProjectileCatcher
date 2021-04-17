@@ -1,8 +1,10 @@
 #include <ros/ros.h>
 #include <pcl_ros/point_cloud.h>
 #include <pcl/point_types.h>
-#include <geometry_msgs/Point.h>
+#include <geometry_msgs/PointStamped.h>
 #include <numeric>
+#include <cmath>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,6 +16,7 @@ typedef Eigen::aligned_allocator<PointData> EigenPointData;
 void callback(const PointCloud::ConstPtr&);
 void findball(std::vector<PointData, EigenPointData>&);
 void isolate_ball(std::vector<PointData, EigenPointData>&, float&, float&, float&);
+float median(vector<float> &v);
 
 // Global publisher pointers
 ros::Publisher *ball_points_pubPtr;
@@ -29,6 +32,8 @@ int green_upper = 255;
 
 
 void isolate_ball(std::vector<PointData, EigenPointData> &Frame, float& ball_x, float& ball_y, float& ball_z){
+
+	
 	// Assign x, y values to new vector
 	std::vector<float> xs;
 	std::vector<float> ys;
@@ -48,8 +53,8 @@ void isolate_ball(std::vector<PointData, EigenPointData> &Frame, float& ball_x, 
 	float sq_sum_x = std::inner_product(xs.begin(), xs.end(), xs.begin(), 0.0);
 	float sq_sum_y = std::inner_product(ys.begin(), ys.end(), ys.begin(), 0.0);
 	// 2 stddev using n-1 as population mean unknown (93% of points in here)
-	float stdev_x = 2* std::sqrt(sq_sum_x / (xs.size()-1) - mean_x * mean_x);
-	float stdev_y = 2* std::sqrt(sq_sum_y / (xs.size()-1) - mean_y * mean_y);
+	float stdev_x = std::sqrt(sq_sum_x / (xs.size()-1) - mean_x * mean_x);
+	float stdev_y = std::sqrt(sq_sum_y / (xs.size()-1) - mean_y * mean_y);
 	
 	std::vector<PointData, EigenPointData> temp;
 	// Get rid of fringe points
@@ -57,23 +62,39 @@ void isolate_ball(std::vector<PointData, EigenPointData> &Frame, float& ball_x, 
 		if (true || i->x >= mean_x - stdev_x && i->x <= mean_x + stdev_x &&
 			i->y >= mean_y - stdev_y && i->y <= mean_y + stdev_y)
 			temp.push_back(*i);
-	}
+	} 
+
+	// cout << temp.size() << endl;
+	
 	
 	// Pass the x,y,z values back to the callback function
 	std::vector<float> newx;
 	std::vector<float> newy;
 	std::vector<float> newz;
-	for (auto i = temp.begin(); i != temp.end(); i++){
+	//for (auto i = temp.begin(); i != temp.end(); i++){
+	for (auto i = Frame.begin(); i != Frame.end(); i++){
 		newx.push_back(i->x);
 		newy.push_back(i->y);
 		newz.push_back(i->z);
 	}
-	ball_x = std::accumulate(newx.begin(), newx.end(), 0.0) / newx.size();
-	ball_y = std::accumulate(newy.begin(), newy.end(), 0.0) / newy.size();
-	ball_z = std::accumulate(newz.begin(), newz.end(), 0.0) / newz.size();
+
+	ball_x = median(newx);
+	ball_y = median(newy);
+	ball_z = median(newz);
+
+	// ball_x = std::accumulate(newx.begin(), newx.end(), 0.0) / newx.size();
+	// ball_y = std::accumulate(newy.begin(), newy.end(), 0.0) / newy.size();
+	// ball_z = std::accumulate(newz.begin(), newz.end(), 0.0) / newz.size();
 	
 	// Swap the pointers
-	Frame.swap(temp);
+	Frame.swap(temp); 
+
+}
+
+float median(vector<float> &v){
+	int n = v.size()/2;
+	nth_element(v.begin(), v.begin() + n, v.end());
+	return v[n];
 }
 
 void findball(std::vector<PointData, EigenPointData> &Frame){
@@ -97,21 +118,33 @@ void callback(const PointCloud::ConstPtr& msg)
 	
 	//find the ball, almost, with background
 	findball(Frame);
-	isolate_ball(Frame, ball_x, ball_y, ball_z);
+	if (Frame.size() == 0){
+		ball_x = ball_y = ball_z = NAN;
+	}
+	else{
+		isolate_ball(Frame, ball_x, ball_y, ball_z);
 
-	// Now we publish the filtered point cloud under the ball_points topic
-	PointCloud::Ptr ball_points_msg (new PointCloud);
-	ball_points_msg->header.frame_id = "camera_depth_optical_frame";
-	ball_points_msg->height =1;
-	ball_points_msg->width = Frame.size();
-	ball_points_msg->points = Frame;
-	ball_points_pubPtr->publish(ball_points_msg);
+		// Ensure z value is not 1.0, it is a default pointcloud depth when there is an error
+		if (ball_z == 1.0 || ball_z <= 0){
+			return;
+		}
 
+		// Now we publish the filtered point cloud under the ball_points topic
+		PointCloud::Ptr ball_points_msg (new PointCloud);
+		ball_points_msg->header.frame_id = "camera_depth_optical_frame";
+		ball_points_msg->height =1;
+		ball_points_msg->width = Frame.size();
+		ball_points_msg->points = Frame;
+		ball_points_pubPtr->publish(ball_points_msg);
+	}
+	
 	// Finally, publish the x,y,z coordinates of the ball centroid
-	geometry_msgs::Point::Ptr ball_geom_msg (new geometry_msgs::Point);
-	ball_geom_msg->x = ball_x;
-	ball_geom_msg->y = ball_y;
-	ball_geom_msg->z = ball_z;
+	geometry_msgs::PointStamped::Ptr ball_geom_msg (new geometry_msgs::PointStamped);
+	ball_geom_msg->header.frame_id = "camera_link";
+	ball_geom_msg->header.stamp = ros::Time::now();
+	ball_geom_msg->point.x = ball_x;
+	ball_geom_msg->point.y = ball_y;
+	ball_geom_msg->point.z = ball_z;
 	ball_geom_pubPtr->publish(ball_geom_msg);
 }
 
@@ -130,7 +163,7 @@ int main(int argc, char** argv)
 
 	ros::Subscriber sub = nh.subscribe<PointCloud>("/camera/depth/points", 10000, callback);
 	ball_points_pubPtr = new ros::Publisher(nh.advertise<PointCloud>("ball_points", 10000));
-	ball_geom_pubPtr = new ros::Publisher(nh.advertise<geometry_msgs::Point>("ball_geom", 10000));
+	ball_geom_pubPtr = new ros::Publisher(nh.advertise<geometry_msgs::PointStamped>("ball_geom", 10000));
 
 	//ros::Rate r(500);
 

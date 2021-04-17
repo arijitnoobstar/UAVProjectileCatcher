@@ -1,0 +1,27 @@
+[36m--[0m Python 2 iterpretator: /usr/bin/python2
+[36m--[0m Package version: 2021.1.4
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/ASLUAV.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/all.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/ardupilotmega.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/autoquad.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/common.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/icarous.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/matrixpilot.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/paparazzi.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/standard.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/uAvionix.xml
+[36m--[0m processing v1.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/ualberta.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/ASLUAV.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/all.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/ardupilotmega.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/autoquad.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/common.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/icarous.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/matrixpilot.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/paparazzi.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/standard.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/uAvionix.xml
+[36m--[0m processing v2.0: /home/arijitnoobstar/UAVProjectileCatcher/src/mavlink/message_definitions/v1.0/ualberta.xml
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/arijitnoobstar/UAVProjectileCatcher/build/mavlink

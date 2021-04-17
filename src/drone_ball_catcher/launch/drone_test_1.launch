@@ -1,5 +1,9 @@
 <launch>
 <rosparam command="load" file="$(find drone_ball_catcher)/config/ball_colour.yaml" /> <!-- load yaml file for ball RGB range -->
+<rosparam command="load" file="$(find drone_ball_catcher)/config/initial_drone_pose.yaml" /> <!-- load yaml file for inital drone pose -->
+<rosparam command="load" file="$(find drone_ball_catcher)/config/set_simtime_false.yaml" /> <!-- set the sim time to false for the TF from camera to base link -->
 <node name = "ball_locator_node" pkg="drone_ball_catcher" type="ball_locator" output = "screen" /> <!-- run the node for the depth camera to get xyz location of ball wrt to camera frame -->
+<node name = "ball_image_filter_node" pkg="drone_ball_catcher" type="ball_image_filter" output = "screen" />  <!-- filtered 2d image of ball -->
 <node name = "drone_test_1_node" pkg="drone_ball_catcher" type="drone_test_1" output = "screen" /> <!-- run control node to control path planning for drone -->
+<node name = "camera_to_base_link_tf" pkg="tf2_ros" type="static_transform_publisher" args= "0 0 0 -0.5 0.5 -0.5 0.5 /base_link /camera_link" /> <!-- static transform from camera_link to base_link -->
 </launch>

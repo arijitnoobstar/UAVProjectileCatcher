@@ -2,6 +2,7 @@
 #include <pcl_ros/point_cloud.h>
 #include <pcl/point_types.h>
 #include <geometry_msgs/Point.h>
+#include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/PoseArray.h>
 #include <cmath>
 #include <string>
@@ -19,11 +20,11 @@ struct point_t{
 // CONFIG
 const int frame_cycle = 5; // max number of frames in queue for velocity estimation, a highher value reduces random error, but is less sensitive to acceleration changes
 const double TIME_STEP = 0.1; // in seconds
-const double MAX_TIME_PATH_PLANNING = 10; // in seconds
+const double MAX_TIME_PATH_PLANNING = 100; // in seconds
 const double PI = 3.1415265;
 const double MASS = 0.0027; // in KG
-const double G = 9.781;// approx G in Singapore (in m/s^2)
-const double DRAG_COEF = 0.5; // for spheres at approx Reynold Number 5000
+const double G = 0; //9.781;// approx G in Singapore (in m/s^2)
+const double DRAG_COEF = 0; //0.5; // for spheres at approx Reynold Number 5000
 const double BALL_DIAMETER = 0.04; // in metres
 const double AIR_DENSITY = 1.225; // in kg/m^3
 string goal_type = "plane_fixed";
@@ -42,10 +43,10 @@ double drag, s_x, s_y, s_z, a_x, a_y, a_z; // trajectory prediction intermediate
 bool goal_uncheck = true; // bool variable check for iterative algorithm to stop 
 
 // Function Declarations
-void callback(const geometry_msgs::Point::ConstPtr&);
-void add_point(const geometry_msgs::Point&);
+void callback(const geometry_msgs::PointStamped::ConstPtr& msg);
+void add_point(const geometry_msgs::PointStamped&);
 void compute_velocities();
-void predict_trajectory();
+void predict_trajectory(const geometry_msgs::PointStamped::ConstPtr& msg);
 bool implement_plane_fixed_goal();
 
 bool plane_fixed_path_planning(){
@@ -62,9 +63,10 @@ bool plane_fixed_path_planning(){
 }
 
 void compute_velocities(){
+
 	// computes velocities using least squares linear regression
 	// set intermediate values as 0.0;
-	sum_t, sum_t_2, sum_x, sum_y, sum_z, sum_tx, sum_ty, sum_tz = 0.0;
+	sum_t = sum_t_2 = sum_x = sum_y = sum_z = sum_tx = sum_ty = sum_tz = 0.0;
 	// loop through PoseData to calculate intermediate values
 	for (int i = 0; i < PoseData.size(); ++i){
 		sum_t += PoseData[i].t;
@@ -72,22 +74,30 @@ void compute_velocities(){
 		sum_x += PoseData[i].x;
 		sum_y += PoseData[i].y;
 		sum_z += PoseData[i].z;
-		sum_tx += PoseData[i].t * PoseData[i].x;
-		sum_ty += PoseData[i].t * PoseData[i].y;
-		sum_tz += PoseData[i].t * PoseData[i].z;
+		sum_tx += (PoseData[i].t * PoseData[i].x);
+		sum_ty += (PoseData[i].t * PoseData[i].y);
+		sum_tz += (PoseData[i].t * PoseData[i].z);
 	}
 	// Apply least squares formula to calculate the slopes (velocity)
-	v_x = (PoseData.size() * sum_tx - sum_x * sum_t) / (PoseData.size() * sum_t_2 - pow(sum_t, 2));
-	v_y = (PoseData.size() * sum_ty - sum_y * sum_t) / (PoseData.size() * sum_t_2 - pow(sum_t, 2));
-	v_z = (PoseData.size() * sum_tz - sum_z * sum_t) / (PoseData.size() * sum_t_2 - pow(sum_t, 2));
+	v_x = ((PoseData.size() * sum_tx) - (sum_x * sum_t)) / ((PoseData.size() * sum_t_2) - pow(sum_t, 2));
+	v_y = ((PoseData.size() * sum_ty) - (sum_y * sum_t)) / ((PoseData.size() * sum_t_2) - pow(sum_t, 2));
+	v_z = ((PoseData.size() * sum_tz) - (sum_z * sum_t)) / ((PoseData.size() * sum_t_2) - pow(sum_t, 2));
+
 }
 
-void predict_trajectory(){
+void predict_trajectory(const geometry_msgs::PointStamped::ConstPtr& msg){
 	// create vector for predicted trajectory
 	vector<point_t> PredictedPose;
 	// Calculate the maximum iteration count based on slowest speed approximation
 	double max_count = MAX_TIME_PATH_PLANNING / TIME_STEP;
 	int count = 0;
+
+	s_x = msg->point.x;
+	s_y = msg->point.y;
+	s_z = msg->point.z;
+
+	cout << "VEL" << v_x << ',' << v_y << ',' << v_z << endl;
+
 	while(goal_uncheck && count <= max_count){
 		// calculate the velocity magnitude, vector angles, acclerations wrt point cloud frame
 		mag_V = sqrt(pow(v_x, 2) + pow(v_y, 2) + pow(v_z, 2));
@@ -98,9 +108,9 @@ void predict_trajectory(){
 		a_y = G - (drag / MASS) * sin(phi) * sin(theta);
 		a_z = - (drag / MASS) * cos(phi) * cos(theta);
 		// caclulate the displacements in x,y,z direction after one time step using the equation of motion (assuming constant velocity throughout the time step)
-		s_x = v_x * TIME_STEP + 0.5 * a_x * pow(TIME_STEP, 2);
-		s_y = v_y * TIME_STEP + 0.5 * a_x * pow(TIME_STEP, 2);
-		s_z = v_z * TIME_STEP + 0.5 * a_z * pow(TIME_STEP, 2);
+		s_x = s_x + v_x * TIME_STEP + 0.5 * a_x * pow(TIME_STEP, 2);
+		s_y = s_y + v_y * TIME_STEP + 0.5 * a_y * pow(TIME_STEP, 2);
+		s_z = s_z + v_z * TIME_STEP + 0.5 * a_z * pow(TIME_STEP, 2);
 		// update velocities in 3 directions after one time step (assuming constant acceleration)
 		v_x = v_x + a_x * TIME_STEP;
 		v_y = v_y + a_y * TIME_STEP;
@@ -110,15 +120,19 @@ void predict_trajectory(){
 			goal_uncheck = plane_fixed_path_planning();
 		}
 		count++;
+		if (count <= max_count){
+			cout << count << ',' << s_x << ',' << s_y << ',' << s_z << endl;
+		}
+		
 	}
 }
 
-void add_point(const geometry_msgs::Point& pt){
+void add_point(const geometry_msgs::PointStamped& pt){
 	// Add point to PoseData deque
 	point_t temp_point_t;
-	temp_point_t.x = pt.x;
-	temp_point_t.y = pt.y;
-	temp_point_t.z = pt.z;
+	temp_point_t.x = pt.point.x;
+	temp_point_t.y = pt.point.y;
+	temp_point_t.z = pt.point.z;
 	// use ROS time to input time
 	if (PoseData.size() == 0){
 		t_0 = ros::Time::now().toSec();
@@ -128,11 +142,12 @@ void add_point(const geometry_msgs::Point& pt){
 		temp_point_t.t = ros::Time::now().toSec() - t_0;
 	}
 	// push to the front
+
 	PoseData.push_front(temp_point_t);
 }
 
 
-void callback(const geometry_msgs::Point::ConstPtr& msg)
+void callback(const geometry_msgs::PointStamped::ConstPtr& msg)
 {
 	if (PoseData.size() < frame_cycle){
 		add_point(*msg);
@@ -147,15 +162,21 @@ void callback(const geometry_msgs::Point::ConstPtr& msg)
 		add_point(*msg);
 	}
 	// set default goal->x setpoint to NAN first (math.h macro)
-	goal->x = NAN;
+	goal->x = goal->y = goal->z = NAN;
 	// calculate the velocities in 3 directions and get the Magnitude of V and its angles
 	compute_velocities();
+	// make sure ball is moving towards drone (0.1m/s clearance given)
+	if (v_z > -0.1){
+		return;
+	}
 	// predict the trajectory of ball and conduct drone path planning and extract goal setpoint
-	predict_trajectory();
+	predict_trajectory(msg);
 	// publish goal setpoint
 	if(true || !isnan(goal->x)){
 		setpoint_pubPtr->publish(goal);
 	}
+	// reset goal_uncheck to true
+	goal_uncheck = true;
 }
 
 int main(int argc, char** argv)
@@ -163,8 +184,8 @@ int main(int argc, char** argv)
 	ros::init(argc, argv, "ball_trajectory_node");
 	ros::NodeHandle nh;
 
-	ros::Subscriber sub = nh.subscribe<geometry_msgs::Point>("ball_geom", 10000, callback);
-	setpoint_pubPtr = new ros::Publisher(nh.advertise<geometry_msgs::Point>("setpoint", 10000));
+	ros::Subscriber sub = nh.subscribe<geometry_msgs::PointStamped>("ball_geom", 10000, callback);
+	setpoint_pubPtr = new ros::Publisher(nh.advertise<geometry_msgs::Point>("predicted_setpoint", 10000));
 
 	ros::spin();
 

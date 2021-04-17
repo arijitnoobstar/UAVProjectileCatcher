@@ -1,0 +1,6 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:85:17:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+  cout << v_x << [01;35m[K', '[m[K <<  v_y << ', ' << v_z << endl;
+                 [01;35m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:85:33:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+  cout << v_x << ', ' <<  v_y << [01;35m[K', '[m[K << v_z << endl;
+                                 [01;35m[K^~~~[m[K

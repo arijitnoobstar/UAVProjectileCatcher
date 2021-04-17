@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/arijitnoobstar/UAVProjectileCatcher/build/drone_ball_catcher'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher:$ROS_PACKAGE_PATH"

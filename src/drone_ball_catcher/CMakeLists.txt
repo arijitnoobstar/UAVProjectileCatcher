@@ -17,6 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   mavros_msgs
   mavros
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
 )
 
 find_package(Boost REQUIRED COMPONENTS 
@@ -166,6 +169,7 @@ add_executable(drone_test_1 src/drone_test_1.cpp)
  target_link_libraries(ball_image_filter   ${catkin_LIBRARIES} ${boost_LIBRARIES})
  target_link_libraries(ball_trajectory   ${catkin_LIBRARIES} ${boost_LIBRARIES})
  target_link_libraries(drone_test_1 ${catkin_LIBRARIES} ${boost_LIBRARIES})
+
 #############
 ## Install ##
 #############

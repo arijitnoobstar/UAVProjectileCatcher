@@ -1,0 +1,11 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1.cpp:276:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kball_location_relative_la[m[K’ was not declared in this scope
+                     [01;31m[Kball_location_relative_la[m[K
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1.cpp:276:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kball_location_relative_last[m[K’
+                     [01;36m[Kball_location_relative_la[m[K
+                     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+                     [32m[Kball_location_relative_last[m[K
+make[2]: *** [CMakeFiles/drone_test_1.dir/src/drone_test_1.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_test_1.dir/all] Error 2
+make: *** [all] Error 2

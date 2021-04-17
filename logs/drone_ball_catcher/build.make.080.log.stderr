@@ -1,0 +1,7 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:[m[K In function ‘[01m[Kvoid isolate_ball(std::vector<pcl::PointXYZRGB, Eigen::aligned_allocator<pcl::PointXYZRGB> >&, float&, float&, float&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:81:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kball_y[m[K’
+  [01;31m[Kball_y[m[K = median(newy)
+  [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_locator.dir/all] Error 2
+make: *** [all] Error 2

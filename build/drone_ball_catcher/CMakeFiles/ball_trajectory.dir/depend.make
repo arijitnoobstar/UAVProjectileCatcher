@@ -3,6 +3,7 @@
 
 CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o: /home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp
 CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o: /opt/ros/melodic/include/geometry_msgs/Point.h
+CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o: /opt/ros/melodic/include/geometry_msgs/PointStamped.h
 CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o: /opt/ros/melodic/include/geometry_msgs/Pose.h
 CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o: /opt/ros/melodic/include/geometry_msgs/PoseArray.h
 CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o: /opt/ros/melodic/include/geometry_msgs/Quaternion.h

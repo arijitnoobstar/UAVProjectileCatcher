@@ -1,0 +1,75 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:25:10:[m[K [01;31m[Kerror: [m[K‘[01m[KBuffer[m[K’ in namespace ‘[01m[Ktf2_ros[m[K’ does not name a type
+ tf2_ros::[01;31m[KBuffer[m[K tfBuffer;
+          [01;31m[K^~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:26:10:[m[K [01;31m[Kerror: [m[K‘[01m[KTransformListener[m[K’ in namespace ‘[01m[Ktf2_ros[m[K’ does not name a type
+ tf2_ros::[01;31m[KTransformListener[m[K tfListener(tfBuffer);
+          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:[m[K In function ‘[01m[Kvoid ball_cb(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:49:12:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+     while ([01;31m[Knode[m[K.ok()){
+            [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:49:12:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Knice[m[K’
+     while ([01;36m[Knode[m[K.ok()){
+            [01;36m[K^~~~[m[K
+            [32m[Knice[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:51:28:[m[K [01;31m[Kerror: [m[K‘[01m[KtfBuffer[m[K’ was not declared in this scope
+         transformStamped = [01;31m[KtfBuffer[m[K.lookupTransform("/map", "/camera_link", ros::Time(0));
+                            [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:51:28:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetbuffer[m[K’
+         transformStamped = [01;36m[KtfBuffer[m[K.lookupTransform("/map", "/camera_link", ros::Time(0));
+                            [01;36m[K^~~~~~~~[m[K
+                            [32m[Ksetbuffer[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:53:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2_geometry_msgs[m[K’ has not been declared
+         [01;31m[Ktf2_geometry_msgs[m[K::do_transform(*msg, ball_location_map, transformStamped);
+         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:59:17:[m[K [01;31m[Kerror: [m[K‘[01m[KTransformException[m[K’ in namespace ‘[01m[Ktf2[m[K’ does not name a type
+     catch (tf2::[01;31m[KTransformException[m[K &ex) {
+                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:6[m[K:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:60:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kex[m[K’ was not declared in this scope
+         ROS_WARN("%s",[01;31m[Ke[m[Kx.what());
+                       [01;31m[K^[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:348:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:387:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:572:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:162:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_WARN(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Warn, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:60:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_WARN[m[K’
+         [01;36m[KR[m[KOS_WARN("%s",ex.what());
+         [01;36m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:60:23:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexp[m[K’
+         ROS_WARN("%s",[01;36m[Ke[m[Kx.what());
+                       [01;36m[K^[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:348:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, [01;36m[K__VA_ARGS__[m[K)
+                                                                                                                                                                     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:387:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_AT_LOCATION[m[K(__VA_ARGS__); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/console.h:572:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) [01;36m[KROS_LOG_COND[m[K(true, level, name, __VA_ARGS__)
+                                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/rosconsole/macros_generated.h:162:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_WARN(...) [01;36m[KROS_LOG[m[K(::ros::console::levels::Warn, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:60:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_WARN[m[K’
+         [01;36m[KR[m[KOS_WARN("%s",ex.what());
+         [01;36m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:67:1:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+ [01;31m[K{[m[K
+ [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:193:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/drone_test_1_beta.dir/src/drone_test_1_beta.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_test_1_beta.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

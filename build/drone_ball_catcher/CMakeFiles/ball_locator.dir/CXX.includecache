@@ -13,9 +13,13 @@ pcl_ros/point_cloud.h
 -
 pcl/point_types.h
 -
-geometry_msgs/Point.h
+geometry_msgs/PointStamped.h
 -
 numeric
+-
+cmath
+-
+algorithm
 -
 
 /opt/ros/melodic/include/geometry_msgs/Point.h
@@ -32,6 +36,26 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/opt/ros/melodic/include/geometry_msgs/PointStamped.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Point.h
 -
 
 /opt/ros/melodic/include/pcl_conversions/pcl_conversions.h

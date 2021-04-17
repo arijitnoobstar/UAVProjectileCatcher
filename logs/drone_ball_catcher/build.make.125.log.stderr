@@ -1,0 +1,16 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid predict_trajectory(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:93:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct geometry_msgs::Point_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kpoint[m[K’; did you mean ‘[01m[KPoint_[m[K’?
+  s_x = msg->[01;31m[Kpoint[m[K.x;
+             [01;31m[K^~~~~[m[K
+             [32m[KPoint_[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:94:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct geometry_msgs::Point_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kpoint[m[K’; did you mean ‘[01m[KPoint_[m[K’?
+  s_y = msg->[01;31m[Kpoint[m[K.y;
+             [01;31m[K^~~~~[m[K
+             [32m[KPoint_[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:95:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct geometry_msgs::Point_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kpoint[m[K’; did you mean ‘[01m[KPoint_[m[K’?
+  s_z = msg->[01;31m[Kpoint[m[K.z;
+             [01;31m[K^~~~~[m[K
+             [32m[KPoint_[m[K
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

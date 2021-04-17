@@ -1,0 +1,6 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:27:10:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+ ros::init[01;31m[K([m[Kargc, argv, "drone_test_1");
+          [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/drone_test_1_beta.dir/src/drone_test_1_beta.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_test_1_beta.dir/all] Error 2
+make: *** [all] Error 2

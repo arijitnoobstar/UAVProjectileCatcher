@@ -1,0 +1,22 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:[m[K In function ‘[01m[Kvoid ball_cb(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:50:12:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+     while ([01;31m[Knode[m[K.ok()){
+            [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:50:12:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/boost/unordered/detail/map.hpp:6:0[m[K,
+                 from [01m[K/usr/include/boost/unordered/unordered_map.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/unordered_map.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2/buffer_core.h:49[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:17[m[K:
+[01m[K/usr/include/boost/unordered/detail/implementation.hpp:217:42:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::unordered::detail::node[m[K’
+ template <typename A, typename T> struct [01;36m[Knode[m[K;
+                                          [01;36m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2_geometry_msgs[m[K’ has not been declared
+             [01;31m[Ktf2_geometry_msgs[m[K::do_transform(*msg, ball_location_map, transformStamped);
+             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/drone_test_1_beta.dir/src/drone_test_1_beta.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_test_1_beta.dir/all] Error 2
+make: *** [all] Error 2

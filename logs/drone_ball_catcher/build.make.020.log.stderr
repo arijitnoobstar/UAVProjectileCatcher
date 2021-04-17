@@ -1,0 +1,7 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:[m[K In function ‘[01m[Kvoid ball_cb(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2_geometry_msgs[m[K’ has not been declared
+         [01;31m[Ktf2_geometry_msgs[m[K::do_transform(*msg, ball_location_map, transformStamped);
+         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/drone_test_1_beta.dir/src/drone_test_1_beta.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_test_1_beta.dir/all] Error 2
+make: *** [all] Error 2

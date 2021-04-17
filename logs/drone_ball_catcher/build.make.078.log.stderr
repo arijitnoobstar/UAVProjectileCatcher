@@ -1,0 +1,17 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:[m[K In function ‘[01m[Kvoid isolate_ball(std::vector<pcl::PointXYZRGB, Eigen::aligned_allocator<pcl::PointXYZRGB> >&, float&, float&, float&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:74:16:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp[m[K’ was not declared in this scope
+  for (auto i = [01;31m[Ktemp[m[K.begin(); i != temp.end(); i++){
+                [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:74:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktee[m[K’
+  for (auto i = [01;36m[Ktemp[m[K.begin(); i != temp.end(); i++){
+                [01;36m[K^~~~[m[K
+                [32m[Ktee[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:80:22:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kstd::vector<int>&[m[K’ from expression of type ‘[01m[Kstd::vector<float>[m[K’
+  ball_x = median(newx[01;31m[K)[m[K
+                      [01;31m[K^[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_locator.cpp:18:7:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kfloat median(std::vector<int>&)[m[K’
+ float [01;36m[Kmedian[m[K(vector<int> &v);
+       [01;36m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/ball_locator.dir/src/ball_locator.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_locator.dir/all] Error 2
+make: *** [all] Error 2

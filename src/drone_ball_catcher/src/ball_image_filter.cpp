@@ -21,11 +21,11 @@ void callback(const sensor_msgs::Image::ConstPtr& msg)
 {
 	// Create ImageArr to store data from sensor_msgs/Image image
 	std::vector<uint8_t> ImageArr = msg->data;
-	// Filter out the rgb values based on specified range
+	// Filter out the B8G8R8 values based on specified range
 	for (int i = 0; i < ImageArr.size(); i+= 3){
-		if (ImageArr[i] >= red_lower && ImageArr[i] <= red_upper &&
+		if (ImageArr[i] >= blue_lower && ImageArr[i] <= blue_upper &&
 			ImageArr[i+1] >= green_lower && ImageArr[i+1] <= green_upper &&
-			ImageArr[i+2] >= blue_lower && ImageArr[i+2] <= blue_upper){
+			ImageArr[i+2] >= red_lower && ImageArr[i+2] <= red_upper){
 		}
 		else{
 
@@ -37,7 +37,8 @@ void callback(const sensor_msgs::Image::ConstPtr& msg)
 	}
 	// Publish the filtered ImageArr
 	sensor_msgs::Image::Ptr filtered_image_msg (new sensor_msgs::Image);
-	filtered_image_msg->header.frame_id = "camera_color_optical_frame";
+	filtered_image_msg->header.frame_id = "camera_link";
+	filtered_image_msg->header.stamp = ros::Time::now();
 	filtered_image_msg->height = msg->height;
 	filtered_image_msg->width = msg->width;
 	filtered_image_msg->encoding = msg->encoding;
@@ -60,7 +61,7 @@ int main(int argc, char** argv)
 	nh.getParam("blue_lower", blue_lower);
 	nh.getParam("blue_upper", blue_upper);
 
-	ros::Subscriber sub = nh.subscribe<sensor_msgs::Image>("/camera/color/image_raw", 1, callback);
+	ros::Subscriber sub = nh.subscribe<sensor_msgs::Image>("/camera/rgb/image_raw", 1, callback);
 	filtered_image_pubPtr = new ros::Publisher(nh.advertise<sensor_msgs::Image>("filtered_image/image_raw", 10000));
 
 

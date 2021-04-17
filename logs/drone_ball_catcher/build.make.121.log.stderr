@@ -1,0 +1,10 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:[m[K In function ‘[01m[Kvoid callback(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:159:21:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kgeometry_msgs::Point& {aka geometry_msgs::Point_<std::allocator<void> >&}[m[K’ to ‘[01m[Kconst geometry_msgs::Point_<std::allocator<void> >[m[K’ discards qualifiers
+  predict_trajectory([01;31m[K*msg[m[K);
+                     [01;31m[K^~~~[m[K
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/ball_trajectory.cpp:85:6:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid predict_trajectory(geometry_msgs::Point&)[m[K’
+ void [01;36m[Kpredict_trajectory[m[K(geometry_msgs::Point& msg){
+      [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/ball_trajectory.dir/src/ball_trajectory.cpp.o] Error 1
+make[1]: *** [CMakeFiles/ball_trajectory.dir/all] Error 2
+make: *** [all] Error 2

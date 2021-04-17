@@ -1,0 +1,10 @@
+init_x : 0
+init_y : 0
+init_z : 2
+init_qx : 0 
+init_qy : 0
+init_qz : 0
+init_qw : -1 
+min_readings: 0
+initial_min_readings: 0
+

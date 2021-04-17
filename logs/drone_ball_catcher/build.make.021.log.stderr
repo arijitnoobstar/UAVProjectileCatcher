@@ -1,0 +1,67 @@
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:[m[K In function ‘[01m[Kvoid ball_cb(const ConstPtr&)[m[K’:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ktf2_ros::Buffer::transform(const geometry_msgs::PointStamped_<std::allocator<void> >&, geometry_msgs::PointStamped&, geometry_msgs::TransformStamped&)[m[K’
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;31m[K)[m[K;
+                                                                     [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:18[m[K:
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:123:8:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> T& tf2_ros::BufferInterface::transform(const T&, T&, const string&, ros::Duration) const
+     T& [01;36m[Ktransform[m[K(const T& in, T& out,
+        [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:123:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[KtransformStamped[m[K’ (type ‘[01m[Kgeometry_msgs::TransformStamped {aka geometry_msgs::TransformStamped_<std::allocator<void> >}[m[K’) to type ‘[01m[Kconst string& {aka const std::__cxx11::basic_string<char>&}[m[K’
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;36m[K)[m[K;
+                                                                     [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:18[m[K:
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:143:7:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> T tf2_ros::BufferInterface::transform(const T&, const string&, ros::Duration) const
+     T [01;36m[Ktransform[m[K(const T& in,
+       [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:143:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kball_location_map[m[K’ (type ‘[01m[Kgeometry_msgs::PointStamped {aka geometry_msgs::PointStamped_<std::allocator<void> >}[m[K’) to type ‘[01m[Kconst string& {aka const std::__cxx11::basic_string<char>&}[m[K’
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;36m[K)[m[K;
+                                                                     [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:18[m[K:
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:168:8:[m[K [01;36m[Knote: [m[Kcandidate: template<class A, class B> B& tf2_ros::BufferInterface::transform(const A&, B&, const string&, ros::Duration) const
+     B& [01;36m[Ktransform[m[K(const A& in, B& out,
+        [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:168:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[KtransformStamped[m[K’ (type ‘[01m[Kgeometry_msgs::TransformStamped {aka geometry_msgs::TransformStamped_<std::allocator<void> >}[m[K’) to type ‘[01m[Kconst string& {aka const std::__cxx11::basic_string<char>&}[m[K’
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;36m[K)[m[K;
+                                                                     [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:18[m[K:
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:192:8:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> T& tf2_ros::BufferInterface::transform(const T&, T&, const string&, const ros::Time&, const string&, ros::Duration) const
+     T& [01;36m[Ktransform[m[K(const T& in, T& out,
+        [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:192:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 3 provided
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;36m[K)[m[K;
+                                                                     [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:18[m[K:
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:220:7:[m[K [01;36m[Knote: [m[Kcandidate: template<class T> T tf2_ros::BufferInterface::transform(const T&, const string&, const ros::Time&, const string&, ros::Duration) const
+     T [01;36m[Ktransform[m[K(const T& in,
+       [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:220:7:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 3 provided
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;36m[K)[m[K;
+                                                                     [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/tf2_ros/buffer.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/tf2_ros/transform_listener.h:40[m[K,
+                 from [01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:18[m[K:
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:251:8:[m[K [01;36m[Knote: [m[Kcandidate: template<class A, class B> B& tf2_ros::BufferInterface::transform(const A&, B&, const string&, const ros::Time&, const string&, ros::Duration) const
+     B& [01;36m[Ktransform[m[K(const A& in, B& out,
+        [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/tf2_ros/buffer_interface.h:251:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arijitnoobstar/UAVProjectileCatcher/src/drone_ball_catcher/src/drone_test_1_beta.cpp:54:69:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 3 provided
+         tfBuffer.transform(*msg, ball_location_map, transformStamped[01;36m[K)[m[K;
+                                                                     [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/drone_test_1_beta.dir/src/drone_test_1_beta.cpp.o] Error 1
+make[1]: *** [CMakeFiles/drone_test_1_beta.dir/all] Error 2
+make: *** [all] Error 2

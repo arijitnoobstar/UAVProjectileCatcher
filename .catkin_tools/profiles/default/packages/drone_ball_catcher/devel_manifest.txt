@@ -2,6 +2,7 @@ drone_ball_catcher
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/cmake.lock /home/arijitnoobstar/UAVProjectileCatcher/devel/./cmake.lock
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/drone_ball_catcher/ball_trajectory /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/drone_ball_catcher/ball_trajectory
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/drone_ball_catcher/ball_locator /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/drone_ball_catcher/ball_locator
+/home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/drone_ball_catcher/drone_test_1_beta /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/drone_ball_catcher/drone_test_1_beta
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/drone_ball_catcher/ball_image_filter /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/drone_ball_catcher/ball_image_filter
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/drone_ball_catcher/drone_test_1 /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/drone_ball_catcher/drone_test_1
 /home/arijitnoobstar/UAVProjectileCatcher/devel/.private/drone_ball_catcher/lib/pkgconfig/drone_ball_catcher.pc /home/arijitnoobstar/UAVProjectileCatcher/devel/lib/pkgconfig/drone_ball_catcher.pc
