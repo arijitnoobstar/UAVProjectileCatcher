@@ -1,4 +1,5 @@
 
+
 # Software and Control Architecture of a Ball Catching Drone
 This repository hosts a ROS workspace of the control and software architecture of a ball catching drone in a Gazebo simulation. All details can be found in [`ME4232_Final_Report.pdf`](https://github.com/arijitnoobstar/UAVProjectileCatcher/blob/master/ME4232_Final_Report.pdf) with a summarised version in our poster, [`ME4232poster.pdf`](https://github.com/arijitnoobstar/UAVProjectileCatcher/blob/master/ME4232poster.pdf). The catkin workspace was made in ROS Melodic (Ubuntu 18.04).
 
@@ -62,6 +63,13 @@ The RQT graph of all ROS topics and nodes is as shown:
 <img 
 src="https://github.com/arijitnoobstar/UAVProjectileCatcher/blob/master/rqt_graph.png" width="500" />
 
+
+## Build Instructions
+As this is a catkin workspace configured with `catkin_tools`, build and source the environment using:
+```bash
+catkin build
+source devel/setup.bash
+```
 
 ## Collaborators
 [Arijit Dasgupta](https://github.com/arijitnoobstar)
